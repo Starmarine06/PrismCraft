@@ -1,0 +1,25 @@
+
+modLoader = "javafml" #mandatory
+loaderVersion = "[4,)" #mandatory
+license = "${mod_license}"
+[[mods]] #mandatory
+modId = "prismcraft" #mandatory
+version = "1.0" #mandatory
+displayName = "PrismCraft" #mandatory
+authors = "${mod_authors}" #optional
+
+description = '''${mod_description}'''
+
+[[dependencies.prismcraft]] #optional
+modId = "neoforge" #mandatory
+type = "required" #mandatory
+versionRange = "${neo_version_range}" #mandatory
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.prismcraft]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"

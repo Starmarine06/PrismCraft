@@ -1,8 +1,0 @@
-modLoader="javafml"
-loaderVersion="[73,)"
-license="MIT"
-[[mods]]
-modId="prismcraft"
-version="1.0.0"
-displayName="Prismcraft"
-description='''Prismcraft mod - Dye mixer (example).'''
