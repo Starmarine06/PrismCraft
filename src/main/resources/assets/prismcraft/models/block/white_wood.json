@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "prismcraft:block/white_wood"
+  },
+  "overrides": [],
+  "display": {},
+  "elements": [],
+  "gui_light": "front",
+  "tintindex": 0
+}

@@ -1,3 +1,10 @@
 {
-  "container.prismcraft": "Dye Mixer"
+  "block.prismcraft.dye_mixer": "Dye Mixer",
+  "block.prismcraft.white_wood": "White Wood",
+  "block.prismcraft.white_wood_planks": "White Wood Planks",
+  "block.prismcraft.white_wood_stairs": "White Wood Stairs",
+  "block.prismcraft.white_wood_slab": "White Wood Slab",
+  "block.prismcraft.white_concrete": "White Concrete",
+  "itemGroup.prismcraft": "PrismCraft",
+  "container.prismcraft.dye_mixer": "Dye Mixer"
 }
