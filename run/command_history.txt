@@ -1,0 +1,1 @@
+/give Dev prismcraft:prism_planks

@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="prismcraft"
+version="1.0.0"
+displayName="PrismCraft"
+authors="starmarine06"
+description='''
+Adds customizable white wood and concrete blocks that can be dyed using a dye mixer.
+'''
+
+[[dependencies.prismcraft]]
+modId="neoforge"
+type="required"
+versionRange="[21.4,22)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.prismcraft]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.4,1.22)"
+ordering="NONE"
+side="BOTH"

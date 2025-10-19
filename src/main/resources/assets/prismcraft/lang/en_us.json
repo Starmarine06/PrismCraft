@@ -1,0 +1,19 @@
+{
+  "item.prismcraft.prism_wood": "Prism Wood",
+  "item.prismcraft.prism_planks": "Prism Planks",
+  "item.prismcraft.prism_stairs": "Prism Stairs",
+  "item.prismcraft.prism_slab": "Prism Slab",
+  "item.prismcraft.prism_fence": "Prism Fence",
+  "item.prismcraft.prism_fence_gate": "Prism Fence Gate",
+  "item.prismcraft.prism_concrete": "Prism Concrete",
+  "item.prismcraft.prism_button": "Prism Button",
+  "item.prismcraft.prism_pressure_plate": "Prism Pressure Plate",
+  "item.prismcraft.prism_door": "Prism Door",
+  "item.prismcraft.prism_trapdoor_door": "Prism Trapdoor Door",
+  "item.prismcraft.dye_mixer": "Dye Mixer",
+  "block.prismcraft.dye_mixer": "Dye Mixer",
+
+  "itemGroup.prismcraft": "PrismCraft",
+
+  "itemGroup.prismcraft.prismcraft_tab": "PrismCraft"
+}
