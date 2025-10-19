@@ -1,1 +1,4 @@
 /give Dev prismcraft:prism_planks
+/time set day
+/gamerule doDaylightCycle false
+/gamerule doWeatherCycle false

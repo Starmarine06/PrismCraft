@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/door_bottom_left_open",
   "textures": {
-    "bottom": "prismcraft:block/prism_door_bottom",
-    "top": "prismcraft:block/prism_door_top"
+    "bottom": "prismcraft:block/prism_door",
+    "top": "prismcraft:block/prism_door"
   },
   "elements": [
     {
@@ -10,7 +10,9 @@
       "to": [16, 16, 3],
       "faces": {
         "north": {"uv": [0, 0, 16, 16], "texture": "#bottom", "tintindex": 0},
-        "south": {"uv": [0, 0, 16, 16], "texture": "#bottom", "tintindex": 0}
+        "south": {"uv": [0, 0, 16, 16], "texture": "#bottom", "tintindex": 0},
+        "east": {"uv": [0, 0, 3, 16], "texture": "#bottom", "tintindex": 0},
+        "west": {"uv": [0, 0, 3, 16], "texture": "#bottom", "tintindex": 0}
       }
     }
   ]
