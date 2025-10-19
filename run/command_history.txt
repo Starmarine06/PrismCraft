@@ -1,1 +1,12 @@
 /give Dev prismcraft:prism_planks
+/time set day
+/gamerule doDaylightCycle false
+/gamerule doWeatherCycle false
+/give Dev prismcraft:prismcraft_icon
+/data get block 3 -60 15
+/data get entity @e[type=item,sort=nearest,limit=1]
+/data get block 6 -60 20
+/setblock 6 -60 20 oak_fence[east=true]
+/setblock 5 -60 20 prismcraft:prism_fence[east=true
+/setblock 5 -60 20 prismcraft:prism_fence[east=true]
+/data get block 5 -60 21

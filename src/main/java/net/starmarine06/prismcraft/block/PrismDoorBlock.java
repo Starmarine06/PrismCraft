@@ -44,6 +44,8 @@ public class PrismDoorBlock extends DoorBlock implements EntityBlock {
 
         if (!level.isClientSide) {
             BlockEntity be = level.getBlockEntity(pos);
+            BlockPos upperPos = pos.above();
+            BlockEntity upperBe = level.getBlockEntity(upperPos);
             if (be instanceof PrismColoredBlockEntity tile) {
                 int color = getColor(stack);
                 tile.setColor(color);
@@ -51,6 +53,14 @@ public class PrismDoorBlock extends DoorBlock implements EntityBlock {
                 level.sendBlockUpdated(pos, currentState, currentState, 3);
                 level.blockEntityChanged(pos);
             }
+            if (upperBe instanceof PrismColoredBlockEntity upperTile) {
+                int color = getColor(stack);
+                upperTile.setColor(color);
+                BlockState upperState = level.getBlockState(upperPos);
+                level.sendBlockUpdated(upperPos, upperState, upperState, 3);
+                level.blockEntityChanged(upperPos);
+            }
+
         }
     }
 

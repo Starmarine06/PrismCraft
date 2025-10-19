@@ -1,17 +1,22 @@
 {
-  "parent": "minecraft:block/door_bottom_left_open",
-  "textures": {
-    "bottom": "prismcraft:block/prism_door_bottom",
-    "top": "prismcraft:block/prism_door_top"
-  },
-  "elements": [
-    {
-      "from": [0, 0, 0],
-      "to": [16, 16, 3],
-      "faces": {
-        "north": {"uv": [0, 0, 16, 16], "texture": "#bottom", "tintindex": 0},
-        "south": {"uv": [0, 0, 16, 16], "texture": "#bottom", "tintindex": 0}
-      }
-    }
-  ]
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "block/pale_oak_door_bottom",
+		"bottom": "block/pale_oak_door_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [3, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 3, 16], "texture": "#bottom", "cullface": "north", "tintindex": 0},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#bottom", "tintindex": 0},
+				"south": {"uv": [0, 0, 3, 16], "texture": "#bottom", "cullface": "south", "tintindex": 0},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#bottom", "cullface": "west", "tintindex": 0},
+				"down": {"uv": [0, 16, 16, 13], "rotation": 90, "texture": "#bottom", "cullface": "down", "tintindex": 0}
+			}
+		}
+	]
 }

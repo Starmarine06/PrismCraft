@@ -41,7 +41,7 @@ showSubtitles:true
 directionalAudio:false
 touchscreen:false
 bobView:true
-toggleCrouch:false
+toggleCrouch:true
 toggleSprint:false
 darkMojangStudiosBackground:false
 hideLightningFlashes:false

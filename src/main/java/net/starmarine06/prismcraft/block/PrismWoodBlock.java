@@ -12,27 +12,26 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
 import net.starmarine06.prismcraft.client.ModColorHandlers;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismWoodBlock extends BaseEntityBlock {
+public class PrismWoodBlock extends RotatedPillarBlock implements EntityBlock {
     public static final MapCodec<PrismWoodBlock> CODEC = simpleCodec(PrismWoodBlock::new);
 
     public PrismWoodBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
-    }
-
+    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PrismColoredBlockEntity(pos, state);
@@ -65,8 +64,6 @@ public class PrismWoodBlock extends BaseEntityBlock {
             }
         }
     }
-
-
 
     public static void setColor(ItemStack stack, int color) {
         stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));

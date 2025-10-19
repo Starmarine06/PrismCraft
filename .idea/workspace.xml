@@ -4,7 +4,121 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Initial Commit" />
+    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            e">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/prismcraft.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/prismcraft.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-10.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-10.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-6.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-7.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-7.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-8.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-8.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2025-10-19-9.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2025-10-19-9.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/DIM-1/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDoorBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDoorBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/DyeMixerBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/DyeMixerBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModCreativeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModCreativeTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/neoforge.mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/neoforge.mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/dye_mixer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/dye_mixer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_button.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_concrete.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_concrete.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_fence.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_fence.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_fence_gate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_hanging_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_planks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_pressure_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_wall_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_wall_hanging_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_wall_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_wall_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_button.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_concrete.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_concrete.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_fence.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_fence.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_fence_gate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_planks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_pressure_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/dye_mixer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/dye_mixer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_button.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_button_inventory.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_button_inventory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_button_pressed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_button_pressed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_concrete.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_concrete.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_left_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_left_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_right_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_bottom_right_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_left_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_left_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_right_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_door_top_right_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate_wall.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate_wall.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate_wall_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_gate_wall_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_inventory.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_inventory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_post.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_post.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_side.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_fence_side.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_hanging_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_log_horizontal.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_log_horizontal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_planks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_pressure_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_pressure_plate_down.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_pressure_plate_down.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_slab_top.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_slab_top.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_stairs_inner.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_stairs_inner.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_stairs_outer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_stairs_outer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_trapdoor_bottom.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_trapdoor_bottom.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_trapdoor_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_trapdoor_open.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_trapdoor_top.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_trapdoor_top.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_hanging_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prism_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prismcraft_icon.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/item/prismcraft_icon.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +177,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -75,19 +189,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.prismcraft [:net.neoforged.devlaunch.Main.main()].executor": "Run",
-    "Gradle.prismcraft.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/flame/Documents/prismcraft/src/main/resources/assets/prismcraft/textures/block",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.prismcraft [:net.neoforged.devlaunch.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.prismcraft.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/flame/Documents/prismcraft/src/main/resources/assets/prismcraft/textures/block&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\block" />
@@ -105,35 +221,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Client">
-    <configuration name="Client" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
-      <module name="prismcraft.main" />
-      <option name="PROGRAM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\clientRunProgramArgs.txt" />
-      <option name="VM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\clientRunVmArgs.txt -Dfml.modFolders=prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\classes\\java\\main;prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\resources\\main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Server" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
-      <module name="prismcraft.main" />
-      <option name="PROGRAM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\serverRunProgramArgs.txt" />
-      <option name="VM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\serverRunVmArgs.txt -Dfml.modFolders=prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\classes\\java\\main;prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\resources\\main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,6 +254,35 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="prismcraft.main" />
+      <option name="PROGRAM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\clientRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\clientRunVmArgs.txt -Dfml.modFolders=prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\classes\\java\\main;prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\resources\\main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="prismcraft.main" />
+      <option name="PROGRAM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\serverRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@C:\\Users\\flame\\Documents\\prismcraft\\build\\moddev\\serverRunVmArgs.txt -Dfml.modFolders=prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\classes\\java\\main;prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\resources\\main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -192,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760851252989</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1760859280104</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760859280104</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

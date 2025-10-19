@@ -2,6 +2,7 @@ package net.starmarine06.prismcraft.block;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -10,9 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -74,4 +73,13 @@ public class PrismFenceBlock extends FenceBlock implements EntityBlock {
                     .withStyle(ChatFormatting.GOLD));
         }
     }
+
+    @Override
+    public boolean connectsTo(BlockState state, boolean isSideSolid, Direction direction) {
+        Block block = state.getBlock();
+        boolean isFence = block instanceof FenceBlock;
+        boolean isGate= block instanceof FenceGateBlock;
+        return isFence || isGate || super.connectsTo(state, isSideSolid, direction);
+    }
+
 }
