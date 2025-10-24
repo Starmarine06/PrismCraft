@@ -10,3 +10,6 @@
 /setblock 5 -60 20 prismcraft:prism_fence[east=true
 /setblock 5 -60 20 prismcraft:prism_fence[east=true]
 /data get block 5 -60 21
+/setblock -3 -60 12 minecraft:oak_stairs
+/setblock 0 -60 16 prismcraft:prism_candle
+/setblock -1 -60 16 prismcraft:prism_barrel

@@ -117,6 +117,12 @@ public class ModCreativeTabs {
 
                         // Dye Mixer
                         output.accept(ModBlocks.DYE_MIXER.get().asItem());
+                        output.accept(ModBlocks.PRISM_BARREL.get().asItem());
+                        output.accept(ModBlocks.PRISM_SAND.get().asItem());
+                        output.accept(ModBlocks.PRISM_CONCRETE_POWDERED.get().asItem());
+                        output.accept(ModBlocks.PRISM_CANDLE.get().asItem());
+                        output.accept(ModBlocks.PRISM_CARPET.get().asItem());
+                        //output.accept(ModBlocks.PRISM_TERRACOTTA.get().asItem());
                     })
                     .build());
 }

@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -49,11 +50,7 @@ public class ModBlocks {
     public static final DeferredBlock<PrismPressurePlateBlock> PRISM_PRESSURE_PLATE = BLOCKS.register(
             "prism_pressure_plate",
             registryName -> new PrismPressurePlateBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<PrismConcreteBlock> PRISM_CONCRETE = BLOCKS.register(
-            "prism_concrete",
-            registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE).strength(1.8F)
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
 
     // Wood types (variants) - Oak
     public static final DeferredBlock<PrismWoodBlock> PRISM_OAK_LOG = BLOCKS.register(
@@ -302,4 +299,44 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE).strength(3.5F)
                     .noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
+    //Other Blocks
+    public static final DeferredBlock<PrismConcreteBlock> PRISM_CONCRETE = BLOCKS.register(
+            "prism_concrete",
+            registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).strength(1.8F)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismCandleBlock> PRISM_CANDLE = BLOCKS.register(
+            "prism_candle",
+            registryName -> new PrismCandleBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIAMOND).strength(0.1F)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismCarpetBlock> PRISM_CARPET = BLOCKS.register(
+            "prism_carpet",
+            registryName -> new PrismCarpetBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIAMOND).strength(0.1F)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismLadderBlock> PRISM_LADDER = BLOCKS.register(
+            "prism_ladder",
+            registryName -> new PrismLadderBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).strength(1.8F)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismSand> PRISM_SAND = BLOCKS.register(
+            "prism_sand",
+            registryName -> new PrismSand(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.SAND)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismSand> PRISM_CONCRETE_POWDERED = BLOCKS.register(
+            "prism_concrete_powdered",
+            registryName -> new PrismSand(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.SAND)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismBarrelBlock> PRISM_BARREL = BLOCKS.register(
+            "prism_barrel",
+            registryName -> new PrismBarrelBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .strength(2.5F)
+                    .sound(SoundType.WOOD)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
 }

@@ -75,8 +75,6 @@ public class ModItems {
         registerColoredBlockItem("prism_stairs", ModBlocks.PRISM_STAIRS);
         registerColoredBlockItem("prism_fence", ModBlocks.PRISM_FENCE);
         registerColoredBlockItem("prism_fence_gate", ModBlocks.PRISM_FENCE_GATE);
-        registerColoredBlockItem("prism_concrete", ModBlocks.PRISM_CONCRETE);
-
         registerColoredBlockItem("prism_door", ModBlocks.PRISM_DOOR);
         registerColoredBlockItem("prism_trapdoor", ModBlocks.PRISM_TRAPDOOR);
         registerColoredBlockItem("prism_button", ModBlocks.PRISM_BUTTON);
@@ -168,6 +166,14 @@ public class ModItems {
 
         // Dye Mixer
         registerBlockItem("dye_mixer", ModBlocks.DYE_MIXER);
+        //Other Items
+        registerColoredBlockItem("prism_concrete", ModBlocks.PRISM_CONCRETE);
+        registerColoredBlockItem("prism_concrete_powdered", ModBlocks.PRISM_CONCRETE_POWDERED);
+        registerColoredBlockItem("prism_sand", ModBlocks.PRISM_SAND);
+        registerColoredBlockItem("prism_candle", ModBlocks.PRISM_CANDLE);
+        registerColoredBlockItem("prism_carpet", ModBlocks.PRISM_CARPET);
+        registerColoredBlockItem("prism_ladder", ModBlocks.PRISM_LADDER);
+        registerColoredBlockItem("prism_barrel", ModBlocks.PRISM_BARREL);
     }
 
     public static final DeferredItem<Item> PRISMCRAFT_ICON = ITEMS.registerSimpleItem(

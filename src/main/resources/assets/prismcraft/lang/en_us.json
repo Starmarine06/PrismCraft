@@ -90,6 +90,8 @@
 
   "item.prismcraft.dye_mixer": "Dye Mixer",
   "block.prismcraft.dye_mixer": "Dye Mixer",
+  "item.prismcraft.prism_barrel": "Prism Barrel",
+  "container.prismcraft.prism_barrel": "Prism Barrel",
 
   "itemGroup.prismcraft": "PrismCraft",
   "itemGroup.prismcraft.prismcraft_tab": "PrismCraft"
