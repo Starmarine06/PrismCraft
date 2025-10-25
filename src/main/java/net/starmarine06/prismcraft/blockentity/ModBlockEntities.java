@@ -33,6 +33,7 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("prism_colored", () ->
                     new BlockEntityType<>(PrismColoredBlockEntity::new,
                             ModBlocks.PRISM_LOG.get(),
+                            ModBlocks.PRISM_STRIPPED_LOG.get(),
                             ModBlocks.PRISM_PLANKS.get(),
                             ModBlocks.PRISM_SLAB.get(),
                             ModBlocks.PRISM_STAIRS.get(),
@@ -47,5 +48,11 @@ public class ModBlockEntities {
                             ModBlocks.PRISM_CANDLE.get(),
                             ModBlocks.PRISM_CARPET.get(),
                             ModBlocks.PRISM_CONCRETE_POWDERED.get(),
-                            ModBlocks.PRISM_LADDER.get()));
+                            ModBlocks.PRISM_LADDER.get(),
+                            ModBlocks.PRISM_SLIME_BLOCK.get(),
+                            ModBlocks.PRISM_STONE.get(),
+                            ModBlocks.PRISM_ANDESITE.get(),
+                            ModBlocks.PRISM_WOOL.get(),
+                            ModBlocks.PRISM_TERRACOTTA.get()
+                            ));
 }

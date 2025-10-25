@@ -69,7 +69,7 @@ public class PrismBarrelBlockEntity extends BlockEntity implements Container, Me
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.custom_barrel");
+        return Component.translatable("container.prismcraft.prism_barrel");
     }
 
     @Nullable

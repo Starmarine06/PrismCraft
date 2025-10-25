@@ -30,9 +30,10 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_TRAPDOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_CONCRETE.get().asItem());
+                        output.accept(ModBlocks.PRISM_STRIPPED_LOG.get().asItem());
 
                         // Oak
-                        output.accept(ModBlocks.PRISM_OAK_LOG.get().asItem());
+                        /*output.accept(ModBlocks.PRISM_OAK_LOG.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_PLANKS.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_SLAB.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_STAIRS.get().asItem());
@@ -113,7 +114,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_CHERRY_BUTTON.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_CHERRY_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_CHERRY_TRAPDOOR.get().asItem());*/
 
                         // Dye Mixer
                         output.accept(ModBlocks.DYE_MIXER.get().asItem());
@@ -122,7 +123,12 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_CONCRETE_POWDERED.get().asItem());
                         output.accept(ModBlocks.PRISM_CANDLE.get().asItem());
                         output.accept(ModBlocks.PRISM_CARPET.get().asItem());
-                        //output.accept(ModBlocks.PRISM_TERRACOTTA.get().asItem());
+                        output.accept(ModBlocks.PRISM_TERRACOTTA.get().asItem());
+                        output.accept(ModBlocks.PRISM_SLIME_BLOCK.get().asItem());
+                        output.accept(ModBlocks.PRISM_STONE.get().asItem());
+                        output.accept(ModBlocks.PRISM_ANDESITE.get().asItem());
+                        output.accept(ModBlocks.PRISM_WOOL.get().asItem());
+
                     })
                     .build());
 }

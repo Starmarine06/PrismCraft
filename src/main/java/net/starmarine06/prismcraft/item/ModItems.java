@@ -70,6 +70,7 @@ public class ModItems {
     static {
         // Pale Oak
         registerColoredBlockItem("prism_log", ModBlocks.PRISM_LOG);
+        registerColoredBlockItem("prism_stripped_log", ModBlocks.PRISM_STRIPPED_LOG);
         registerColoredBlockItem("prism_planks", ModBlocks.PRISM_PLANKS);
         registerColoredBlockItem("prism_slab", ModBlocks.PRISM_SLAB);
         registerColoredBlockItem("prism_stairs", ModBlocks.PRISM_STAIRS);
@@ -81,7 +82,7 @@ public class ModItems {
         registerColoredBlockItem("prism_pressure_plate", ModBlocks.PRISM_PRESSURE_PLATE);
 
         // Oak
-        registerColoredBlockItem("prism_oak_log", ModBlocks.PRISM_OAK_LOG);
+        /*registerColoredBlockItem("prism_oak_log", ModBlocks.PRISM_OAK_LOG);
         registerColoredBlockItem("prism_oak_planks", ModBlocks.PRISM_OAK_PLANKS);
         registerColoredBlockItem("prism_oak_slab", ModBlocks.PRISM_OAK_SLAB);
         registerColoredBlockItem("prism_oak_stairs", ModBlocks.PRISM_OAK_STAIRS);
@@ -162,7 +163,7 @@ public class ModItems {
         registerColoredBlockItem("prism_cherry_door", ModBlocks.PRISM_CHERRY_DOOR);
         registerColoredBlockItem("prism_cherry_trapdoor", ModBlocks.PRISM_CHERRY_TRAPDOOR);
         registerColoredBlockItem("prism_cherry_button", ModBlocks.PRISM_CHERRY_BUTTON);
-        registerColoredBlockItem("prism_cherry_pressure_plate", ModBlocks.PRISM_CHERRY_PRESSURE_PLATE);
+        registerColoredBlockItem("prism_cherry_pressure_plate", ModBlocks.PRISM_CHERRY_PRESSURE_PLATE);*/
 
         // Dye Mixer
         registerBlockItem("dye_mixer", ModBlocks.DYE_MIXER);
@@ -174,6 +175,11 @@ public class ModItems {
         registerColoredBlockItem("prism_carpet", ModBlocks.PRISM_CARPET);
         registerColoredBlockItem("prism_ladder", ModBlocks.PRISM_LADDER);
         registerColoredBlockItem("prism_barrel", ModBlocks.PRISM_BARREL);
+        registerColoredBlockItem("prism_slime_block", ModBlocks.PRISM_SLIME_BLOCK);
+        registerColoredBlockItem("prism_stone", ModBlocks.PRISM_STONE);
+        registerColoredBlockItem("prism_andesite", ModBlocks.PRISM_ANDESITE);
+        registerColoredBlockItem("prism_wool", ModBlocks.PRISM_WOOL);
+        registerColoredBlockItem("prism_terracotta", ModBlocks.PRISM_TERRACOTTA);
     }
 
     public static final DeferredItem<Item> PRISMCRAFT_ICON = ITEMS.registerSimpleItem(

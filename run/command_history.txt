@@ -13,3 +13,9 @@
 /setblock -3 -60 12 minecraft:oak_stairs
 /setblock 0 -60 16 prismcraft:prism_candle
 /setblock -1 -60 16 prismcraft:prism_barrel
+/give Dev prismcraft:prismcraft_icon
+/setblock -8 -61 24 prismcraft:prism_concrete
+/data get block -6 -60 12
+/setblock -8 -61 24 prismcraft:prism_concrete{Color:9678488}
+/give Dev minecraft:wooden_pickaxe
+/setblock 4 -59 14 sand

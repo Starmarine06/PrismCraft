@@ -92,6 +92,17 @@
   "block.prismcraft.dye_mixer": "Dye Mixer",
   "item.prismcraft.prism_barrel": "Prism Barrel",
   "container.prismcraft.prism_barrel": "Prism Barrel",
+  "item.prismcraft.prism_ladder": "Prism Ladder",
+  "item.prismcraft.prism_sand": "Prism Sand",
+  "item.prismcraft.prism_slime_block": "Prism Slime Block",
+  "item.prismcraft.prism_stone": "Prism Stone",
+  "item.prismcraft.prism_stripped_log": "Prism Stripped Log",
+  "item.prismcraft.prism_andesite": "Prism Andesite",
+  "item.prismcraft.prism_wool": "Prism Wool",
+  "item.prismcraft.prism_concrete_powdered": "Prism Concrete Powder",
+  "item.prismcraft.prism_candle": "Prism Candle",
+  "item.prismcraft.prism_carpet": "Prism Carpet",
+  "item.prismcraft.prism_terracotta": "Prism Terracotta",
 
   "itemGroup.prismcraft": "PrismCraft",
   "itemGroup.prismcraft.prismcraft_tab": "PrismCraft"
