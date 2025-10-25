@@ -40,9 +40,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_OAK_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_OAK_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_OAK_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_OAK_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_OAK_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_OAK_TRAPDOOR.get().asItem());/*
 
                         // Birch
                         output.accept(ModBlocks.PRISM_BIRCH_LOG.get().asItem());
@@ -52,9 +52,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_BIRCH_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_BIRCH_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_BIRCH_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_BIRCH_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_BIRCH_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_BIRCH_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_BIRCH_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_BIRCH_TRAPDOOR.get().asItem());/*
 
                         // Acacia
                         output.accept(ModBlocks.PRISM_ACACIA_LOG.get().asItem());
@@ -64,9 +64,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_ACACIA_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_ACACIA_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_ACACIA_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_ACACIA_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_ACACIA_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_ACACIA_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_ACACIA_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_ACACIA_TRAPDOOR.get().asItem());/*
 
                         // Dark Oak
                         output.accept(ModBlocks.PRISM_DARK_OAK_LOG.get().asItem());
@@ -76,9 +76,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_DARK_OAK_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_DARK_OAK_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_DARK_OAK_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_DARK_OAK_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_DARK_OAK_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_DARK_OAK_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_DARK_OAK_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_DARK_OAK_TRAPDOOR.get().asItem());/*
 
                         // Jungle
                         output.accept(ModBlocks.PRISM_JUNGLE_LOG.get().asItem());
@@ -88,9 +88,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_JUNGLE_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_JUNGLE_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_JUNGLE_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_JUNGLE_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_JUNGLE_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_JUNGLE_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_JUNGLE_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_JUNGLE_TRAPDOOR.get().asItem());/*
 
                         // Mangrove
                         output.accept(ModBlocks.PRISM_MANGROVE_LOG.get().asItem());
@@ -100,9 +100,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_MANGROVE_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_MANGROVE_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_MANGROVE_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_MANGROVE_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_MANGROVE_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_MANGROVE_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_MANGROVE_TRAPDOOR.get().asItem());
+                        output.accept(ModBlocks.PRISM_MANGROVE_TRAPDOOR.get().asItem());/*
 
                         // Cherry
                         output.accept(ModBlocks.PRISM_CHERRY_LOG.get().asItem());
@@ -112,9 +112,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_CHERRY_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_CHERRY_PRESSURE_PLATE.get().asItem());
+                        output.accept(ModBlocks.PRISM_CHERRY_PRESSURE_PLATE.get().asItem());*/
                         output.accept(ModBlocks.PRISM_CHERRY_DOOR.get().asItem());
-                        output.accept(ModBlocks.PRISM_CHERRY_TRAPDOOR.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_CHERRY_TRAPDOOR.get().asItem());
 
                         // Dye Mixer
                         output.accept(ModBlocks.DYE_MIXER.get().asItem());

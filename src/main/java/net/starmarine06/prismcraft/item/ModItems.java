@@ -87,10 +87,10 @@ public class ModItems {
         registerColoredBlockItem("prism_oak_slab", ModBlocks.PRISM_OAK_SLAB);
         registerColoredBlockItem("prism_oak_stairs", ModBlocks.PRISM_OAK_STAIRS);
         registerColoredBlockItem("prism_oak_fence", ModBlocks.PRISM_OAK_FENCE);
-        registerColoredBlockItem("prism_oak_fence_gate", ModBlocks.PRISM_OAK_FENCE_GATE);
+        registerColoredBlockItem("prism_oak_fence_gate", ModBlocks.PRISM_OAK_FENCE_GATE);*/
         registerColoredBlockItem("prism_oak_door", ModBlocks.PRISM_OAK_DOOR);
         registerColoredBlockItem("prism_oak_trapdoor", ModBlocks.PRISM_OAK_TRAPDOOR);
-        registerColoredBlockItem("prism_oak_button", ModBlocks.PRISM_OAK_BUTTON);
+        /*registerColoredBlockItem("prism_oak_button", ModBlocks.PRISM_OAK_BUTTON);
         registerColoredBlockItem("prism_oak_pressure_plate", ModBlocks.PRISM_OAK_PRESSURE_PLATE);
 
         // Birch
@@ -99,9 +99,9 @@ public class ModItems {
         registerColoredBlockItem("prism_birch_slab", ModBlocks.PRISM_BIRCH_SLAB);
         registerColoredBlockItem("prism_birch_stairs", ModBlocks.PRISM_BIRCH_STAIRS);
         registerColoredBlockItem("prism_birch_fence", ModBlocks.PRISM_BIRCH_FENCE);
-        registerColoredBlockItem("prism_birch_fence_gate", ModBlocks.PRISM_BIRCH_FENCE_GATE);
+        registerColoredBlockItem("prism_birch_fence_gate", ModBlocks.PRISM_BIRCH_FENCE_GATE);*/
         registerColoredBlockItem("prism_birch_door", ModBlocks.PRISM_BIRCH_DOOR);
-        registerColoredBlockItem("prism_birch_trapdoor", ModBlocks.PRISM_BIRCH_TRAPDOOR);
+        registerColoredBlockItem("prism_birch_trapdoor", ModBlocks.PRISM_BIRCH_TRAPDOOR);/*
         registerColoredBlockItem("prism_birch_button", ModBlocks.PRISM_BIRCH_BUTTON);
         registerColoredBlockItem("prism_birch_pressure_plate", ModBlocks.PRISM_BIRCH_PRESSURE_PLATE);
 
@@ -111,9 +111,9 @@ public class ModItems {
         registerColoredBlockItem("prism_acacia_slab", ModBlocks.PRISM_ACACIA_SLAB);
         registerColoredBlockItem("prism_acacia_stairs", ModBlocks.PRISM_ACACIA_STAIRS);
         registerColoredBlockItem("prism_acacia_fence", ModBlocks.PRISM_ACACIA_FENCE);
-        registerColoredBlockItem("prism_acacia_fence_gate", ModBlocks.PRISM_ACACIA_FENCE_GATE);
+        registerColoredBlockItem("prism_acacia_fence_gate", ModBlocks.PRISM_ACACIA_FENCE_GATE);*/
         registerColoredBlockItem("prism_acacia_door", ModBlocks.PRISM_ACACIA_DOOR);
-        registerColoredBlockItem("prism_acacia_trapdoor", ModBlocks.PRISM_ACACIA_TRAPDOOR);
+        registerColoredBlockItem("prism_acacia_trapdoor", ModBlocks.PRISM_ACACIA_TRAPDOOR);/*
         registerColoredBlockItem("prism_acacia_button", ModBlocks.PRISM_ACACIA_BUTTON);
         registerColoredBlockItem("prism_acacia_pressure_plate", ModBlocks.PRISM_ACACIA_PRESSURE_PLATE);
 
@@ -123,9 +123,9 @@ public class ModItems {
         registerColoredBlockItem("prism_dark_oak_slab", ModBlocks.PRISM_DARK_OAK_SLAB);
         registerColoredBlockItem("prism_dark_oak_stairs", ModBlocks.PRISM_DARK_OAK_STAIRS);
         registerColoredBlockItem("prism_dark_oak_fence", ModBlocks.PRISM_DARK_OAK_FENCE);
-        registerColoredBlockItem("prism_dark_oak_fence_gate", ModBlocks.PRISM_DARK_OAK_FENCE_GATE);
+        registerColoredBlockItem("prism_dark_oak_fence_gate", ModBlocks.PRISM_DARK_OAK_FENCE_GATE);*/
         registerColoredBlockItem("prism_dark_oak_door", ModBlocks.PRISM_DARK_OAK_DOOR);
-        registerColoredBlockItem("prism_dark_oak_trapdoor", ModBlocks.PRISM_DARK_OAK_TRAPDOOR);
+        registerColoredBlockItem("prism_dark_oak_trapdoor", ModBlocks.PRISM_DARK_OAK_TRAPDOOR);/*
         registerColoredBlockItem("prism_dark_oak_button", ModBlocks.PRISM_DARK_OAK_BUTTON);
         registerColoredBlockItem("prism_dark_oak_pressure_plate", ModBlocks.PRISM_DARK_OAK_PRESSURE_PLATE);
 
@@ -135,9 +135,9 @@ public class ModItems {
         registerColoredBlockItem("prism_jungle_slab", ModBlocks.PRISM_JUNGLE_SLAB);
         registerColoredBlockItem("prism_jungle_stairs", ModBlocks.PRISM_JUNGLE_STAIRS);
         registerColoredBlockItem("prism_jungle_fence", ModBlocks.PRISM_JUNGLE_FENCE);
-        registerColoredBlockItem("prism_jungle_fence_gate", ModBlocks.PRISM_JUNGLE_FENCE_GATE);
+        registerColoredBlockItem("prism_jungle_fence_gate", ModBlocks.PRISM_JUNGLE_FENCE_GATE);*/
         registerColoredBlockItem("prism_jungle_door", ModBlocks.PRISM_JUNGLE_DOOR);
-        registerColoredBlockItem("prism_jungle_trapdoor", ModBlocks.PRISM_JUNGLE_TRAPDOOR);
+        registerColoredBlockItem("prism_jungle_trapdoor", ModBlocks.PRISM_JUNGLE_TRAPDOOR);/*
         registerColoredBlockItem("prism_jungle_button", ModBlocks.PRISM_JUNGLE_BUTTON);
         registerColoredBlockItem("prism_jungle_pressure_plate", ModBlocks.PRISM_JUNGLE_PRESSURE_PLATE);
 
@@ -147,9 +147,9 @@ public class ModItems {
         registerColoredBlockItem("prism_mangrove_slab", ModBlocks.PRISM_MANGROVE_SLAB);
         registerColoredBlockItem("prism_mangrove_stairs", ModBlocks.PRISM_MANGROVE_STAIRS);
         registerColoredBlockItem("prism_mangrove_fence", ModBlocks.PRISM_MANGROVE_FENCE);
-        registerColoredBlockItem("prism_mangrove_fence_gate", ModBlocks.PRISM_MANGROVE_FENCE_GATE);
+        registerColoredBlockItem("prism_mangrove_fence_gate", ModBlocks.PRISM_MANGROVE_FENCE_GATE);*/
         registerColoredBlockItem("prism_mangrove_door", ModBlocks.PRISM_MANGROVE_DOOR);
-        registerColoredBlockItem("prism_mangrove_trapdoor", ModBlocks.PRISM_MANGROVE_TRAPDOOR);
+        registerColoredBlockItem("prism_mangrove_trapdoor", ModBlocks.PRISM_MANGROVE_TRAPDOOR);/*
         registerColoredBlockItem("prism_mangrove_button", ModBlocks.PRISM_MANGROVE_BUTTON);
         registerColoredBlockItem("prism_mangrove_pressure_plate", ModBlocks.PRISM_MANGROVE_PRESSURE_PLATE);
 
@@ -159,9 +159,9 @@ public class ModItems {
         registerColoredBlockItem("prism_cherry_slab", ModBlocks.PRISM_CHERRY_SLAB);
         registerColoredBlockItem("prism_cherry_stairs", ModBlocks.PRISM_CHERRY_STAIRS);
         registerColoredBlockItem("prism_cherry_fence", ModBlocks.PRISM_CHERRY_FENCE);
-        registerColoredBlockItem("prism_cherry_fence_gate", ModBlocks.PRISM_CHERRY_FENCE_GATE);
+        registerColoredBlockItem("prism_cherry_fence_gate", ModBlocks.PRISM_CHERRY_FENCE_GATE);*/
         registerColoredBlockItem("prism_cherry_door", ModBlocks.PRISM_CHERRY_DOOR);
-        registerColoredBlockItem("prism_cherry_trapdoor", ModBlocks.PRISM_CHERRY_TRAPDOOR);
+        registerColoredBlockItem("prism_cherry_trapdoor", ModBlocks.PRISM_CHERRY_TRAPDOOR);/*
         registerColoredBlockItem("prism_cherry_button", ModBlocks.PRISM_CHERRY_BUTTON);
         registerColoredBlockItem("prism_cherry_pressure_plate", ModBlocks.PRISM_CHERRY_PRESSURE_PLATE);*/
 
