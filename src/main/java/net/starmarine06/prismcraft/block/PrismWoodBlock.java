@@ -20,11 +20,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
 import net.starmarine06.prismcraft.client.ModColorHandlers;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismWoodBlock extends RotatedPillarBlock implements EntityBlock {
+public class PrismWoodBlock extends RotatedPillarBlock implements EntityBlock, IPrismColoredBlock {
     public static final MapCodec<PrismWoodBlock> CODEC = simpleCodec(PrismWoodBlock::new);
 
     public PrismWoodBlock(BlockBehaviour.Properties properties) {

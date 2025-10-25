@@ -16,11 +16,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismFenceBlock extends FenceBlock implements EntityBlock {
+public class PrismFenceBlock extends FenceBlock implements EntityBlock, IPrismColoredBlock {
     public PrismFenceBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }

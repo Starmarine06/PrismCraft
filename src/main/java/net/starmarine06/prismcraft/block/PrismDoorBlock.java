@@ -18,11 +18,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismDoorBlock extends DoorBlock implements EntityBlock {
+public class PrismDoorBlock extends DoorBlock implements EntityBlock, IPrismColoredBlock {
     public PrismDoorBlock(BlockBehaviour.Properties properties) {
         super(BlockSetType.OAK, properties);
     }

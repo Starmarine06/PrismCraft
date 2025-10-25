@@ -18,11 +18,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismPressurePlateBlock extends PressurePlateBlock implements EntityBlock {
+public class PrismPressurePlateBlock extends PressurePlateBlock implements EntityBlock, IPrismColoredBlock {
     public PrismPressurePlateBlock(BlockBehaviour.Properties properties) {
         super(BlockSetType.OAK, properties);
     }

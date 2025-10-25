@@ -1,70 +1,52 @@
 package net.starmarine06.prismcraft.blockentity;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.NonNullList;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
-import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ChestMenu;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import net.starmarine06.prismcraft.menu.PrismBarrelMenu;
 import org.jetbrains.annotations.Nullable;
 
-public class PrismBarrelBlockEntity extends BlockEntity implements Container, MenuProvider {
-
-    private final NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);
+public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider {
+    private int color = 0xFFFFFF;
+    private final ItemStackHandler itemHandler = new ItemStackHandler(27) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            setChanged();
+        }
+    };
 
     public PrismBarrelBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.PRISM_BARREL.get(), pos, state);
     }
 
-    @Override
-    public int getContainerSize() {
-        return 27;
+    public int getColor() {
+        return color;
     }
 
-    @Override
-    public boolean isEmpty() {
-        return items.stream().allMatch(ItemStack::isEmpty);
-    }
-
-    @Override
-    public ItemStack getItem(int slot) {
-        return items.get(slot);
-    }
-
-    @Override
-    public ItemStack removeItem(int slot, int amount) {
-        return ContainerHelper.removeItem(items, slot, amount);
-    }
-
-    @Override
-    public ItemStack removeItemNoUpdate(int slot) {
-        return ContainerHelper.takeItem(items, slot);
-    }
-
-    @Override
-    public void setItem(int slot, ItemStack stack) {
-        items.set(slot, stack);
-        if (stack.getCount() > getMaxStackSize()) {
-            stack.setCount(getMaxStackSize());
-        }
+    public void setColor(int color) {
+        this.color = color;
         setChanged();
+        if (level != null && !level.isClientSide()) {
+            BlockState state = getBlockState();
+            level.sendBlockUpdated(getBlockPos(), state, state, 3);
+        }
     }
 
-    @Override
-    public boolean stillValid(Player player) {
-        return Container.stillValidBlockEntity(this, player);
-    }
-
-    @Override
-    public void clearContent() {
-        items.clear();
+    // THIS IS THE METHOD THAT WAS MISSING
+    public ItemStackHandler getItemHandler() {
+        return itemHandler;
     }
 
     @Override
@@ -74,8 +56,47 @@ public class PrismBarrelBlockEntity extends BlockEntity implements Container, Me
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return ChestMenu.threeRows(id, inventory, this);
+    public AbstractContainerMenu createMenu(int containerId, Inventory playerInventory, Player player) {
+        return new PrismBarrelMenu(containerId, playerInventory, this);
+    }
+
+    @Override
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
+        tag.putInt("Color", color);
+        tag.put("inventory", itemHandler.serializeNBT(registries));
+    }
+
+    @Override
+    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
+        color = tag.getInt("Color");
+        itemHandler.deserializeNBT(registries, tag.getCompound("inventory"));
+    }
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = super.getUpdateTag(registries);
+        tag.putInt("Color", color);
+        return tag;
+    }
+
+    @Override
+    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
+        super.handleUpdateTag(tag, registries);
+        loadAdditional(tag, registries);
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    public void drops() {
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            Containers.dropItemStack(level, worldPosition.getX(), worldPosition.getY(),
+                    worldPosition.getZ(), itemHandler.getStackInSlot(i));
+        }
     }
 }
-

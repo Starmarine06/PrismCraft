@@ -16,12 +16,15 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.starmarine06.prismcraft.block.*;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import net.starmarine06.prismcraft.menu.DyeMixerMenu;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.component.CustomData;
@@ -142,7 +145,7 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
         ItemStack result = new ItemStack(input.getItem(), 1);
         setBlockColor(result, mixedColor);
 
-        // --- DYE HISTORY NBT (Minecraft 1.21.4+) ---
+        // --- DYE HISTORY NBT
         ListTag dyeList = new ListTag();
 
         BiConsumer<ResourceLocation, Integer> addOrMergeDye = (dyeRL, amount) -> {
@@ -191,60 +194,17 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
         setChanged();
     }
 
-    // GET COLOR FROM BLOCK ITEM
+    // GET COLOR - works for ALL prism blocks automatically
     private int getBlockColor(ItemStack stack) {
-        if (!(stack.getItem() instanceof BlockItem blockItem)) { return 0xFFFFFF; }
-        Block block = blockItem.getBlock();
-        if (block instanceof PrismWoodBlock) {
-            return PrismWoodBlock.getColor(stack);
-        } else if (block instanceof PrismSlabBlock) {
-            return PrismSlabBlock.getColor(stack);
-        } else if (block instanceof PrismStairsBlock) {
-            return PrismStairsBlock.getColor(stack);
-        } else if (block instanceof PrismFenceBlock) {
-            return PrismFenceBlock.getColor(stack);
-        } else if (block instanceof PrismFenceGateBlock) {
-            return PrismFenceGateBlock.getColor(stack);
-        } else if (block instanceof PrismButtonBlock) {
-            return PrismButtonBlock.getColor(stack);
-        } else if (block instanceof PrismPressurePlateBlock) {
-            return PrismPressurePlateBlock.getColor(stack);
-        } else if (block instanceof PrismDoorBlock) {
-            return PrismDoorBlock.getColor(stack);
-        } else if (block instanceof PrismTrapdoorBlock) {
-            return PrismTrapdoorBlock.getColor(stack);
-        } else if (block instanceof PrismConcreteBlock) {
-            return PrismConcreteBlock.getColor(stack);
-        }
-        return 0xFFFFFF;
+        DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
+        return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
 
-    // SET COLOR ON BLOCK ITEM
+    // SET COLOR - works for ALL prism blocks automatically
     private void setBlockColor(ItemStack stack, int color) {
-        if (!(stack.getItem() instanceof BlockItem blockItem)) { return; }
-        Block block = blockItem.getBlock();
-        if (block instanceof PrismWoodBlock) {
-            PrismWoodBlock.setColor(stack, color);
-        } else if (block instanceof PrismSlabBlock) {
-            PrismSlabBlock.setColor(stack, color);
-        } else if (block instanceof PrismStairsBlock) {
-            PrismStairsBlock.setColor(stack, color);
-        } else if (block instanceof PrismFenceBlock) {
-            PrismFenceBlock.setColor(stack, color);
-        } else if (block instanceof PrismFenceGateBlock) {
-            PrismFenceGateBlock.setColor(stack, color);
-        } else if (block instanceof PrismButtonBlock) {
-            PrismButtonBlock.setColor(stack, color);
-        } else if (block instanceof PrismPressurePlateBlock) {
-            PrismPressurePlateBlock.setColor(stack, color);
-        } else if (block instanceof PrismDoorBlock) {
-            PrismDoorBlock.setColor(stack, color);
-        } else if (block instanceof PrismTrapdoorBlock) {
-            PrismTrapdoorBlock.setColor(stack, color);
-        } else if (block instanceof PrismConcreteBlock) {
-            PrismConcreteBlock.setColor(stack, color);
-        }
+        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));
     }
+
 
     private int mixThreeColors(int color1, int color2, int color3) {
         int r1 = (color1 >> 16) & 0xFF;
@@ -263,17 +223,10 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private boolean isPrismBlock(ItemStack stack) {
-        if (!(stack.getItem() instanceof BlockItem blockItem)) { return false; }
-        Block block = blockItem.getBlock();
-        return block instanceof PrismWoodBlock ||
-                block instanceof PrismSlabBlock ||
-                block instanceof PrismStairsBlock ||
-                block instanceof PrismFenceBlock ||
-                block instanceof PrismFenceGateBlock ||
-                block instanceof PrismButtonBlock ||
-                block instanceof PrismPressurePlateBlock ||
-                block instanceof PrismDoorBlock ||
-                block instanceof PrismTrapdoorBlock ||
-                block instanceof PrismConcreteBlock;
+        if (!(stack.getItem() instanceof BlockItem blockItem)) {
+            return false;
+        }
+        return blockItem.getBlock() instanceof IPrismColoredBlock;
     }
+
 }

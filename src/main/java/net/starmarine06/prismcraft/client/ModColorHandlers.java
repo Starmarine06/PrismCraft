@@ -31,16 +31,27 @@ public class ModColorHandlers {
 
         event.register(blockColor,
                 ModBlocks.PRISM_LOG.get(),
+                ModBlocks.PRISM_STRIPPED_LOG.get(),
                 ModBlocks.PRISM_PLANKS.get(),
                 ModBlocks.PRISM_SLAB.get(),
                 ModBlocks.PRISM_STAIRS.get(),
                 ModBlocks.PRISM_FENCE.get(),
                 ModBlocks.PRISM_FENCE_GATE.get(),
-                ModBlocks.PRISM_BUTTON.get(),
-                ModBlocks.PRISM_PRESSURE_PLATE.get(),
                 ModBlocks.PRISM_DOOR.get(),
                 ModBlocks.PRISM_TRAPDOOR.get(),
-                ModBlocks.PRISM_CONCRETE.get()
+                ModBlocks.PRISM_BUTTON.get(),
+                ModBlocks.PRISM_PRESSURE_PLATE.get(),
+                ModBlocks.PRISM_CONCRETE.get(),
+                ModBlocks.PRISM_SAND.get(),
+                ModBlocks.PRISM_CANDLE.get(),
+                ModBlocks.PRISM_CARPET.get(),
+                ModBlocks.PRISM_CONCRETE_POWDERED.get(),
+                ModBlocks.PRISM_LADDER.get(),
+                ModBlocks.PRISM_SLIME_BLOCK.get(),
+                ModBlocks.PRISM_STONE.get(),
+                ModBlocks.PRISM_ANDESITE.get(),
+                ModBlocks.PRISM_WOOL.get(),
+                ModBlocks.PRISM_TERRACOTTA.get()
         );
 
         //System.out.println("=== COLORS REGISTERED SUCCESSFULLY ===");

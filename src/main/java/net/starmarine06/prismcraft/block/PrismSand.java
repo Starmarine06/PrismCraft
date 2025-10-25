@@ -17,10 +17,11 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 
 import java.util.List;
 
-public class PrismSand extends BaseEntityBlock {
+public class PrismSand extends BaseEntityBlock implements IPrismColoredBlock {
     public static final MapCodec<PrismSand> CODEC = simpleCodec(PrismSand::new);
 
     public PrismSand(BlockBehaviour.Properties properties) {

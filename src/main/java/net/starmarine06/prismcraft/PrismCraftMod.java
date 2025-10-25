@@ -13,6 +13,7 @@ import net.starmarine06.prismcraft.item.ModCreativeTabs;
 import net.starmarine06.prismcraft.item.ModItems;
 import net.starmarine06.prismcraft.menu.ModMenuTypes;
 import net.starmarine06.prismcraft.screen.DyeMixerScreen;
+import net.starmarine06.prismcraft.screen.PrismBarrelScreen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,5 +39,6 @@ public class PrismCraftMod {
     @SuppressWarnings({"unchecked", "rawtypes"})
     private void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.DYE_MIXER.get(), DyeMixerScreen::new);
+        event.register(ModMenuTypes.PRISM_BARREL.get(), PrismBarrelScreen::new);
     }
 }

@@ -16,11 +16,12 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismCandleBlock extends CandleBlock implements EntityBlock {
+public class PrismCandleBlock extends CandleBlock implements EntityBlock, IPrismColoredBlock {
     public PrismCandleBlock(Properties properties) {
         super(properties);
     }

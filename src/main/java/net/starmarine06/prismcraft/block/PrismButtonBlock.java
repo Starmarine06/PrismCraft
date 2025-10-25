@@ -18,11 +18,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismButtonBlock extends ButtonBlock implements EntityBlock {
+public class PrismButtonBlock extends ButtonBlock implements EntityBlock, IPrismColoredBlock {
     public PrismButtonBlock(BlockBehaviour.Properties properties) {
         super(BlockSetType.OAK, 30, properties);
     }

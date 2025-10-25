@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"lit=false": { "model": "prismcraft:block/prism_candle" },
+		"lit=true":  { "model": "prismcraft:block/prism_candle_lit" }
+	}
+}

@@ -4,10 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Added Sand,barrel, concrete powder,candle, and carpet">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlimeBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/AxeStrippingHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prismcraft_icon.json" afterDir="false" />
+    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Added Barrel, Ladder, Sand, Slime block, stone, stripped wood, andesite, wool, concrete powder, candle, terracotta">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/interfaces/IPrismColoredBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/menu/PrismBarrelMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/screen/PrismBarrelScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_candle.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_carpet.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_concrete_powder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_ladder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_sand.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_slime_block.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_wool.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_candle.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_carpet.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_concrete_powder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_ladder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_sand.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_slime_block.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/items/prism_wool.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_candle.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_carpet.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_concrete_powder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_four_candles.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_ladder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_sand.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_slime_block.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_three_candles.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_two_candles.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/models/block/prism_wool.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
@@ -19,8 +43,9 @@
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/DIM-1/data/raids.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/DIM1/data/raids_end.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/level.dat_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
@@ -32,12 +57,29 @@
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/ModBlockEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/ModBlockEntities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismBarrelBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismBarrelBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismButtonBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismButtonBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCandleBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCandleBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCarpetBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCarpetBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismConcreteBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismConcreteBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDoorBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDoorBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceGateBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceGateBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismLadderBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismLadderBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismPressurePlateBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismPressurePlateBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlabBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlabBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlimeBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlimeBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismStairsBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismStairsBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismTrapdoorBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismTrapdoorBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/DyeMixerBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/DyeMixerBlockEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismBarrelBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismBarrelBlockEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModCreativeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModCreativeTabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ModColorHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ModColorHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/menu/ModMenuTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/menu/ModMenuTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/textures/gui/container/dye_mix2er.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/textures/gui/container/dye_mixer2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,30 +151,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.prismcraft [:net.neoforged.devlaunch.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.prismcraft.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/flame/Documents/prismcraft/src/main/resources/assets/prismcraft/textures/block&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.prismcraft [:net.neoforged.devlaunch.Main.main()].executor": "Run",
+    "Gradle.prismcraft.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/flame/Documents/prismcraft/src/main/resources/assets/prismcraft/items",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\block" />
-      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\models\item" />
-      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\models\block" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\items" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\blockstates" />
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\models\block" />
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\block" />
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\models\item" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\items" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\item" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\gui\container" />
     </key>
@@ -268,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761341472726</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Barrel, Ladder, Sand, Slime block, stone, stripped wood, andesite, wool, concrete powder, candle, terracotta">
+      <option name="closed" value="true" />
+      <created>1761371399788</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761371399788</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,6 +340,7 @@
     <MESSAGE value="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            e" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added Sand,barrel, concrete powder,candle, and carpet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Sand,barrel, concrete powder,candle, and carpet" />
+    <MESSAGE value="Added Barrel, Ladder, Sand, Slime block, stone, stripped wood, andesite, wool, concrete powder, candle, terracotta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Barrel, Ladder, Sand, Slime block, stone, stripped wood, andesite, wool, concrete powder, candle, terracotta" />
   </component>
 </project>

@@ -19,3 +19,4 @@
 /setblock -8 -61 24 prismcraft:prism_concrete{Color:9678488}
 /give Dev minecraft:wooden_pickaxe
 /setblock 4 -59 14 sand
+/data get block 15 -59 19

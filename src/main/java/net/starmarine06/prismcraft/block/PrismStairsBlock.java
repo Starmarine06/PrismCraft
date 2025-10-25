@@ -19,11 +19,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismStairsBlock extends StairBlock implements EntityBlock {
+public class PrismStairsBlock extends StairBlock implements EntityBlock, IPrismColoredBlock {
     public static final MapCodec<PrismStairsBlock> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
                     BlockState.CODEC.fieldOf("base_state").forGetter(block -> block.baseState),

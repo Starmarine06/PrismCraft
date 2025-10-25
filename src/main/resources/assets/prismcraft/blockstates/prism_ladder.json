@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "prismcraft:block/prism_ladder" },
+		"facing=south": { "model": "prismcraft:block/prism_ladder", "y": 180 },
+		"facing=west":  { "model": "prismcraft:block/prism_ladder", "y": 270 },
+		"facing=east":  { "model": "prismcraft:block/prism_ladder", "y": 90 }
+	}
+}

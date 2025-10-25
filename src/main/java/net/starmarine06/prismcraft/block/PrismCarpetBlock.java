@@ -16,11 +16,12 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismCarpetBlock extends CarpetBlock implements EntityBlock {
+public class PrismCarpetBlock extends CarpetBlock implements EntityBlock, IPrismColoredBlock {
     public PrismCarpetBlock(Properties properties) {
         super(properties);
     }

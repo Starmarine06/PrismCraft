@@ -18,11 +18,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismFenceGateBlock extends FenceGateBlock implements EntityBlock {
+public class PrismFenceGateBlock extends FenceGateBlock implements EntityBlock, IPrismColoredBlock {
     public PrismFenceGateBlock(BlockBehaviour.Properties properties) {
         super(WoodType.OAK, properties);
     }

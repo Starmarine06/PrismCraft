@@ -17,11 +17,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PrismSlabBlock extends SlabBlock implements EntityBlock {
+public class PrismSlabBlock extends SlabBlock implements EntityBlock, IPrismColoredBlock {
     public PrismSlabBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
