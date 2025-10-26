@@ -1,22 +1,7 @@
 {
-	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"ambientocclusion": false,
+	"parent": "prismcraft:block/template_door_bottom_left",
 	"textures": {
-		"particle": "block/pale_oak_door_bottom",
-		"bottom": "block/pale_oak_door_bottom"
-	},
-	"elements": [
-		{
-			"from": [0, 0, 0],
-			"to": [3, 16, 16],
-			"faces": {
-				"north": {"uv": [3, 0, 0, 16], "texture": "#bottom", "cullface": "north", "tintindex": 0},
-				"east": {"uv": [16, 0, 0, 16], "texture": "#bottom", "tintindex": 0},
-				"south": {"uv": [0, 0, 3, 16], "texture": "#bottom", "cullface": "south", "tintindex": 0},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "west", "tintindex": 0},
-				"down": {"uv": [16, 13, 0, 16], "rotation": 90, "texture": "#bottom", "cullface": "down", "tintindex": 0}
-			}
-		}
-	]
+		"particle": "prismcraft:block/prism_door_bottom",
+		"bottom": "prismcraft:block/prism_door_bottom"
+	}
 }

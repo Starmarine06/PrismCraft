@@ -1,0 +1,7 @@
+{
+  "parent": "prismcraft:block/template_candle",
+  "textures": {
+    "all": "prismcraft:block/prism_candle_lit",
+    "particle": "prismcraft:block/prism_candle_lit"
+  }
+}

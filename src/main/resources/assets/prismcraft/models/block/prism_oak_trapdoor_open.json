@@ -1,0 +1,6 @@
+{
+  "parent": "prismcraft:block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "prismcraft:block/prism_oak_trapdoor"
+  }
+}

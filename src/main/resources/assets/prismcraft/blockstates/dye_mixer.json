@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "prismcraft:block/dye_mixer"
-    }
+    "facing=north": { "model": "prismcraft:block/dye_mixer" },
+    "facing=east":  { "model": "prismcraft:block/dye_mixer", "y": 90 },
+    "facing=south": { "model": "prismcraft:block/dye_mixer", "y": 180 },
+    "facing=west":  { "model": "prismcraft:block/dye_mixer", "y": 270 }
   }
 }

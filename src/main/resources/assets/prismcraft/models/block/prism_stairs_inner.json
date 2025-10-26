@@ -1,5 +1,5 @@
 {
-	"parent": "prismcraft:block/inner_stairs",
+	"parent": "prismcraft:block/template_inner_stairs",
 	"textures": {
 		"bottom": "prismcraft:block/prism_planks",
 		"top": "prismcraft:block/prism_planks",

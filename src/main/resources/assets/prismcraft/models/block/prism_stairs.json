@@ -1,7 +1,5 @@
 {
-	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"parent": "prismcraft:block/stairs",
+	"parent": "prismcraft:block/template_stairs",
 	"textures": {
 		"top": "prismcraft:block/prism_planks",
 		"side": "prismcraft:block/prism_planks",

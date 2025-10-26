@@ -1,20 +1,6 @@
 {
-	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"ambientocclusion": false,
-	"textures": {
-		"particle": "prismcraft:block/prism_ladder",
-		"texture": "prismcraft:block/prism_ladder"
-	},
-	"elements": [
-		{
-			"from": [0, 0, 15.2],
-			"to": [16, 16, 15.2],
-			"shade": false,
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#texture", "tintindex": 0},
-				"south": {"uv": [16, 0, 0, 16], "texture": "#texture", "tintindex": 0}
-			}
-		}
-	]
+  "parent": "prismcraft:block/template_ladder",
+  "textures": {
+    "texture": "prismcraft:block/prism_ladder"
+  }
 }

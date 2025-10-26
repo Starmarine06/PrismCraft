@@ -1,23 +1,7 @@
 {
-	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"parent": "block/thin_block",
+	"parent": "prismcraft:block/template_carpet",
 	"textures": {
 		"particle": "prismcraft:block/prism_wool",
 		"wool": "prismcraft:block/prism_wool"
-	},
-	"elements": [
-		{
-			"from": [0, 0, 0],
-			"to": [16, 1, 16],
-			"faces": {
-				"north": {"uv": [0, 15, 16, 16], "texture": "#wool", "tintindex": 0, "tintindex": 0, "cullface": "north"},
-				"east": {"uv": [0, 15, 16, 16], "texture": "#wool", "tintindex": 0, "tintindex": 0, "cullface": "east"},
-				"south": {"uv": [0, 15, 16, 16], "texture": "#wool", "tintindex": 0, "tintindex": 0, "cullface": "south"},
-				"west": {"uv": [0, 15, 16, 16], "texture": "#wool", "tintindex": 0, "tintindex": 0, "cullface": "west"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#wool", "tintindex": 0, "tintindex": 0},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#wool", "tintindex": 0, "tintindex": 0, "cullface": "down"}
-			}
-		}
-	]
+	}
 }

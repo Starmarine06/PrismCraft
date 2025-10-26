@@ -1,7 +1,7 @@
 {
 	"model": {
 		"type": "minecraft:model",
-		"model": "prismcraft:block/prism_candle",
+		"model": "prismcraft:item/prism_candle",
 		"tints": [
 			{
 				"type": "minecraft:dye",

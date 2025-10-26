@@ -1,7 +1,7 @@
 {
 	"model": {
 		"type": "minecraft:model",
-		"model": "prismcraft:block/prism_carpet",
+		"model": "prismcraft:block/prism_concrete_powder",
 		"tints": [
 			{
 				"type": "minecraft:dye",

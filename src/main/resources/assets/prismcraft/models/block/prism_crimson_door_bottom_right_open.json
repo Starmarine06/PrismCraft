@@ -1,0 +1,7 @@
+{
+	"parent": "prismcraft:block/template_door_bottom_right_open",
+	"textures": {
+		"particle": "prismcraft:block/prism_crimson_door_bottom",
+		"bottom": "prismcraft:block/prism_crimson_door_bottom"
+	}
+}

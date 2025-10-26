@@ -1,0 +1,6 @@
+{
+  "parent": "prismcraft:block/template_cube_all",
+  "textures": {
+    "all": "prismcraft:block/prism_terracotta"
+  }
+}

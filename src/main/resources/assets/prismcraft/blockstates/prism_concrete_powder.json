@@ -1,7 +1,21 @@
 {
-	"variants": {
-		"": {
-			"model": "prismcraft:block/prism_concrete_powder"
-		}
-	}
+  "variants": {
+    "": [
+      {
+        "model": "prismcraft:block/prism_concrete_powder"
+      },
+      {
+        "model": "prismcraft:block/prism_concrete_powder",
+        "y": 90
+      },
+      {
+        "model": "prismcraft:block/prism_concrete_powder",
+        "y": 180
+      },
+      {
+        "model": "prismcraft:block/prism_concrete_powder",
+        "y": 270
+      }
+    ]
+  }
 }
