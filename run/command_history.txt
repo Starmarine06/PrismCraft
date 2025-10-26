@@ -20,3 +20,5 @@
 /give Dev minecraft:wooden_pickaxe
 /setblock 4 -59 14 sand
 /data get block 15 -59 19
+/setblock -1 -60 8 minecraft:barrel
+/enchant Dev minecraft:efficiency 5

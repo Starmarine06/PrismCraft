@@ -79,4 +79,13 @@ public class PrismBarrelMenu extends AbstractContainerMenu {
                         blockEntity.getBlockPos().getY() + 0.5,
                         blockEntity.getBlockPos().getZ() + 0.5) <= 64.0;
     }
+
+    @Override
+    public void removed(Player player) {
+        super.removed(player);
+        // Make sure your blockEntity is valid and on the server!
+        if (blockEntity != null && !player.level().isClientSide) {
+            blockEntity.stopOpen(player);
+        }
+    }
 }

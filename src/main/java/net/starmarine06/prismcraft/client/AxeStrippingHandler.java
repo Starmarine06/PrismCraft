@@ -2,6 +2,7 @@ package net.starmarine06.prismcraft.client;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -51,7 +52,7 @@ public class AxeStrippingHandler {
     private static BlockState getStrippedState(BlockState state) {
         // Prism
         if (state.is(ModBlocks.PRISM_LOG.get())) {
-            return ModBlocks.PRISM_STRIPPED_LOG.get().defaultBlockState();
+            return ModBlocks.PRISM_STRIPPED_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
         }
         // add other logs if needed
         return null;

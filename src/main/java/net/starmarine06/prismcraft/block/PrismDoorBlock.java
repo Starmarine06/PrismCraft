@@ -24,8 +24,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class PrismDoorBlock extends DoorBlock implements EntityBlock, IPrismColoredBlock {
-    public PrismDoorBlock(BlockBehaviour.Properties properties) {
-        super(BlockSetType.OAK, properties);
+    public PrismDoorBlock(BlockSetType setType, BlockBehaviour.Properties properties) {
+        super(setType, properties);
     }
 
     @Nullable

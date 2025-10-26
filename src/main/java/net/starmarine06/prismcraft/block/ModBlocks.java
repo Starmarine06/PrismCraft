@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -51,10 +52,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismDoorBlock> PRISM_DOOR = BLOCKS.register(
             "prism_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_TRAPDOOR = BLOCKS.register(
             "prism_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismButtonBlock> PRISM_BUTTON = BLOCKS.register(
             "prism_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -156,10 +157,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_OAK_DOOR = BLOCKS.register(
             "prism_oak_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_OAK_TRAPDOOR = BLOCKS.register(
             "prism_oak_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_OAK_BUTTON = BLOCKS.register(
             "prism_oak_button",
@@ -191,10 +192,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_SPRUCE_DOOR = BLOCKS.register(
             "prism_spruce_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.SPRUCE, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_SPRUCE_TRAPDOOR = BLOCKS.register(
             "prism_spruce_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.SPRUCE, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_SPRUCE_BUTTON = BLOCKS.register(
             "prism_spruce_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -225,10 +226,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_BIRCH_DOOR = BLOCKS.register(
             "prism_birch_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.BIRCH, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_BIRCH_TRAPDOOR = BLOCKS.register(
             "prism_birch_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.BIRCH, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_BIRCH_BUTTON = BLOCKS.register(
             "prism_birch_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -259,10 +260,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_JUNGLE_DOOR = BLOCKS.register(
             "prism_jungle_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.JUNGLE, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_JUNGLE_TRAPDOOR = BLOCKS.register(
             "prism_jungle_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.JUNGLE, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_JUNGLE_BUTTON = BLOCKS.register(
             "prism_jungle_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -293,10 +294,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_ACACIA_DOOR = BLOCKS.register(
             "prism_acacia_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.ACACIA, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_ACACIA_TRAPDOOR = BLOCKS.register(
             "prism_acacia_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.ACACIA, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_ACACIA_BUTTON = BLOCKS.register(
             "prism_acacia_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -327,10 +328,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_DARK_OAK_DOOR = BLOCKS.register(
             "prism_dark_oak_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.DARK_OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_DARK_OAK_TRAPDOOR = BLOCKS.register(
             "prism_dark_oak_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.DARK_OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_DARK_OAK_BUTTON = BLOCKS.register(
             "prism_dark_oak_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -361,10 +362,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_MANGROVE_DOOR = BLOCKS.register(
             "prism_mangrove_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.MANGROVE, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_MANGROVE_TRAPDOOR = BLOCKS.register(
             "prism_mangrove_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.MANGROVE, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_MANGROVE_BUTTON = BLOCKS.register(
             "prism_mangrove_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -395,10 +396,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_CHERRY_DOOR = BLOCKS.register(
             "prism_cherry_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.CHERRY, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_CHERRY_TRAPDOOR = BLOCKS.register(
             "prism_cherry_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.CHERRY, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_CHERRY_BUTTON = BLOCKS.register(
             "prism_cherry_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -429,10 +430,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_PALE_OAK_DOOR = BLOCKS.register(
             "prism_pale_oak_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.PALE_OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_PALE_OAK_TRAPDOOR = BLOCKS.register(
             "prism_pale_oak_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.PALE_OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_PALE_OAK_BUTTON = BLOCKS.register(
             "prism_pale_oak_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -463,10 +464,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_BAMBOO_DOOR = BLOCKS.register(
             "prism_bamboo_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.BAMBOO, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_BAMBOO_TRAPDOOR = BLOCKS.register(
             "prism_bamboo_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.BAMBOO, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_BAMBOO_BUTTON = BLOCKS.register(
             "prism_bamboo_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -497,10 +498,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_CRIMSON_DOOR = BLOCKS.register(
             "prism_crimson_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.CRIMSON, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_CRIMSON_TRAPDOOR = BLOCKS.register(
             "prism_crimson_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.CRIMSON, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_CRIMSON_BUTTON = BLOCKS.register(
             "prism_crimson_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -531,10 +532,10 @@ public class ModBlocks {
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));*/
     public static final DeferredBlock<PrismDoorBlock> PRISM_WARPED_DOOR = BLOCKS.register(
             "prism_warped_door",
-            registryName -> new PrismDoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismDoorBlock(BlockSetType.WARPED, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismTrapdoorBlock> PRISM_WARPED_TRAPDOOR = BLOCKS.register(
             "prism_warped_trapdoor",
-            registryName -> new PrismTrapdoorBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismTrapdoorBlock(BlockSetType.WARPED, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     /*public static final DeferredBlock<PrismButtonBlock> PRISM_WARPED_BUTTON = BLOCKS.register(
             "prism_warped_button",
             registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));

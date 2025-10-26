@@ -17,6 +17,8 @@ import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
@@ -49,6 +51,7 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismBarrelBlockEntity tile) {
                 int color = getColor(stack);
+                System.out.println("[BARREL SETPLACEDBY DEBUG] ItemStack color: " + Integer.toHexString(color));
                 tile.setColor(color);
                 BlockState currentState = level.getBlockState(pos);
                 level.sendBlockUpdated(pos, currentState, currentState, 3);
@@ -57,11 +60,13 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
         }
     }
 
+
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide && player instanceof ServerPlayer serverPlayer) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismBarrelBlockEntity barrel) {
+                barrel.startOpen(serverPlayer); // Trigger open logic & sound
                 serverPlayer.openMenu(barrel);
                 return InteractionResult.CONSUME;
             }
@@ -83,10 +88,12 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
 
     public static void setColor(ItemStack stack, int color) {
         stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));
+        System.out.println("[BARREL BLOCK CCOLOR DEBUG] color=" + Integer.toHexString(color));
     }
 
     public static int getColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
+        System.out.println("[BARREL BLOCK COLOR DEBUG] get_color=" + dyedColor);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
 
@@ -102,4 +109,12 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
                     .withStyle(ChatFormatting.GOLD));
         }
     }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return level.isClientSide
+                ? (lvl, pos, st, be) -> PrismBarrelBlockEntity.clientTick(lvl, pos, st, (PrismBarrelBlockEntity)be)
+                : null;
+    }
+
 }

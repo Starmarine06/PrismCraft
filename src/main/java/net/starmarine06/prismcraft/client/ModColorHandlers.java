@@ -8,7 +8,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
+import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.item.ModItems;
 
 @EventBusSubscriber(modid = PrismCraftMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModColorHandlers {
@@ -25,12 +27,17 @@ public class ModColorHandlers {
                     //System.out.println("Color handler called for " + state.getBlock() + " at " + pos + ": #" + String.format("%06X", color));
                     return color;
                 }
+                if (be instanceof PrismBarrelBlockEntity barrel) {
+                    System.out.println("Color handler called for " + state.getBlock() + " at " + pos + ": #" + String.format("%06X", barrel.getColor()));
+                    return barrel.getColor();
+                }
             }
             return 0xFFFFFF;
         };
 
         event.register(blockColor,
                 ModBlocks.PRISM_LOG.get(),
+                ModBlocks.PRISM_BARREL.get(),
                 ModBlocks.PRISM_STRIPPED_LOG.get(),
                 ModBlocks.PRISM_PLANKS.get(),
                 ModBlocks.PRISM_SLAB.get(),
