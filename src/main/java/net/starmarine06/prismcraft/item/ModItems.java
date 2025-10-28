@@ -83,19 +83,42 @@ public class ModItems {
         registerColoredBlockItem("prism_trapdoor", ModBlocks.PRISM_TRAPDOOR);
         registerColoredBlockItem("prism_button", ModBlocks.PRISM_BUTTON);
         registerColoredBlockItem("prism_pressure_plate", ModBlocks.PRISM_PRESSURE_PLATE);
+        registerColoredBlockItem("prism_pressure_plate",ModBlocks.PRISM_STANDING_SIGN);
+        registerColoredBlockItem("prism_wall_sign", ModBlocks.PRISM_WALL_SIGN);
+        registerColoredBlockItem("prism_ceiling_hanging_sign", ModBlocks.PRISM_CEILING_HANGING_SIGN);
+        registerColoredBlockItem("prism_wall_hanging_sign", ModBlocks.PRISM_WALL_HANGING_SIGN);
+        registerColoredBlockItem("prism_flower_pot", ModBlocks.PRISM_FLOWER_POT);
+        registerColoredBlockItem("prism_decorated_pot", ModBlocks.PRISM_DECORATED_POT);
         //Other Items
-        registerColoredBlockItem("prism_concrete", ModBlocks.PRISM_CONCRETE);
-        registerColoredBlockItem("prism_concrete_powder", ModBlocks.PRISM_CONCRETE_POWDER);
         registerColoredBlockItem("prism_sand", ModBlocks.PRISM_SAND);
         registerColoredBlockItem("prism_candle", ModBlocks.PRISM_CANDLE);
         registerColoredBlockItem("prism_carpet", ModBlocks.PRISM_CARPET);
         registerColoredBlockItem("prism_ladder", ModBlocks.PRISM_LADDER);
         registerColoredBlockItem("prism_barrel", ModBlocks.PRISM_BARREL);
         registerColoredBlockItem("prism_slime_block", ModBlocks.PRISM_SLIME_BLOCK);
-        registerColoredBlockItem("prism_stone", ModBlocks.PRISM_STONE);
-        registerColoredBlockItem("prism_andesite", ModBlocks.PRISM_ANDESITE);
         registerColoredBlockItem("prism_wool", ModBlocks.PRISM_WOOL);
+        //Concrete
+        registerColoredBlockItem("prism_concrete", ModBlocks.PRISM_CONCRETE);
+        registerColoredBlockItem("prism_concrete_powder", ModBlocks.PRISM_CONCRETE_POWDER);
+        registerColoredBlockItem("prism_concrete_slab", ModBlocks.PRISM_CONCRETE_SLAB);
+        registerColoredBlockItem("prism_concrete_wall", ModBlocks.PRISM_CONCRETE_WALL);
+        registerColoredBlockItem("prism_concrete_stairs", ModBlocks.PRISM_CONCRETE_STAIRS);
+        //Stone
+        registerColoredBlockItem("prism_stone", ModBlocks.PRISM_STONE);
+        registerColoredBlockItem("prism_stone_slab", ModBlocks.PRISM_STONE_SLAB);
+        registerColoredBlockItem("prism_stone_stairs", ModBlocks.PRISM_STONE_STAIRS);
+        registerColoredBlockItem("prism_stone_wall", ModBlocks.PRISM_STONE_WALL);
+        //Andesite
+        registerColoredBlockItem("prism_andesite", ModBlocks.PRISM_ANDESITE);
+        registerColoredBlockItem("prism_andesite_slab", ModBlocks.PRISM_ANDESITE_SLAB);
+        registerColoredBlockItem("prism_andesite_stairs", ModBlocks.PRISM_ANDESITE_STAIRS);
+        registerColoredBlockItem("prism_andesite_wall", ModBlocks.PRISM_ANDESITE_WALL);
+        //Terracotta
         registerColoredBlockItem("prism_terracotta", ModBlocks.PRISM_TERRACOTTA);
+        registerColoredBlockItem("prism_terracotta_slab", ModBlocks.PRISM_TERRACOTTA_SLAB);
+        registerColoredBlockItem("prism_terracotta_stairs", ModBlocks.PRISM_TERRACOTTA_STAIRS);
+        registerColoredBlockItem("prism_terracotta_wall", ModBlocks.PRISM_TERRACOTTA_WALL);
+
         // Oak
         /*registerColoredBlockItem("prism_oak_log", ModBlocks.PRISM_OAK_LOG);
         registerColoredBlockItem("prism_oak_planks", ModBlocks.PRISM_OAK_PLANKS);

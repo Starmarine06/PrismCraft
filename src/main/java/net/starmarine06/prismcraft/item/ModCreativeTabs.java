@@ -34,19 +34,41 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_TRAPDOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_STRIPPED_LOG.get().asItem());
+                        output.accept(ModBlocks.PRISM_STANDING_SIGN.get().asItem());
+                        output.accept(ModBlocks.PRISM_WALL_SIGN.get().asItem());
+                        output.accept(ModBlocks.PRISM_CEILING_HANGING_SIGN.get().asItem());
+                        output.accept(ModBlocks.PRISM_WALL_HANGING_SIGN.get().asItem());
+                        output.accept(ModBlocks.PRISM_FLOWER_POT.get().asItem());
+                        output.accept(ModBlocks.PRISM_DECORATED_POT.get().asItem());
 
                         output.accept(ModBlocks.PRISM_BARREL.get().asItem());
                         output.accept(ModBlocks.PRISM_LADDER.get().asItem());
                         output.accept(ModBlocks.PRISM_SAND.get().asItem());
-                        output.accept(ModBlocks.PRISM_CONCRETE.get().asItem());
-                        output.accept(ModBlocks.PRISM_CONCRETE_POWDER.get().asItem());
                         output.accept(ModBlocks.PRISM_CANDLE.get().asItem());
                         output.accept(ModBlocks.PRISM_CARPET.get().asItem());
-                        output.accept(ModBlocks.PRISM_TERRACOTTA.get().asItem());
                         output.accept(ModBlocks.PRISM_SLIME_BLOCK.get().asItem());
-                        output.accept(ModBlocks.PRISM_STONE.get().asItem());
-                        output.accept(ModBlocks.PRISM_ANDESITE.get().asItem());
                         output.accept(ModBlocks.PRISM_WOOL.get().asItem());
+
+                        output.accept(ModBlocks.PRISM_CONCRETE.get().asItem());
+                        output.accept(ModBlocks.PRISM_CONCRETE_POWDER.get().asItem());
+                        output.accept(ModBlocks.PRISM_CONCRETE_SLAB.get().asItem());
+                        output.accept(ModBlocks.PRISM_CONCRETE_STAIRS.get().asItem());
+                        output.accept(ModBlocks.PRISM_CONCRETE_WALL.get().asItem());
+                        output.accept(ModBlocks.PRISM_TERRACOTTA.get().asItem());
+                        output.accept(ModBlocks.PRISM_TERRACOTTA_SLAB.get().asItem());
+                        output.accept(ModBlocks.PRISM_TERRACOTTA_STAIRS.get().asItem());
+                        output.accept(ModBlocks.PRISM_TERRACOTTA_WALL.get().asItem());
+                        output.accept(ModBlocks.PRISM_STONE.get().asItem());
+                        output.accept(ModBlocks.PRISM_STONE_SLAB.get().asItem());
+                        output.accept(ModBlocks.PRISM_STONE_STAIRS.get().asItem());
+                        output.accept(ModBlocks.PRISM_STONE_WALL.get().asItem());
+                        output.accept(ModBlocks.PRISM_ANDESITE.get().asItem());
+                        output.accept(ModBlocks.PRISM_ANDESITE_SLAB.get().asItem());
+                        output.accept(ModBlocks.PRISM_ANDESITE_STAIRS.get().asItem());
+                        output.accept(ModBlocks.PRISM_ANDESITE_WALL.get().asItem());
+                        output.accept(ModBlocks.PRISM_COPPER_BLOCK.get().asItem());
+                        output.accept(ModBlocks.PRISM_CHISELED_COPPER_BLOCK.get().asItem());
+                        output.accept(ModBlocks.PRISM_CUT_COPPER_BLOCK.get().asItem());
 
                         // Oak
                         /*output.accept(ModBlocks.PRISM_OAK_LOG.get().asItem());

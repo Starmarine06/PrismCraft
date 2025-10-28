@@ -8,11 +8,12 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
 import net.starmarine06.prismcraft.item.ModItems;
 
-@EventBusSubscriber(modid = PrismCraftMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = PrismCraftMod.MOD_ID, bus = Bus.MOD, value = Dist.CLIENT)
 public class ModColorHandlers {
 
     @SubscribeEvent
@@ -48,17 +49,35 @@ public class ModColorHandlers {
                 ModBlocks.PRISM_TRAPDOOR.get(),
                 ModBlocks.PRISM_BUTTON.get(),
                 ModBlocks.PRISM_PRESSURE_PLATE.get(),
-                ModBlocks.PRISM_CONCRETE.get(),
+                ModBlocks.PRISM_STANDING_SIGN.get(),
+                ModBlocks.PRISM_WALL_SIGN.get(),
+                ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
+                ModBlocks.PRISM_FLOWER_POT.get(),
+                ModBlocks.PRISM_DECORATED_POT.get(),
                 ModBlocks.PRISM_SAND.get(),
                 ModBlocks.PRISM_CANDLE.get(),
                 ModBlocks.PRISM_CARPET.get(),
                 ModBlocks.PRISM_CONCRETE_POWDER.get(),
                 ModBlocks.PRISM_LADDER.get(),
                 ModBlocks.PRISM_SLIME_BLOCK.get(),
-                ModBlocks.PRISM_STONE.get(),
-                ModBlocks.PRISM_ANDESITE.get(),
                 ModBlocks.PRISM_WOOL.get(),
+                ModBlocks.PRISM_CONCRETE.get(),
+                ModBlocks.PRISM_CONCRETE_SLAB.get(),
+                ModBlocks.PRISM_CONCRETE_STAIRS.get(),
+                ModBlocks.PRISM_CONCRETE_WALL.get(),
                 ModBlocks.PRISM_TERRACOTTA.get(),
+                ModBlocks.PRISM_TERRACOTTA_SLAB.get(),
+                ModBlocks.PRISM_TERRACOTTA_STAIRS.get(),
+                ModBlocks.PRISM_TERRACOTTA_WALL.get(),
+                ModBlocks.PRISM_STONE.get(),
+                ModBlocks.PRISM_STONE_SLAB.get(),
+                ModBlocks.PRISM_STONE_STAIRS.get(),
+                ModBlocks.PRISM_STONE_WALL.get(),
+                ModBlocks.PRISM_ANDESITE.get(),
+                ModBlocks.PRISM_ANDESITE_SLAB.get(),
+                ModBlocks.PRISM_ANDESITE_STAIRS.get(),
+                ModBlocks.PRISM_ANDESITE_WALL.get(),
                 //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped
                 ModBlocks.PRISM_OAK_DOOR.get(),
                 ModBlocks.PRISM_OAK_TRAPDOOR.get(),
