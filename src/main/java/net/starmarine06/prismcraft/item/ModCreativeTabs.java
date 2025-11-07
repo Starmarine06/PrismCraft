@@ -33,8 +33,8 @@ public class ModCreativeTabs {
                         output.accept(new ItemStack(ModItems.PRISM_FENCE_GATE.get()));
                         output.accept(new ItemStack(ModItems.PRISM_BUTTON.get()));
                         output.accept(new ItemStack(ModItems.PRISM_PRESSURE_PLATE.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_DOOR.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_TRAPDOOR.get()));
+                        //output.accept(new ItemStack(ModItems.PRISM_DOOR.get()));
+                        //output.accept(new ItemStack(ModItems.PRISM_TRAPDOOR.get()));
                         output.accept(new ItemStack(ModItems.PRISM_STRIPPED_LOG.get()));
                         output.accept(new ItemStack(ModItems.PRISM_STANDING_SIGN.get()));
                         output.accept(new ItemStack(ModItems.PRISM_WALL_SIGN.get()));

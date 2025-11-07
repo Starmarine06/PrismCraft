@@ -32,8 +32,8 @@ public class ModItems {
     public static final DeferredItem<Item> PRISM_STAIRS = registerColoredBlockItem("prism_stairs", ModBlocks.PRISM_STAIRS);
     public static final DeferredItem<Item> PRISM_FENCE = registerColoredBlockItem("prism_fence", ModBlocks.PRISM_FENCE);
     public static final DeferredItem<Item> PRISM_FENCE_GATE = registerColoredBlockItem("prism_fence_gate", ModBlocks.PRISM_FENCE_GATE);
-    public static final DeferredItem<Item> PRISM_DOOR = registerColoredBlockItem("prism_door", ModBlocks.PRISM_DOOR);
-    public static final DeferredItem<Item> PRISM_TRAPDOOR = registerColoredBlockItem("prism_trapdoor", ModBlocks.PRISM_TRAPDOOR);
+    //public static final DeferredItem<Item> PRISM_DOOR = registerColoredBlockItem("prism_door", ModBlocks.PRISM_DOOR);
+    //public static final DeferredItem<Item> PRISM_TRAPDOOR = registerColoredBlockItem("prism_trapdoor", ModBlocks.PRISM_TRAPDOOR);
     public static final DeferredItem<Item> PRISM_BUTTON = registerColoredBlockItem("prism_button", ModBlocks.PRISM_BUTTON);
     public static final DeferredItem<Item> PRISM_PRESSURE_PLATE = registerColoredBlockItem("prism_pressure_plate", ModBlocks.PRISM_PRESSURE_PLATE);
     public static final DeferredItem<Item> PRISM_STANDING_SIGN = registerColoredBlockItem("prism_standing_sign", ModBlocks.PRISM_STANDING_SIGN);
