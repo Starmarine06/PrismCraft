@@ -2,39 +2,38 @@ package net.starmarine06.prismcraft.blockentity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
+import net.minecraft.world.Container;
+import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import net.starmarine06.prismcraft.menu.PrismBarrelMenu;
 import org.jetbrains.annotations.Nullable;
 
-public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider, IPrismColoredBlock {
+public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider, Container, IPrismColoredBlock {
     private int color = 0xFFFFFF;
-    private final ItemStackHandler itemHandler = new ItemStackHandler(27) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-        }
-    };
+    private NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);
 
     public PrismBarrelBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.PRISM_BARREL.get(), pos, state);
     }
 
     public int getColor() {
-        System.out.println("[BARREL COLOR DEBUG] getColor() called at " + worldPosition + ", color=" + Integer.toHexString(color));
         return color;
     }
 
@@ -47,9 +46,50 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
         }
     }
 
-    // THIS IS THE METHOD THAT WAS MISSING
-    public ItemStackHandler getItemHandler() {
-        return itemHandler;
+    @Override
+    public int getContainerSize() {
+        return 27;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        for (ItemStack stack : items) {
+            if (!stack.isEmpty()) return false;
+        }
+        return true;
+    }
+
+    @Override
+    public ItemStack getItem(int slot) {
+        return items.get(slot);
+    }
+
+    @Override
+    public ItemStack removeItem(int slot, int amount) {
+        ItemStack stack = ContainerHelper.removeItem(items, slot, amount);
+        if (!stack.isEmpty()) setChanged();
+        return stack;
+    }
+
+    @Override
+    public ItemStack removeItemNoUpdate(int slot) {
+        return ContainerHelper.takeItem(items, slot);
+    }
+
+    @Override
+    public void setItem(int slot, ItemStack stack) {
+        items.set(slot, stack);
+        setChanged();
+    }
+
+    @Override
+    public boolean stillValid(Player player) {
+        return Container.stillValidBlockEntity(this, player);
+    }
+
+    @Override
+    public void clearContent() {
+        items.clear();
     }
 
     @Override
@@ -64,17 +104,16 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
-        tag.putInt("Color", color);
-        tag.put("inventory", itemHandler.serializeNBT(registries));
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        ContainerHelper.saveAllItems(output, items, true);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        color = tag.getInt("Color");
-        itemHandler.deserializeNBT(registries, tag.getCompound("inventory"));
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
+        ContainerHelper.loadAllItems(input, items);
     }
 
     @Override
@@ -85,9 +124,9 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     @Override
-    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
-        super.handleUpdateTag(tag, registries);
-        loadAdditional(tag, registries);
+    public void handleUpdateTag(ValueInput input) {
+        super.handleUpdateTag(input);
+        loadAdditional(input);
     }
 
     @Nullable
@@ -97,9 +136,8 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     public void drops() {
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            Containers.dropItemStack(level, worldPosition.getX(), worldPosition.getY(),
-                    worldPosition.getZ(), itemHandler.getStackInSlot(i));
+        for (int i = 0; i < getContainerSize(); i++) {
+            Containers.dropItemStack(level, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ(), getItem(i));
         }
     }
 
@@ -107,7 +145,6 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     public float openness;
     public float prevOpenness;
 
-    // Animation ticking (client side)
     public static void clientTick(Level level, BlockPos pos, BlockState state, PrismBarrelBlockEntity tile) {
         tile.prevOpenness = tile.openness;
         if (state.getValue(net.minecraft.world.level.block.BarrelBlock.OPEN)) {
@@ -117,19 +154,17 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
         }
     }
 
-    // Call when open/close (from your menu container logic)
     public void startOpen(Player player) {
         if (!hasLevel()) return;
         viewers++;
         if (viewers == 1 && !getBlockState().getValue(net.minecraft.world.level.block.BarrelBlock.OPEN)) {
-            // First opener: set open state and play sound
             level.setBlock(worldPosition, getBlockState().setValue(net.minecraft.world.level.block.BarrelBlock.OPEN, true), 3);
             level.playSound(null, worldPosition, net.minecraft.sounds.SoundEvents.BARREL_OPEN, net.minecraft.sounds.SoundSource.BLOCKS, 1.0F, 1.0F);
         } else if (viewers > 1 && getBlockState().getValue(net.minecraft.world.level.block.BarrelBlock.OPEN)) {
-            // Additional opener: just play sound
             level.playSound(null, worldPosition, net.minecraft.sounds.SoundEvents.BARREL_OPEN, net.minecraft.sounds.SoundSource.BLOCKS, 1.0F, 1.0F);
         }
     }
+
     public void stopOpen(Player player) {
         if (!hasLevel()) return;
         viewers = Math.max(0, viewers - 1);
@@ -138,5 +173,4 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
             level.playSound(null, worldPosition, net.minecraft.sounds.SoundEvents.BARREL_CLOSE, net.minecraft.sounds.SoundSource.BLOCKS, 1.0F, 1.0F);
         }
     }
-
 }

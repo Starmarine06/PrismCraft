@@ -47,7 +47,7 @@ public class PrismWoodBlock extends RotatedPillarBlock implements EntityBlock, I
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
 
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismColoredBlockEntity tile) {
                 int color = getColor(stack);
@@ -67,29 +67,11 @@ public class PrismWoodBlock extends RotatedPillarBlock implements EntityBlock, I
     }
 
     public static void setColor(ItemStack stack, int color) {
-        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));
+        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
     }
 
     public static int getColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
-    }
-
-    @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
-
-        int color = getColor(stack);
-
-        // Only show RGB if block is dyed (not white)
-        if (color != 0xFFFFFF) {
-            int r = (color >> 16) & 0xFF;
-            int g = (color >> 8) & 0xFF;
-            int b = color & 0xFF;
-
-            // Golden colored text
-            tooltip.add(Component.literal("RGB: " + r + ", " + g + ", " + b)
-                    .withStyle(ChatFormatting.GOLD));
-        }
     }
 }

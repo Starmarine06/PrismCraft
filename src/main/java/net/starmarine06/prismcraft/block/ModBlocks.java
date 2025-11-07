@@ -58,10 +58,10 @@ public class ModBlocks {
             registryName -> new PrismTrapdoorBlock(BlockSetType.OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismButtonBlock> PRISM_BUTTON = BLOCKS.register(
             "prism_button",
-            registryName -> new PrismButtonBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismButtonBlock(WOOD_PROPS.noCollision().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismPressurePlateBlock> PRISM_PRESSURE_PLATE = BLOCKS.register(
             "prism_pressure_plate",
-            registryName -> new PrismPressurePlateBlock(WOOD_PROPS.noCollission().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+            registryName -> new PrismPressurePlateBlock(WOOD_PROPS.noCollision().setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<StandingSignBlock> PRISM_STANDING_SIGN =
             BLOCKS.register("prism_standing_sign", registryName ->
                     new PrismStandingSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));

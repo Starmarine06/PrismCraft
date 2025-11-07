@@ -23,7 +23,6 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
         graphics.blit(
-                RenderType::guiTextured,    // ← First parameter is the render type
                 BACKGROUND_LOCATION,
                 this.leftPos, this.topPos,
                 0, 0,

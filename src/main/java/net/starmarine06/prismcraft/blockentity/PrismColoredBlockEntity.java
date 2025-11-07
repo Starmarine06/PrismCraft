@@ -3,11 +3,14 @@ package net.starmarine06.prismcraft.blockentity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismColoredBlockEntity extends BlockEntity {
@@ -43,15 +46,9 @@ public class PrismColoredBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
-        tag.putInt("Color", color);
-    }
-
-    @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        color = tag.getInt("Color");
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        output.putInt("Color", color);
     }
 
     // CLIENT SYNC - Send data to client
@@ -63,10 +60,10 @@ public class PrismColoredBlockEntity extends BlockEntity {
     }
 
     @Override
-    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
-        super.handleUpdateTag(tag, registries);
+    public void handleUpdateTag(ValueInput input) {
+        super.handleUpdateTag(input);
         int oldColor = this.color;
-        loadAdditional(tag, registries);
+        loadAdditional(input);
 
         // If color changed, request re-render
         if (oldColor != this.color && level != null) {
@@ -77,16 +74,15 @@ public class PrismColoredBlockEntity extends BlockEntity {
     }
 
     @Override
-    public void onDataPacket(net.minecraft.network.Connection net, ClientboundBlockEntityDataPacket pkt, HolderLookup.Provider registries) {
+    public void onDataPacket(Connection net, ValueInput valueInput) {
         int oldColor = this.color;
-        handleUpdateTag(pkt.getTag(), registries);
+        handleUpdateTag(valueInput);
 
         // Force immediate render update if color changed
         if (oldColor != this.color && level != null && level.isClientSide()) {
             level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
         }
     }
-
 
     // CLIENT SYNC - Receive data on client
     @Nullable

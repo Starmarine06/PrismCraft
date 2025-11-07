@@ -40,7 +40,7 @@ public class PrismCarpetBlock extends CarpetBlock implements EntityBlock, IPrism
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismColoredBlockEntity tile) {
                 int color = getColor(stack);
@@ -53,7 +53,7 @@ public class PrismCarpetBlock extends CarpetBlock implements EntityBlock, IPrism
     }
 
     public static void setColor(ItemStack stack, int color) {
-        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));
+        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
     }
 
     public static int getColor(ItemStack stack) {

@@ -30,7 +30,7 @@ java {
 }
 
 neoForge {
-    version = "21.8.49"
+    version = "21.9.16-beta" // Use the latest 21.9.x version for Minecraft 1.21.9
     runs {
         client {
             client()

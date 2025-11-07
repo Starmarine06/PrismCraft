@@ -1,12 +1,16 @@
 package net.starmarine06.prismcraft.blockentity;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
@@ -16,51 +20,23 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.starmarine06.prismcraft.block.*;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import net.starmarine06.prismcraft.menu.DyeMixerMenu;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.component.CustomData;
-import net.minecraft.core.component.DataComponents;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 
-public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
+public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Container {
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-            if (level != null && !level.isClientSide()) {
-                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
-            }
-        }
-
-        @Override
-        public boolean isItemValid(int slot, ItemStack stack) {
-            // Slots 0 and 1 are dye slots
-            if (slot == 0 || slot == 1) {
-                return stack.getItem() instanceof DyeItem;
-            }
-            // Slot 2 is input slot (prism blocks only)
-            else if (slot == 2) {
-                return isPrismBlock(stack);
-            }
-            // Slot 3 is output slot (no manual insertion)
-            else if (slot == 3) {
-                return false;
-            }
-            return super.isItemValid(slot, stack);
-        }
-    };
+    private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
 
     private final ContainerData data = new ContainerData() {
         @Override public int get(int index) { return 0; }
@@ -68,12 +44,61 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
         @Override public int getCount() { return 0; }
     };
 
-    public DyeMixerBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlockEntities.DYE_MIXER.get(), pos, blockState);
+    public DyeMixerBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.DYE_MIXER.get(), pos, state);
     }
 
-    public ItemStackHandler getItemHandler() {
-        return itemHandler;
+    @Override
+    public int getContainerSize() {
+        return items.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return items.stream().allMatch(ItemStack::isEmpty);
+    }
+
+    @Override
+    public ItemStack getItem(int slot) {
+        return items.get(slot);
+    }
+
+    @Override
+    public ItemStack removeItem(int slot, int amount) {
+        ItemStack stack = ContainerHelper.removeItem(items, slot, amount);
+        if (!stack.isEmpty()) setChanged();
+        return stack;
+    }
+
+    @Override
+    public ItemStack removeItemNoUpdate(int slot) {
+        return ContainerHelper.takeItem(items, slot);
+    }
+
+    @Override
+    public void setItem(int slot, ItemStack stack) {
+        items.set(slot, stack);
+        stack.limitSize(getMaxStackSize(stack));
+        setChanged();
+    }
+
+    @Override
+    public boolean stillValid(Player player) {
+        return Container.stillValidBlockEntity(this, player);
+    }
+
+    @Override
+    public void clearContent() {
+        items.clear();
+    }
+
+    @Override
+    public boolean canPlaceItem(int slot, ItemStack stack) {
+        return switch (slot) {
+            case 0, 1 -> stack.getItem() instanceof DyeItem;
+            case 2 -> isPrismBlock(stack);
+            default -> false;
+        };
     }
 
     @Override
@@ -88,54 +113,46 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        tag.put("inventory", itemHandler.serializeNBT(registries));
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        ContainerHelper.saveAllItems(output, items, true);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        itemHandler.deserializeNBT(registries, tag.getCompound("inventory"));
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
+        ContainerHelper.loadAllItems(input, items);
     }
 
     public void drops() {
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            Containers.dropItemStack(level, worldPosition.getX(), worldPosition.getY(),
-                    worldPosition.getZ(), itemHandler.getStackInSlot(i));
+        for (int i = 0; i < getContainerSize(); i++) {
+            Containers.dropItemStack(level, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ(), getItem(i));
         }
     }
 
-    // TICK METHOD - Called every game tick
     public static void tick(Level level, BlockPos pos, BlockState state, DyeMixerBlockEntity blockEntity) {
-        if (level.isClientSide()) { return; }
-        // Try to craft every tick
-        if (blockEntity.canCraft()) { blockEntity.craft(); }
+        if (!level.isClientSide() && blockEntity.canCraft()) {
+            blockEntity.craft();
+        }
     }
 
-    // CHECK IF CRAFTING IS POSSIBLE
     private boolean canCraft() {
-        ItemStack dye1 = itemHandler.getStackInSlot(0);
-        ItemStack dye2 = itemHandler.getStackInSlot(1);
-        ItemStack input = itemHandler.getStackInSlot(2);
-        ItemStack output = itemHandler.getStackInSlot(3);
-
-        // Check all inputs are present
-        if (dye1.isEmpty() || dye2.isEmpty() || input.isEmpty()) { return false; }
-        // Verify items are dyes
-        if (!(dye1.getItem() instanceof DyeItem) || !(dye2.getItem() instanceof DyeItem)) { return false; }
-        // Verify input is a prism block
-        if (!isPrismBlock(input)) { return false; }
-        // Check if output slot is empty (we only craft when output is empty)
-        if (!output.isEmpty()) { return false; }
-        return true;
+        ItemStack dye1 = getItem(0);
+        ItemStack dye2 = getItem(1);
+        ItemStack input = getItem(2);
+        ItemStack output = getItem(3);
+        return !dye1.isEmpty() && !dye2.isEmpty() && !input.isEmpty()
+                && dye1.getItem() instanceof DyeItem
+                && dye2.getItem() instanceof DyeItem
+                && isPrismBlock(input)
+                && output.isEmpty();
     }
 
-    // PERFORM THE CRAFTING
     private void craft() {
-        ItemStack dye1 = itemHandler.getStackInSlot(0);
-        ItemStack dye2 = itemHandler.getStackInSlot(1);
-        ItemStack input = itemHandler.getStackInSlot(2);
+        ItemStack dye1 = getItem(0);
+        ItemStack dye2 = getItem(1);
+        ItemStack input = getItem(2);
 
         int color1 = ((DyeItem) dye1.getItem()).getDyeColor().getTextureDiffuseColor();
         int color2 = ((DyeItem) dye2.getItem()).getDyeColor().getTextureDiffuseColor();
@@ -145,14 +162,14 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
         ItemStack result = new ItemStack(input.getItem(), 1);
         setBlockColor(result, mixedColor);
 
-        // --- DYE HISTORY NBT
         ListTag dyeList = new ListTag();
 
         BiConsumer<ResourceLocation, Integer> addOrMergeDye = (dyeRL, amount) -> {
             for (int i = 0; i < dyeList.size(); i++) {
-                CompoundTag tag = dyeList.getCompound(i);
+                CompoundTag tag = dyeList.getCompoundOrEmpty(i);
                 if (tag.getString("id").equals(dyeRL.toString())) {
-                    tag.putInt("count", tag.getInt("count") + amount);
+                    int current = tag.getIntOr("count",1);
+                    tag.putInt("count", current + amount);
                     return;
                 }
             }
@@ -162,23 +179,25 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
             dyeList.add(dyeTag);
         };
 
+// Get dye item keys safely
         ResourceLocation dye1RL = BuiltInRegistries.ITEM.getKey(dye1.getItem());
         ResourceLocation dye2RL = BuiltInRegistries.ITEM.getKey(dye2.getItem());
 
         addOrMergeDye.accept(dye1RL, 1);
         addOrMergeDye.accept(dye2RL, 1);
 
+// Safely unwrap CustomData tag
         CustomData inputCustomData = input.get(DataComponents.CUSTOM_DATA);
         if (inputCustomData != null) {
-            CompoundTag customTag = inputCustomData.copyTag();
-            if (customTag.contains("prismcraft:dye_ingredients", Tag.TAG_LIST)) {
-                ListTag oldList = customTag.getList("prismcraft:dye_ingredients", Tag.TAG_COMPOUND);
+            CompoundTag customTag = inputCustomData.copyTag().asCompound().orElse(null);
+            if (customTag != null && customTag.contains("prismcraft:dye_ingredients")) {
+                ListTag oldList = customTag.getListOrEmpty("prismcraft:dye_ingredients");
                 for (int i = 0; i < oldList.size(); i++) {
-                    CompoundTag t = oldList.getCompound(i);
-                    ResourceLocation rl = ResourceLocation.tryParse(t.getString("id"));
-                    if (rl != null) {
-                        addOrMergeDye.accept(rl, t.getInt("count"));
-                    }
+                    CompoundTag t = oldList.getCompoundOrEmpty(i);
+                    String idStr = t.getStringOr("id","id");
+                    ResourceLocation rl = ResourceLocation.parse(idStr);
+                    int count = t.getIntOr("count",1);
+                    addOrMergeDye.accept(rl, count);
                 }
             }
         }
@@ -187,46 +206,44 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider {
         custom.put("prismcraft:dye_ingredients", dyeList);
         result.set(DataComponents.CUSTOM_DATA, CustomData.of(custom));
 
-        itemHandler.setStackInSlot(3, result);
+        setItem(3, result);
         dye1.shrink(1);
         dye2.shrink(1);
         input.shrink(1);
         setChanged();
     }
 
-    // GET COLOR - works for ALL prism blocks automatically
     private int getBlockColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
 
-    // SET COLOR - works for ALL prism blocks automatically
     private void setBlockColor(ItemStack stack, int color) {
-        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));
+        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
     }
-
-
     private int mixThreeColors(int color1, int color2, int color3) {
         int r1 = (color1 >> 16) & 0xFF;
         int g1 = (color1 >> 8) & 0xFF;
         int b1 = color1 & 0xFF;
+
         int r2 = (color2 >> 16) & 0xFF;
         int g2 = (color2 >> 8) & 0xFF;
         int b2 = color2 & 0xFF;
+
         int r3 = (color3 >> 16) & 0xFF;
         int g3 = (color3 >> 8) & 0xFF;
         int b3 = color3 & 0xFF;
+
         int r = (r1 + r2 + r3) / 3;
         int g = (g1 + g2 + g3) / 3;
         int b = (b1 + b2 + b3) / 3;
+
         return (r << 16) | (g << 8) | b;
     }
 
     private boolean isPrismBlock(ItemStack stack) {
-        if (!(stack.getItem() instanceof BlockItem blockItem)) {
-            return false;
-        }
+        if (!(stack.getItem() instanceof BlockItem blockItem)) return false;
         return blockItem.getBlock() instanceof IPrismColoredBlock;
     }
-
 }
+

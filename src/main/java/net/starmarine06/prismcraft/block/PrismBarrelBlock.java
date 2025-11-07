@@ -20,7 +20,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.starmarine06.prismcraft.blockentity.DyeMixerBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
@@ -47,7 +49,7 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismBarrelBlockEntity tile) {
                 int color = getColor(stack);
@@ -63,7 +65,7 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (!level.isClientSide && player instanceof ServerPlayer serverPlayer) {
+        if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismBarrelBlockEntity barrel) {
                 barrel.startOpen(serverPlayer); // Trigger open logic & sound
@@ -74,20 +76,8 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
         return InteractionResult.SUCCESS;
     }
 
-    // ADD THIS METHOD - Handle drops when block is broken
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock())) {
-            BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof PrismBarrelBlockEntity barrel) {
-                barrel.drops();
-            }
-        }
-        super.onRemove(state, level, pos, newState, movedByPiston);
-    }
-
     public static void setColor(ItemStack stack, int color) {
-        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color, true));
+        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
         System.out.println("[BARREL BLOCK CCOLOR DEBUG] color=" + Integer.toHexString(color));
     }
 
@@ -98,21 +88,17 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
-        int color = getColor(stack);
-        if (color != 0xFFFFFF) {
-            int r = (color >> 16) & 0xFF;
-            int g = (color >> 8) & 0xFF;
-            int b = color & 0xFF;
-            tooltip.add(Component.literal("RGB: " + r + ", " + g + ", " + b)
-                    .withStyle(ChatFormatting.GOLD));
+    public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof DyeMixerBlockEntity dyeMixer) {
+            dyeMixer.drops();
         }
+        return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide
+        return level.isClientSide()
                 ? (lvl, pos, st, be) -> PrismBarrelBlockEntity.clientTick(lvl, pos, st, (PrismBarrelBlockEntity)be)
                 : null;
     }

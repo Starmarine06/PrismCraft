@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -16,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.starmarine06.prismcraft.blockentity.DyeMixerBlockEntity;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
@@ -54,13 +56,12 @@ public class DyeMixerBlock extends BaseEntityBlock {
         return this.defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
     }
 
-
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
             BlockEntity entity = level.getBlockEntity(pos);
-            if (entity instanceof DyeMixerBlockEntity) {
-                player.openMenu((DyeMixerBlockEntity) entity);
+            if (entity instanceof DyeMixerBlockEntity dyeMixer) {
+                player.openMenu(dyeMixer);
             }
         }
         return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.CONSUME;
@@ -69,22 +70,22 @@ public class DyeMixerBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
-        if (level.isClientSide()) {
-            return null;
+        if (!level.isClientSide()) {
+            return createTickerHelper(
+                    blockEntityType,
+                    ModBlockEntities.DYE_MIXER.get(),
+                    (pLevel, pPos, pState, pBlockEntity) -> DyeMixerBlockEntity.tick(pLevel, pPos, pState, pBlockEntity)
+            );
         }
-
-        return createTickerHelper(blockEntityType, ModBlockEntities.DYE_MIXER.get(),
-                (pLevel, pPos, pState, pBlockEntity) -> DyeMixerBlockEntity.tick(pLevel, pPos, pState, pBlockEntity));
+        return null;
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (state.getBlock() != newState.getBlock()) {
-            BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity instanceof DyeMixerBlockEntity) {
-                ((DyeMixerBlockEntity) blockEntity).drops();
-            }
+    public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof DyeMixerBlockEntity dyeMixer) {
+            dyeMixer.drops();
         }
-        super.onRemove(state, level, pos, newState, movedByPiston);
+        return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
     }
 }

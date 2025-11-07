@@ -13,7 +13,7 @@ import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
 import net.starmarine06.prismcraft.item.ModItems;
 
-@EventBusSubscriber(modid = PrismCraftMod.MOD_ID, bus = Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = PrismCraftMod.MOD_ID, value = Dist.CLIENT)
 public class ModColorHandlers {
 
     @SubscribeEvent
