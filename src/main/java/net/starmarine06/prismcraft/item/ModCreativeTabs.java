@@ -4,15 +4,20 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
 
+import java.util.function.Consumer;
+
 public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PrismCraftMod.MOD_ID);
 
+
+    /*
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PRISMCRAFT_TAB =
             CREATIVE_MODE_TABS.register("prismcraft_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.prismcraft.prismcraft_tab"))
@@ -78,7 +83,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_OAK_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_OAK_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_OAK_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_OAK_TRAPDOOR.get().asItem());
 
@@ -90,7 +95,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_SPRUCE_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_SPRUCE_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_SPRUCE_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_SPRUCE_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_SPRUCE_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_SPRUCE_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_SPRUCE_TRAPDOOR.get().asItem());
 
@@ -102,7 +107,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_BIRCH_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_BIRCH_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_BIRCH_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_BIRCH_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_BIRCH_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_BIRCH_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_BIRCH_TRAPDOOR.get().asItem());
 
@@ -114,7 +119,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_JUNGLE_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_JUNGLE_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_JUNGLE_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_JUNGLE_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_JUNGLE_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_JUNGLE_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_JUNGLE_TRAPDOOR.get().asItem());
 
@@ -126,7 +131,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_ACACIA_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_ACACIA_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_ACACIA_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_ACACIA_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_ACACIA_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_ACACIA_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_ACACIA_TRAPDOOR.get().asItem());
 
@@ -138,7 +143,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_DARK_OAK_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_DARK_OAK_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_DARK_OAK_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_DARK_OAK_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_DARK_OAK_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_DARK_OAK_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_DARK_OAK_TRAPDOOR.get().asItem());
 
@@ -151,7 +156,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_MANGROVE_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_MANGROVE_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_MANGROVE_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_MANGROVE_PRESSURE_PLATE.get().asItem())*/
+                        output.accept(ModBlocks.PRISM_MANGROVE_PRESSURE_PLATE.get().asItem())
                         output.accept(ModBlocks.PRISM_MANGROVE_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_MANGROVE_TRAPDOOR.get().asItem());
 
@@ -163,7 +168,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_CHERRY_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_CHERRY_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_CHERRY_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_CHERRY_TRAPDOOR.get().asItem());
 
@@ -175,7 +180,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_PALE_OAK_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_PALE_OAK_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_PALE_OAK_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_PALE_OAK_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_PALE_OAK_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_PALE_OAK_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_PALE_OAK_TRAPDOOR.get().asItem());
 
@@ -187,7 +192,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_BAMBOO_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_BAMBOO_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_BAMBOO_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_BAMBOO_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_BAMBOO_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_BAMBOO_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_BAMBOO_TRAPDOOR.get().asItem());
 
@@ -199,7 +204,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_CRIMSON_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_CRIMSON_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_CRIMSON_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_CRIMSON_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_CRIMSON_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_CRIMSON_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_CRIMSON_TRAPDOOR.get().asItem());
 
@@ -211,9 +216,10 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PRISM_WARPED_FENCE.get().asItem());
                         output.accept(ModBlocks.PRISM_WARPED_FENCE_GATE.get().asItem());
                         output.accept(ModBlocks.PRISM_WARPED_BUTTON.get().asItem());
-                        output.accept(ModBlocks.PRISM_WARPED_PRESSURE_PLATE.get().asItem());*/
+                        output.accept(ModBlocks.PRISM_WARPED_PRESSURE_PLATE.get().asItem());
                         output.accept(ModBlocks.PRISM_WARPED_DOOR.get().asItem());
                         output.accept(ModBlocks.PRISM_WARPED_TRAPDOOR.get().asItem());
                     })
                     .build());
+            */
 }

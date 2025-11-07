@@ -22,3 +22,8 @@
 /data get block 15 -59 19
 /setblock -1 -60 8 minecraft:barrel
 /enchant Dev minecraft:efficiency 5
+/setblock 1 -60 2 prismcraft:dye_mixer
+/give Dev prismcraft:prism_concrete
+/give Dev prismcraft:prism_concrete 64
+/data get block 0 -59 0
+/data get block -1 -59 0
