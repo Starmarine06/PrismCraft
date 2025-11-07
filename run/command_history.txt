@@ -27,3 +27,4 @@
 /give Dev prismcraft:prism_concrete 64
 /data get block 0 -59 0
 /data get block -1 -59 0
+/give Dev prismcraft:prism_acacia_trapdoor
