@@ -27,7 +27,7 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
                 this.leftPos, this.topPos,
                 0, 0,
                 this.imageWidth, this.imageHeight,
-                256, 256
+                176, 166
         );
     }
 

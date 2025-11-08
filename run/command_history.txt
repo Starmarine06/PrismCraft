@@ -1,7 +1,3 @@
-/gamerule doWeatherCycle false
-/give Dev prismcraft:prismcraft_icon
-/data get block 3 -60 15
-/data get entity @e[type=item,sort=nearest,limit=1]
 /data get block 6 -60 20
 /setblock 6 -60 20 oak_fence[east=true]
 /setblock 5 -60 20 prismcraft:prism_fence[east=true
@@ -48,3 +44,7 @@
 /effect clear Dev minecraft:darkness
 /summon minecraft:warden
 /scoreboard objectives add itemCount dummy
+/setblock 5 -60 3 prismcraft:prism_barrel
+/data get block 15 -60 0
+/data get block 9 -60 2
+/data get block 0 -60 10

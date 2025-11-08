@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -104,9 +105,18 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     @Override
+    public void onLoad() {
+        super.onLoad();
+        if (level != null && level.isClientSide()) {
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+        }
+    }
+
+    @Override
     protected void saveAdditional(ValueOutput output) {
         super.saveAdditional(output);
         ContainerHelper.saveAllItems(output, items, true);
+        output.putInt("Color", color);
     }
 
     @Override
@@ -114,6 +124,7 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
         super.loadAdditional(input);
         items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         ContainerHelper.loadAllItems(input, items);
+        this.color = input.getInt("Color").orElse(0xFFFFFF);
     }
 
     @Override
@@ -126,7 +137,26 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     @Override
     public void handleUpdateTag(ValueInput input) {
         super.handleUpdateTag(input);
+        int oldColor = this.color;
         loadAdditional(input);
+
+        // If color changed, request re-render
+        if (oldColor != this.color && level != null) {
+            level.setBlocksDirty(getBlockPos(), getBlockState(), getBlockState());
+            // Force model data refresh
+            requestModelDataUpdate();
+        }
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ValueInput valueInput) {
+        int oldColor = this.color;
+        handleUpdateTag(valueInput);
+
+        // Force immediate render update if color changed
+        if (oldColor != this.color && level != null && level.isClientSide()) {
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+        }
     }
 
     @Nullable
