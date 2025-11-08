@@ -1,0 +1,7 @@
+{
+  "parent": "prismcraft:block/template_cube_all",
+  "render_type": "translucent",
+  "textures": {
+    "all": "prismcraft:block/prism_copper_grate"
+  }
+}

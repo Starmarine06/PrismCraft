@@ -1,0 +1,8 @@
+{
+	"parent": "prismcraft:block/template_stairs",
+	"textures": {
+		"top": "prismcraft:block/prism_stone",
+		"side": "prismcraft:block/prism_stone",
+		"top": "prismcraft:block/prism_stone"
+	}
+}

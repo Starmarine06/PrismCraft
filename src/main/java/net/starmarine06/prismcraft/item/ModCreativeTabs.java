@@ -70,12 +70,15 @@ public class ModCreativeTabs {
                         output.accept(new ItemStack(ModItems.PRISM_ANDESITE_SLAB.get()));
                         output.accept(new ItemStack(ModItems.PRISM_ANDESITE_STAIRS.get()));
                         output.accept(new ItemStack(ModItems.PRISM_ANDESITE_WALL.get()));
+
                         output.accept(new ItemStack(ModItems.PRISM_COPPER_BLOCK.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_CHISELED_COPPER_BLOCK.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER_BLOCK.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_CHISELED_COPPER.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER.get()));
                         output.accept(new ItemStack(ModItems.PRISM_COPPER_GRATE.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_COPPER_SLAB.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_COPPER_STAIRS.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER_SLAB.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER_STAIRS.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_COPPER_DOOR.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_COPPER_TRAPDOOR.get()));
 
                         // Oak
                         /*output.accept(new ItemStack(ModItems.PRISM_OAK_LOG.get()));

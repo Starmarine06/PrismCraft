@@ -1,0 +1,8 @@
+{
+	"parent": "prismcraft:block/template_slab",
+	"textures": {
+		"bottom": "prismcraft:block/prism_concrete",
+		"top": "prismcraft:block/prism_concrete",
+		"side": "prismcraft:block/prism_concrete"
+	}
+}
