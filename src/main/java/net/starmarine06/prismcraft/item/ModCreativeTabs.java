@@ -73,6 +73,9 @@ public class ModCreativeTabs {
                         output.accept(new ItemStack(ModItems.PRISM_COPPER_BLOCK.get()));
                         output.accept(new ItemStack(ModItems.PRISM_CHISELED_COPPER_BLOCK.get()));
                         output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER_BLOCK.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_COPPER_GRATE.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_COPPER_SLAB.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_COPPER_STAIRS.get()));
 
                         // Oak
                         /*output.accept(new ItemStack(ModItems.PRISM_OAK_LOG.get()));

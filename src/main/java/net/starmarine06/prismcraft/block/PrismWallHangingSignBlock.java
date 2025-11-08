@@ -20,11 +20,13 @@ public class PrismWallHangingSignBlock extends WallHangingSignBlock implements I
     public PrismWallHangingSignBlock(BlockBehaviour.Properties properties, WoodType woodType) {
         super(woodType, properties);
     }
+
     @Override
     @Nullable
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return ModBlockEntities.PRISM_HANGING_SIGN.get().create(pos, state);
     }
+
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
@@ -37,6 +39,7 @@ public class PrismWallHangingSignBlock extends WallHangingSignBlock implements I
             }
         }
     }
+
     public static int getColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;

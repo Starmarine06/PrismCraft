@@ -74,20 +74,25 @@ public class ModBlocks {
             BLOCKS.register("prism_ceiling_hanging_sign", registryName ->
                     new PrismCeilingHangingSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));
     public static final DeferredBlock<WallHangingSignBlock> PRISM_WALL_HANGING_SIGN =
-            BLOCKS.register("prism_wall_hanging_sign", () ->
-                    new PrismWallHangingSignBlock(BlockBehaviour.Properties.of()
-                            .noCollision()
-                            .strength(1.0F), WoodType.OAK
+            BLOCKS.register("prism_wall_hanging_sign", registryName ->
+                    new PrismWallHangingSignBlock(
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
+                            WoodType.OAK
                     )
             );
 
-    public static final DeferredBlock<FlowerPotBlock> PRISM_FLOWER_POT =
+    public static final DeferredBlock<PrismFlowerPotBlock> PRISM_FLOWER_POT =
             BLOCKS.register("prism_flower_pot", registryName ->
                     new PrismFlowerPotBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
-    public static final DeferredBlock<DecoratedPotBlock> PRISM_DECORATED_POT =
+    public static final DeferredBlock<PrismDecoratedPotBlock> PRISM_DECORATED_POT =
             BLOCKS.register("prism_decorated_pot", registryName ->
-                    new PrismDecoratedPotBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+                    new PrismDecoratedPotBlock(BlockBehaviour.Properties.of()
+                            .noOcclusion()
+                            .strength(1.5F)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName)))
+            );
+
 
     //*********************************************************************Other Blocks
     //Concrete Vars
@@ -252,6 +257,24 @@ public class ModBlocks {
             registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismConcreteBlock> PRISM_COPPER_GRATE = BLOCKS.register(
+            "prism_copper_grate",
+            registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismSlabBlock> PRISM_COPPER_SLAB = BLOCKS.register(
+            "prism_copper_slab",
+            registryName -> new PrismSlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).strength(1.8F).requiresCorrectToolForDrops()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+    public static final DeferredBlock<PrismStairsBlock> PRISM_COPPER_STAIRS = BLOCKS.register(
+            "prism_copper_stairs",
+            registryName -> new PrismStairsBlock(
+                    PRISM_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE).strength(1.8F).requiresCorrectToolForDrops()
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
 
 
     //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped
@@ -445,6 +468,21 @@ public class ModBlocks {
                     registryName -> new PrismTrapdoorBlock(
                             BlockSetType.WARPED,
                             Blocks.WARPED_TRAPDOOR.defaultBlockState().getBlock().properties()
+                    )
+            );
+    // Copper
+    public static final DeferredBlock<Block> PRISM_COPPER_DOOR =
+            BLOCKS.register("prism_copper_door",
+                    registryName -> new PrismDoorBlock(
+                            BlockSetType.COPPER,
+                            Blocks.COPPER_DOOR.defaultBlockState().getBlock().properties()
+                    )
+            );
+    public static final DeferredBlock<Block> PRISM_COPPER_TRAPDOOR =
+            BLOCKS.register("prism_copper_trapdoor",
+                    registryName -> new PrismTrapdoorBlock(
+                            BlockSetType.COPPER,
+                            Blocks.COPPER_TRAPDOOR.defaultBlockState().getBlock().properties()
                     )
             );
 }
