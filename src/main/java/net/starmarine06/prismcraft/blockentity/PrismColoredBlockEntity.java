@@ -84,6 +84,12 @@ public class PrismColoredBlockEntity extends BlockEntity {
         }
     }
 
+    @Override
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        this.color = input.getInt("Color").orElse(0xFFFFFF);
+    }
+
     // CLIENT SYNC - Receive data on client
     @Nullable
     @Override

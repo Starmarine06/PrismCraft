@@ -1,20 +1,62 @@
 package net.starmarine06.prismcraft.client;
 
 import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
-import net.starmarine06.prismcraft.item.ModItems;
+
+import java.util.List;
 
 @EventBusSubscriber(modid = PrismCraftMod.MOD_ID, value = Dist.CLIENT)
 public class ModColorHandlers {
+
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            List<DeferredBlock<?>> cutoutBlocks = List.of(
+                    ModBlocks.PRISM_OAK_DOOR,
+                    ModBlocks.PRISM_SPRUCE_DOOR,
+                    ModBlocks.PRISM_BIRCH_DOOR,
+                    ModBlocks.PRISM_JUNGLE_DOOR,
+                    ModBlocks.PRISM_ACACIA_DOOR,
+                    ModBlocks.PRISM_DARK_OAK_DOOR,
+                    ModBlocks.PRISM_MANGROVE_DOOR,
+                    ModBlocks.PRISM_CHERRY_DOOR,
+                    ModBlocks.PRISM_PALE_OAK_DOOR,
+                    ModBlocks.PRISM_BAMBOO_DOOR,
+                    ModBlocks.PRISM_CRIMSON_DOOR,
+                    ModBlocks.PRISM_WARPED_DOOR,
+                    ModBlocks.PRISM_OAK_TRAPDOOR,
+                    ModBlocks.PRISM_SPRUCE_TRAPDOOR,
+                    ModBlocks.PRISM_BIRCH_TRAPDOOR,
+                    ModBlocks.PRISM_JUNGLE_TRAPDOOR,
+                    ModBlocks.PRISM_ACACIA_TRAPDOOR,
+                    ModBlocks.PRISM_DARK_OAK_TRAPDOOR,
+                    ModBlocks.PRISM_MANGROVE_TRAPDOOR,
+                    ModBlocks.PRISM_CHERRY_TRAPDOOR,
+                    ModBlocks.PRISM_PALE_OAK_TRAPDOOR,
+                    ModBlocks.PRISM_BAMBOO_TRAPDOOR,
+                    ModBlocks.PRISM_CRIMSON_TRAPDOOR,
+                    ModBlocks.PRISM_WARPED_TRAPDOOR,
+                    ModBlocks.PRISM_LADDER,
+                    ModBlocks.DYE_MIXER
+            );
+
+            for (DeferredBlock<?> block : cutoutBlocks) {
+                ItemBlockRenderTypes.setRenderLayer(block.get(), ChunkSectionLayer.CUTOUT);
+            }
+        });
+    }
 
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
