@@ -22,6 +22,23 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("prism_barrel", () ->
                     new BlockEntityType<>(PrismBarrelBlockEntity::new, ModBlocks.PRISM_BARREL.get()));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismSignBlockEntity>> PRISM_SIGN =
+            BLOCK_ENTITIES.register("prism_sign", () ->
+                    new BlockEntityType<>(
+                            PrismSignBlockEntity::new,
+                            ModBlocks.PRISM_STANDING_SIGN.get(),
+                            ModBlocks.PRISM_WALL_SIGN.get()
+                    )
+            );
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismHangingSignBlockEntity>> PRISM_HANGING_SIGN =
+            BLOCK_ENTITIES.register("prism_hanging_sign", () ->
+                    new BlockEntityType<>(
+                            PrismHangingSignBlockEntity::new,
+                            ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                            ModBlocks.PRISM_WALL_HANGING_SIGN.get()
+                    )
+            );
     /*public static final Supplier<BlockEntityType<PrismSignBlockEntity>> PRISM_SIGN =
             BLOCK_ENTITY_TYPES.register("prism_sign",
                     () -> BlockEntityType.Builder.of(PrismSignBlockEntity::new,

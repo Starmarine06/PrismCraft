@@ -36,10 +36,10 @@ public class ModItems {
     //public static final DeferredItem<Item> PRISM_TRAPDOOR = registerColoredBlockItem("prism_trapdoor", ModBlocks.PRISM_TRAPDOOR);
     public static final DeferredItem<Item> PRISM_BUTTON = registerColoredBlockItem("prism_button", ModBlocks.PRISM_BUTTON);
     public static final DeferredItem<Item> PRISM_PRESSURE_PLATE = registerColoredBlockItem("prism_pressure_plate", ModBlocks.PRISM_PRESSURE_PLATE);
-    public static final DeferredItem<Item> PRISM_STANDING_SIGN = registerColoredBlockItem("prism_standing_sign", ModBlocks.PRISM_STANDING_SIGN);
-    public static final DeferredItem<Item> PRISM_WALL_SIGN = registerColoredBlockItem("prism_wall_sign", ModBlocks.PRISM_WALL_SIGN);
-    public static final DeferredItem<Item> PRISM_CEILING_HANGING_SIGN = registerColoredBlockItem("prism_ceiling_hanging_sign", ModBlocks.PRISM_CEILING_HANGING_SIGN);
-    public static final DeferredItem<Item> PRISM_WALL_HANGING_SIGN = registerColoredBlockItem("prism_wall_hanging_sign", ModBlocks.PRISM_WALL_HANGING_SIGN);
+    //public static final DeferredItem<Item> PRISM_STANDING_SIGN = registerColoredBlockItem("prism_standing_sign", ModBlocks.PRISM_STANDING_SIGN);
+    //public static final DeferredItem<Item> PRISM_WALL_SIGN = registerColoredBlockItem("prism_wall_sign", ModBlocks.PRISM_WALL_SIGN);
+    //public static final DeferredItem<Item> PRISM_CEILING_HANGING_SIGN = registerColoredBlockItem("prism_ceiling_hanging_sign", ModBlocks.PRISM_CEILING_HANGING_SIGN);
+    //public static final DeferredItem<Item> PRISM_WALL_HANGING_SIGN = registerColoredBlockItem("prism_wall_hanging_sign", ModBlocks.PRISM_WALL_HANGING_SIGN);
     public static final DeferredItem<Item> PRISM_FLOWER_POT = registerColoredBlockItem("prism_flower_pot", ModBlocks.PRISM_FLOWER_POT);
     public static final DeferredItem<Item> PRISM_DECORATED_POT = registerColoredBlockItem("prism_decorated_pot", ModBlocks.PRISM_DECORATED_POT);
     public static final DeferredItem<Item> PRISM_SAND = registerColoredBlockItem("prism_sand", ModBlocks.PRISM_SAND);
@@ -93,6 +93,24 @@ public class ModItems {
     public static final DeferredItem<Item> PRISM_CRIMSON_TRAPDOOR = registerColoredBlockItem("prism_crimson_trapdoor", ModBlocks.PRISM_CRIMSON_TRAPDOOR);
     public static final DeferredItem<Item> PRISM_WARPED_DOOR = registerColoredBlockItem("prism_warped_door", ModBlocks.PRISM_WARPED_DOOR);
     public static final DeferredItem<Item> PRISM_WARPED_TRAPDOOR = registerColoredBlockItem("prism_warped_trapdoor", ModBlocks.PRISM_WARPED_TRAPDOOR);
+    public static final DeferredItem<PrismSignItem> PRISM_SIGN_ITEM =
+            ITEMS.register("prism_sign", registryName -> new PrismSignItem(
+                    new Item.Properties()
+                            .stacksTo(16)
+                            .setId(ResourceKey.create(Registries.ITEM, registryName)),
+                    ModBlocks.PRISM_STANDING_SIGN.get(),
+                    ModBlocks.PRISM_WALL_SIGN.get()
+            ));
+
+    public static final DeferredItem<PrismHangingSignItem> PRISM_HANGING_SIGN_ITEM =
+            ITEMS.register("prism_hanging_sign", registryName -> new PrismHangingSignItem(
+                    ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                    ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
+                    new Item.Properties()
+                            .stacksTo(16)
+                            .setId(ResourceKey.create(Registries.ITEM, registryName))
+            ));
+
 
     public static final DeferredItem<Item> PRISMCRAFT_ICON = ITEMS.registerSimpleItem(
             "prismcraft_icon",

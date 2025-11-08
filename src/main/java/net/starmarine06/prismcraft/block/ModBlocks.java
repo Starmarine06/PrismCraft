@@ -73,9 +73,13 @@ public class ModBlocks {
     public static final DeferredBlock<CeilingHangingSignBlock> PRISM_CEILING_HANGING_SIGN =
             BLOCKS.register("prism_ceiling_hanging_sign", registryName ->
                     new PrismCeilingHangingSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));
-    public static final DeferredBlock<CeilingHangingSignBlock> PRISM_WALL_HANGING_SIGN =
-            BLOCKS.register("prism_wall_hanging_sign", registryName ->
-                    new PrismCeilingHangingSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));
+    public static final DeferredBlock<WallHangingSignBlock> PRISM_WALL_HANGING_SIGN =
+            BLOCKS.register("prism_wall_hanging_sign", () ->
+                    new PrismWallHangingSignBlock(BlockBehaviour.Properties.of()
+                            .noCollision()
+                            .strength(1.0F), WoodType.OAK
+                    )
+            );
 
     public static final DeferredBlock<FlowerPotBlock> PRISM_FLOWER_POT =
             BLOCKS.register("prism_flower_pot", registryName ->

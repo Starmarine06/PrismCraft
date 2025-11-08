@@ -26,8 +26,8 @@ public class PrismCraftMod {
         LOGGER.info("Initializing PrismCraft mod...");
 
         ModBlocks.BLOCKS.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
         ModMenuTypes.MENUS.register(modEventBus);
 
         modEventBus.addListener(this::registerScreens);

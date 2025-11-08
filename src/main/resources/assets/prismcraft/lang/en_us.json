@@ -15,6 +15,8 @@
   "item.prismcraft.prism_concrete_powder": "Prism Concrete Powder",
   "item.prismcraft.prism_candle": "Prism Candle",
   "item.prismcraft.prism_carpet": "Prism Carpet",
+  "item.prismcraft.prism_sign": "Prism Sign",
+  "item.prismcraft.prism_hanging_sign": "Prism Hanging Sign",
 
   "item.prismcraft.prism_concrete": "Prism Concrete",
   "item.prismcraft.prism_concrete_slab": "Prism Concrete Slab",
@@ -35,6 +37,11 @@
   "item.prismcraft.prism_andesite_slab": "Prism Andesite Slab",
   "item.prismcraft.prism_andesite_stairs": "Prism Andesite Stairs",
   "item.prismcraft.prism_andesite_wall": "Prism Andesite Wall",
+
+  "item.prismcraft.prism_copper_block": "Prism Copper Block",
+  "item.prismcraft.prism_chiseled_copper_block": "Prism Chiseled Copper Block",
+  "item.prismcraft.prism_cut_copper_block": "Prism Cut Copper Block",
+  "item.prismcraft.prism_copper_stairs": "Prism Copper Stairs",
 
   "item.prismcraft.prism_log": "Prism Log",
   "item.prismcraft.prism_planks": "Prism Planks",
