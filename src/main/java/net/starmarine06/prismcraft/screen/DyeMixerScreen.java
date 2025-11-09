@@ -2,6 +2,7 @@ package net.starmarine06.prismcraft.screen;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -15,20 +16,14 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
 
     public DyeMixerScreen(DyeMixerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
-        this.imageHeight = 166;
-        this.imageWidth = 176;
-        this.inventoryLabelY = this.imageHeight - 94;
     }
 
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
-        graphics.blit(
-                BACKGROUND_LOCATION,
-                this.leftPos, this.topPos,
-                0, 0,
-                this.imageWidth, this.imageHeight,
-                176, 166
-        );
+        int x = (width - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
+
+        graphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_LOCATION, x, y, 0, 0, imageWidth, imageHeight, 256, 256);
     }
 
     @Override
