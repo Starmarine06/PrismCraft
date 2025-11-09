@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "minecraft:block/pale_oak_hanging_sign"
-    }
+    "facing=north": { "model": "prismcraft:block/prism_wall_hanging_sign", "y": 180 },
+    "facing=south": { "model": "prismcraft:block/prism_wall_hanging_sign", "y": 0 },
+    "facing=west":  { "model": "prismcraft:block/prism_wall_hanging_sign", "y": 90 },
+    "facing=east":  { "model": "prismcraft:block/prism_wall_hanging_sign", "y": 270 }
   }
 }

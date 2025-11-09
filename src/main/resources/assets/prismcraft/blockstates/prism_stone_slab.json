@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "prismcraft:block/prism_stone_slab"
+    },
+    "type=double": {
+      "model": "prismcraft:block/prism_stone"
+    },
+    "type=top": {
+      "model": "prismcraft:block/prism_stone_slab_top"
+    }
+  }
+}

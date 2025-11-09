@@ -67,11 +67,11 @@ public class ModItems {
     public static final DeferredItem<Item> PRISM_TERRACOTTA_STAIRS = registerColoredBlockItem("prism_terracotta_stairs", ModBlocks.PRISM_TERRACOTTA_STAIRS);
     public static final DeferredItem<Item> PRISM_TERRACOTTA_WALL = registerColoredBlockItem("prism_terracotta_wall", ModBlocks.PRISM_TERRACOTTA_WALL);
     public static final DeferredItem<Item> PRISM_COPPER_BLOCK = registerColoredBlockItem("prism_copper_block", ModBlocks.PRISM_COPPER_BLOCK);
-    public static final DeferredItem<Item> PRISM_CHISELED_COPPER_BLOCK = registerColoredBlockItem("prism_chiseled_copper_block", ModBlocks.PRISM_CHISELED_COPPER_BLOCK);
-    public static final DeferredItem<Item> PRISM_CUT_COPPER_BLOCK = registerColoredBlockItem("prism_cut_copper_block", ModBlocks.PRISM_CUT_COPPER_BLOCK);
+    public static final DeferredItem<Item> PRISM_CHISELED_COPPER = registerColoredBlockItem("prism_chiseled_copper", ModBlocks.PRISM_CHISELED_COPPER);
+    public static final DeferredItem<Item> PRISM_CUT_COPPER = registerColoredBlockItem("prism_cut_copper", ModBlocks.PRISM_CUT_COPPER);
     public static final DeferredItem<Item> PRISM_COPPER_GRATE = registerColoredBlockItem("prism_copper_grate", ModBlocks.PRISM_COPPER_GRATE);
-    public static final DeferredItem<Item> PRISM_COPPER_SLAB = registerColoredBlockItem("prism_copper_slab", ModBlocks.PRISM_COPPER_SLAB);
-    public static final DeferredItem<Item> PRISM_COPPER_STAIRS = registerColoredBlockItem("prism_copper_stairs", ModBlocks.PRISM_COPPER_STAIRS);
+    public static final DeferredItem<Item> PRISM_CUT_COPPER_SLAB = registerColoredBlockItem("prism_cut_copper_slab", ModBlocks.PRISM_CUT_COPPER_SLAB);
+    public static final DeferredItem<Item> PRISM_CUT_COPPER_STAIRS = registerColoredBlockItem("prism_cut_copper_stairs", ModBlocks.PRISM_CUT_COPPER_STAIRS);
     public static final DeferredItem<Item> PRISM_OAK_DOOR = registerColoredBlockItem("prism_oak_door", ModBlocks.PRISM_OAK_DOOR);
     public static final DeferredItem<Item> PRISM_OAK_TRAPDOOR = registerColoredBlockItem("prism_oak_trapdoor", ModBlocks.PRISM_OAK_TRAPDOOR);
     public static final DeferredItem<Item> PRISM_SPRUCE_DOOR = registerColoredBlockItem("prism_spruce_door", ModBlocks.PRISM_SPRUCE_DOOR);
@@ -97,19 +97,19 @@ public class ModItems {
     public static final DeferredItem<Item> PRISM_WARPED_DOOR = registerColoredBlockItem("prism_warped_door", ModBlocks.PRISM_WARPED_DOOR);
     public static final DeferredItem<Item> PRISM_WARPED_TRAPDOOR = registerColoredBlockItem("prism_warped_trapdoor", ModBlocks.PRISM_WARPED_TRAPDOOR);
     public static final DeferredItem<Item> PRISM_COPPER_DOOR = registerColoredBlockItem("prism_copper_door", ModBlocks.PRISM_COPPER_DOOR);
-    public static final DeferredItem<Item> PRISM_COPPPER_TRAPDOOR = registerColoredBlockItem("prism_copper_trapdoor", ModBlocks.PRISM_COPPER_TRAPDOOR);
+    public static final DeferredItem<Item> PRISM_COPPER_TRAPDOOR = registerColoredBlockItem("prism_copper_trapdoor", ModBlocks.PRISM_COPPER_TRAPDOOR);
     public static final DeferredItem<PrismSignItem> PRISM_SIGN_ITEM =
             ITEMS.register("prism_sign", registryName -> new PrismSignItem(
                     new Item.Properties()
                             .stacksTo(16)
                             .setId(ResourceKey.create(Registries.ITEM, registryName)),
-                    ModBlocks.PRISM_STANDING_SIGN.get(),
+                    ModBlocks.PRISM_SIGN.get(),
                     ModBlocks.PRISM_WALL_SIGN.get()
             ));
 
     public static final DeferredItem<PrismHangingSignItem> PRISM_HANGING_SIGN_ITEM =
             ITEMS.register("prism_hanging_sign", registryName -> new PrismHangingSignItem(
-                    ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                    ModBlocks.PRISM_HANGING_SIGN.get(),
                     ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
                     new Item.Properties()
                             .stacksTo(16)

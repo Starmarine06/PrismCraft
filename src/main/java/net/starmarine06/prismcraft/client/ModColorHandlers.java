@@ -48,8 +48,15 @@ public class ModColorHandlers {
                     ModBlocks.PRISM_BAMBOO_TRAPDOOR,
                     ModBlocks.PRISM_CRIMSON_TRAPDOOR,
                     ModBlocks.PRISM_WARPED_TRAPDOOR,
+
                     ModBlocks.PRISM_LADDER,
-                    ModBlocks.DYE_MIXER
+                    ModBlocks.DYE_MIXER,
+                    ModBlocks.PRISM_COPPER_GRATE,
+                    ModBlocks.PRISM_COPPER_DOOR,
+                    ModBlocks.PRISM_COPPER_TRAPDOOR,
+
+                    ModBlocks.PRISM_HANGING_SIGN,
+                    ModBlocks.PRISM_WALL_HANGING_SIGN
             );
 
             for (DeferredBlock<?> block : cutoutBlocks) {
@@ -91,9 +98,9 @@ public class ModColorHandlers {
                 //ModBlocks.PRISM_TRAPDOOR.get(),
                 ModBlocks.PRISM_BUTTON.get(),
                 ModBlocks.PRISM_PRESSURE_PLATE.get(),
-                ModBlocks.PRISM_STANDING_SIGN.get(),
+                ModBlocks.PRISM_SIGN.get(),
                 ModBlocks.PRISM_WALL_SIGN.get(),
-                ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                ModBlocks.PRISM_HANGING_SIGN.get(),
                 ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
                 ModBlocks.PRISM_FLOWER_POT.get(),
                 ModBlocks.PRISM_DECORATED_POT.get(),
@@ -121,11 +128,11 @@ public class ModColorHandlers {
                 ModBlocks.PRISM_ANDESITE_STAIRS.get(),
                 ModBlocks.PRISM_ANDESITE_WALL.get(),
                 ModBlocks.PRISM_COPPER_BLOCK.get(),
-                ModBlocks.PRISM_CHISELED_COPPER_BLOCK.get(),
-                ModBlocks.PRISM_CUT_COPPER_BLOCK.get(),
+                ModBlocks.PRISM_CHISELED_COPPER.get(),
                 ModBlocks.PRISM_COPPER_GRATE.get(),
-                ModBlocks.PRISM_COPPER_SLAB.get(),
-                ModBlocks.PRISM_COPPER_STAIRS.get(),
+                ModBlocks.PRISM_CUT_COPPER.get(),
+                ModBlocks.PRISM_CUT_COPPER_SLAB.get(),
+                ModBlocks.PRISM_CUT_COPPER_STAIRS.get(),
                 //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped
                 ModBlocks.PRISM_OAK_DOOR.get(),
                 ModBlocks.PRISM_OAK_TRAPDOOR.get(),

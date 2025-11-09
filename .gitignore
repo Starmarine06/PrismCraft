@@ -1,3 +1,9 @@
 # Project exclude paths
 /.gradle/
+/.gradle
+/.idea/
+/.idea
 /build/
+/build
+/run/
+/run

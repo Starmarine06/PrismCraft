@@ -28,7 +28,7 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("prism_sign", () ->
                     new BlockEntityType<>(
                             PrismSignBlockEntity::new,
-                            ModBlocks.PRISM_STANDING_SIGN.get(),
+                            ModBlocks.PRISM_SIGN.get(),
                             ModBlocks.PRISM_WALL_SIGN.get()
                     )
             );
@@ -37,7 +37,7 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("prism_hanging_sign", () ->
                     new BlockEntityType<>(
                             PrismHangingSignBlockEntity::new,
-                            ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                            ModBlocks.PRISM_HANGING_SIGN.get(),
                             ModBlocks.PRISM_WALL_HANGING_SIGN.get()
                     )
             );
@@ -78,9 +78,9 @@ public class ModBlockEntities {
                             //ModBlocks.PRISM_TRAPDOOR.get(),
                             ModBlocks.PRISM_BUTTON.get(),
                             ModBlocks.PRISM_PRESSURE_PLATE.get(),
-                            ModBlocks.PRISM_STANDING_SIGN.get(),
+                            ModBlocks.PRISM_SIGN.get(),
                             ModBlocks.PRISM_WALL_SIGN.get(),
-                            ModBlocks.PRISM_CEILING_HANGING_SIGN.get(),
+                            ModBlocks.PRISM_HANGING_SIGN.get(),
                             ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
                             ModBlocks.PRISM_SAND.get(),
                             ModBlocks.PRISM_CANDLE.get(),
@@ -106,11 +106,11 @@ public class ModBlockEntities {
                             ModBlocks.PRISM_ANDESITE_STAIRS.get(),
                             ModBlocks.PRISM_ANDESITE_WALL.get(),
                             ModBlocks.PRISM_COPPER_BLOCK.get(),
-                            ModBlocks.PRISM_CHISELED_COPPER_BLOCK.get(),
-                            ModBlocks.PRISM_CUT_COPPER_BLOCK.get(),
+                            ModBlocks.PRISM_CHISELED_COPPER.get(),
+                            ModBlocks.PRISM_CUT_COPPER.get(),
                             ModBlocks.PRISM_COPPER_GRATE.get(),
-                            ModBlocks.PRISM_COPPER_SLAB.get(),
-                            ModBlocks.PRISM_COPPER_STAIRS.get(),
+                            ModBlocks.PRISM_CUT_COPPER_SLAB.get(),
+                            ModBlocks.PRISM_CUT_COPPER_STAIRS.get(),
                             //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped
                             ModBlocks.PRISM_OAK_DOOR.get(),
                             ModBlocks.PRISM_OAK_TRAPDOOR.get(),
@@ -136,8 +136,8 @@ public class ModBlockEntities {
                             ModBlocks.PRISM_CRIMSON_TRAPDOOR.get(),
                             ModBlocks.PRISM_WARPED_DOOR.get(),
                             ModBlocks.PRISM_WARPED_TRAPDOOR.get(),
-                            ModBlocks.PRISM_COPPER_TRAPDOOR.get(),
-                            ModBlocks.PRISM_COPPER_DOOR.get()
 
-                            ));
+                            ModBlocks.PRISM_COPPER_DOOR.get(),
+                            ModBlocks.PRISM_COPPER_TRAPDOOR.get()
+                    ));
 }

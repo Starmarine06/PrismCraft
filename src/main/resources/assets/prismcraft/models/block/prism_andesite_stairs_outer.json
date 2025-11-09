@@ -1,0 +1,8 @@
+{
+	"parent": "prismcraft:block/template_outer_stairs",
+	"textures": {
+		"bottom": "prismcraft:block/prism_andesite",
+		"top": "prismcraft:block/prism_andesite",
+		"side": "prismcraft:block/prism_andesite"
+	}
+}

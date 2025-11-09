@@ -50,7 +50,7 @@ public class ModBlocks {
     public static final DeferredBlock<PrismFenceGateBlock> PRISM_FENCE_GATE = BLOCKS.register(
             "prism_fence_gate",
             registryName -> new PrismFenceGateBlock(WOOD_PROPS.setId(ResourceKey.create(Registries.BLOCK, registryName))));
-//    public static final DeferredBlock<PrismDoorBlock> PRISM_DOOR = BLOCKS.register(
+    //    public static final DeferredBlock<PrismDoorBlock> PRISM_DOOR = BLOCKS.register(
 //            "prism_door",
 //            registryName -> new PrismDoorBlock(BlockSetType.OAK, WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
 //    public static final DeferredBlock<PrismTrapdoorBlock> PRISM_TRAPDOOR = BLOCKS.register(
@@ -62,22 +62,29 @@ public class ModBlocks {
     public static final DeferredBlock<PrismPressurePlateBlock> PRISM_PRESSURE_PLATE = BLOCKS.register(
             "prism_pressure_plate",
             registryName -> new PrismPressurePlateBlock(WOOD_PROPS.noCollision().setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<StandingSignBlock> PRISM_STANDING_SIGN =
-            BLOCKS.register("prism_standing_sign", registryName ->
-                    new PrismStandingSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));
+    public static final DeferredBlock<StandingSignBlock> PRISM_SIGN =
+            BLOCKS.register("prism_sign", registryName ->
+                    new PrismSignBlock(
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
+                            WoodType.PALE_OAK));
 
     public static final DeferredBlock<WallSignBlock> PRISM_WALL_SIGN =
             BLOCKS.register("prism_wall_sign", registryName ->
-                    new PrismWallSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));
+                    new PrismWallSignBlock(
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
+                            WoodType.PALE_OAK));
 
-    public static final DeferredBlock<CeilingHangingSignBlock> PRISM_CEILING_HANGING_SIGN =
-            BLOCKS.register("prism_ceiling_hanging_sign", registryName ->
-                    new PrismCeilingHangingSignBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)), WoodType.OAK));
+    public static final DeferredBlock<CeilingHangingSignBlock> PRISM_HANGING_SIGN =
+            BLOCKS.register("prism_hanging_sign", registryName ->
+                    new PrismHangingSignBlock(
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
+                            WoodType.PALE_OAK));
+
     public static final DeferredBlock<WallHangingSignBlock> PRISM_WALL_HANGING_SIGN =
             BLOCKS.register("prism_wall_hanging_sign", registryName ->
                     new PrismWallHangingSignBlock(
                             WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
-                            WoodType.OAK
+                            WoodType.PALE_OAK
                     )
             );
 
@@ -215,6 +222,7 @@ public class ModBlocks {
             "prism_ladder",
             registryName -> new PrismLadderBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F)
+                    .noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismSand> PRISM_SAND = BLOCKS.register(
             "prism_sand",
@@ -241,19 +249,18 @@ public class ModBlocks {
                     .strength(2.5F)
                     .sound(SoundType.WOOD)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
-
     public static final DeferredBlock<PrismConcreteBlock> PRISM_COPPER_BLOCK = BLOCKS.register(
             "prism_copper_block",
             registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<PrismConcreteBlock> PRISM_CHISELED_COPPER_BLOCK = BLOCKS.register(
-            "prism_chiseled_copper_block",
+    public static final DeferredBlock<PrismConcreteBlock> PRISM_CHISELED_COPPER = BLOCKS.register(
+            "prism_chiseled_copper",
             registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<PrismConcreteBlock> PRISM_CUT_COPPER_BLOCK = BLOCKS.register(
-            "prism_cut_copper_block",
+    public static final DeferredBlock<PrismConcreteBlock> PRISM_CUT_COPPER = BLOCKS.register(
+            "prism_cut_copper",
             registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
@@ -261,14 +268,15 @@ public class ModBlocks {
             "prism_copper_grate",
             registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
+                    .noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<PrismSlabBlock> PRISM_COPPER_SLAB = BLOCKS.register(
-            "prism_copper_slab",
+    public static final DeferredBlock<PrismSlabBlock> PRISM_CUT_COPPER_SLAB = BLOCKS.register(
+            "prism_cut_copper_slab",
             registryName -> new PrismSlabBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(1.8F).requiresCorrectToolForDrops()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<PrismStairsBlock> PRISM_COPPER_STAIRS = BLOCKS.register(
-            "prism_copper_stairs",
+    public static final DeferredBlock<PrismStairsBlock> PRISM_CUT_COPPER_STAIRS = BLOCKS.register(
+            "prism_cut_copper_stairs",
             registryName -> new PrismStairsBlock(
                     PRISM_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of()
@@ -276,9 +284,7 @@ public class ModBlocks {
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
 
-
     //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped
-
     // Oak
     public static final DeferredBlock<Block> PRISM_OAK_DOOR =
             BLOCKS.register("prism_oak_door",

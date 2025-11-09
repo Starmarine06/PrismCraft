@@ -1,0 +1,6 @@
+{
+  "parent": "prismcraft:block/template_wall_inventory",
+  "textures": {
+    "wall": "prismcraft:block/prism_andesite"
+  }
+}

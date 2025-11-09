@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "rotation=0":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=1":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=2":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=3":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=4":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=5":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=6":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=7":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=8":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=9":  { "model": "prismcraft:block/prism_sign" },
+    "rotation=10": { "model": "prismcraft:block/prism_sign" },
+    "rotation=11": { "model": "prismcraft:block/prism_sign" },
+    "rotation=12": { "model": "prismcraft:block/prism_sign" },
+    "rotation=13": { "model": "prismcraft:block/prism_sign" },
+    "rotation=14": { "model": "prismcraft:block/prism_sign" },
+    "rotation=15": { "model": "prismcraft:block/prism_sign" }
+  }
+}

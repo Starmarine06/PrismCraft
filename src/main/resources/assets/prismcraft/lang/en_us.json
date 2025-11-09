@@ -15,6 +15,10 @@
   "item.prismcraft.prism_concrete_powder": "Prism Concrete Powder",
   "item.prismcraft.prism_candle": "Prism Candle",
   "item.prismcraft.prism_carpet": "Prism Carpet",
+
+  "item.prismcraft.prism_flower_pot": "Prism Flower Pot",
+  "item.prismcraft.prism_decorated_pot": "Prism Decorated Pot",
+
   "item.prismcraft.prism_sign": "Prism Sign",
   "item.prismcraft.prism_hanging_sign": "Prism Hanging Sign",
 
@@ -38,10 +42,14 @@
   "item.prismcraft.prism_andesite_stairs": "Prism Andesite Stairs",
   "item.prismcraft.prism_andesite_wall": "Prism Andesite Wall",
 
-  "item.prismcraft.prism_copper_block": "Prism Copper Block",
-  "item.prismcraft.prism_chiseled_copper_block": "Prism Chiseled Copper Block",
-  "item.prismcraft.prism_cut_copper_block": "Prism Cut Copper Block",
-  "item.prismcraft.prism_copper_stairs": "Prism Copper Stairs",
+  "item.prismcraft.prism_copper_block": "Prism Block of Copper",
+  "item.prismcraft.prism_chiseled_copper": "Prism Chiseled Copper",
+  "item.prismcraft.prism_cut_copper": "Prism Cut Copper",
+  "item.prismcraft.prism_copper_grate": "Prism Copper Grate",
+  "item.prismcraft.prism_cut_copper_slab": "Prism Copper Slab",
+  "item.prismcraft.prism_cut_copper_stairs": "Prism Copper Stairs",
+  "item.prismcraft.prism_copper_door": "Prism Copper Door",
+  "item.prismcraft.prism_copper_trapdoor": "Prism Copper Trapdoor",
 
   "item.prismcraft.prism_log": "Prism Log",
   "item.prismcraft.prism_planks": "Prism Planks",

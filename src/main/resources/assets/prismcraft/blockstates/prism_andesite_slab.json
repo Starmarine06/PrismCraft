@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "prismcraft:block/prism_andesite_slab"
+    },
+    "type=double": {
+      "model": "prismcraft:block/prism_andesite"
+    },
+    "type=top": {
+      "model": "prismcraft:block/prism_andesite_slab_top"
+    }
+  }
+}
