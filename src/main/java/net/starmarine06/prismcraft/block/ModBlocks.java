@@ -92,13 +92,13 @@ public class ModBlocks {
             BLOCKS.register("prism_flower_pot", registryName ->
                     new PrismFlowerPotBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
-    public static final DeferredBlock<PrismDecoratedPotBlock> PRISM_DECORATED_POT =
-            BLOCKS.register("prism_decorated_pot", registryName ->
-                    new PrismDecoratedPotBlock(BlockBehaviour.Properties.of()
-                            .noOcclusion()
-                            .strength(1.5F)
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName)))
-            );
+    public static final DeferredBlock<PrismDecoratedPotBlock> PRISM_DECORATED_POT = BLOCKS.register(
+            "prism_decorated_pot",
+            registryName -> new PrismDecoratedPotBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .strength(2.5F)
+                    .sound(SoundType.DECORATED_POT)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
 
     //*********************************************************************Other Blocks

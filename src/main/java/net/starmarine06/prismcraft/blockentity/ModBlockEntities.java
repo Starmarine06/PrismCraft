@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
 
+import java.util.Set;
 import java.util.function.Supplier;
 
 public class ModBlockEntities {
@@ -45,7 +46,7 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("prism_decorated_pot", () ->
                     new BlockEntityType<>(
                             PrismDecoratedPotBlockEntity::new,
-                            ModBlocks.PRISM_DECORATED_POT.get() // Your block reference
+                            Set.of(ModBlocks.PRISM_DECORATED_POT.get())
                     )
             );
 

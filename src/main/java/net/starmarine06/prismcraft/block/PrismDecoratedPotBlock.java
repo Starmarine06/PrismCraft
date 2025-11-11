@@ -5,25 +5,35 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.DyedItemColor;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
 import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismDecoratedPotBlock extends DecoratedPotBlock implements IPrismColoredBlock {
+    public static final IntegerProperty COLOR = IntegerProperty.create("color", 0, 0xFFFFFF);
+
     public PrismDecoratedPotBlock(BlockBehaviour.Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(COLOR, 0xFFFFFF));
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PrismDecoratedPotBlockEntity(pos, state);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext p_272711_) {
+        return this.defaultBlockState().setValue(COLOR, 0xFFFFFF);
     }
 
     @Override

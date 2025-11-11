@@ -1,14 +1,15 @@
 package net.starmarine06.prismcraft;
 
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.starmarine06.prismcraft.block.ModBlocks;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
-import net.starmarine06.prismcraft.client.ModColorHandlers;
+import net.starmarine06.prismcraft.blockentity.renderer.PrismFlowerPotRenderer;
+import net.starmarine06.prismcraft.blockentity.renderer.PrismSignRenderer;
 import net.starmarine06.prismcraft.item.ModCreativeTabs;
 import net.starmarine06.prismcraft.item.ModItems;
 import net.starmarine06.prismcraft.menu.ModMenuTypes;
@@ -41,4 +42,11 @@ public class PrismCraftMod {
         event.register(ModMenuTypes.DYE_MIXER.get(), DyeMixerScreen::new);
         event.register(ModMenuTypes.PRISM_BARREL.get(), PrismBarrelScreen::new);
     }
+
+    @SubscribeEvent
+    public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_FLOWER_POT_ENTITY.get(), PrismFlowerPotRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_SIGN.get(), PrismSignRenderer::new);
+    }
+
 }

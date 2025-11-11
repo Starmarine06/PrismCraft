@@ -1,5 +1,7 @@
 package net.starmarine06.prismcraft.blockentity;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -7,14 +9,18 @@ import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
-public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity {
+public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity implements IPrismColoredBlock {
     private int color = 0xFFFFFF;
 
     public PrismDecoratedPotBlockEntity(BlockPos pos, BlockState state) {
@@ -28,9 +34,8 @@ public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity {
 
     public void setColor(int color) {
         this.color = color;
+        System.out.println("SetColor:"+color);
         setChanged();
-
-        // Sync to client
         if (level != null && !level.isClientSide()) {
             BlockState state = getBlockState();
             level.sendBlockUpdated(getBlockPos(), state, state, 3);
@@ -38,6 +43,7 @@ public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity {
     }
 
     public int getColor() {
+        System.out.println("GetColor:"+color);
         return color;
     }
     @Override
