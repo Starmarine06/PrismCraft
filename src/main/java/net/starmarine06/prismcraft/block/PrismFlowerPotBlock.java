@@ -21,13 +21,19 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.starmarine06.prismcraft.blockentity.PrismFlowerPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismFlowerPotBlock extends BaseEntityBlock implements IPrismColoredBlock {
-    public static final VoxelShape SHAPE = Block.box(1, 0, 1, 6, 6, 4);
+    private static final VoxelShape SHAPE = Shapes.or(
+            // Pot base (thinner)
+            Block.box(6.0D, 0.0D, 6.0D, 10.0D, 7.0D, 10.0D),
+            // Pot outer walls (taller + thinner)
+            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D) // Pot outer walls
+    );
     public static final MapCodec<PrismFlowerPotBlock> CODEC = simpleCodec(PrismFlowerPotBlock::new);
 
     public PrismFlowerPotBlock(Properties props) {
