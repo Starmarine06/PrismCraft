@@ -82,9 +82,9 @@ public class ModBlocks {
             );
 
 
-    public static final DeferredBlock<PrismCeilingHangingSignBlock> PRISM_HANGING_SIGN =
+    public static final DeferredBlock<PrismHangingSignBlock> PRISM_HANGING_SIGN =
             BLOCKS.register("prism_hanging_sign", registryName ->
-                    new PrismCeilingHangingSignBlock(
+                    new PrismHangingSignBlock(
                             WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))
                     )
             );

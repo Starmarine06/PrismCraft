@@ -1,5 +1,6 @@
 package net.starmarine06.prismcraft;
 
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.bus.api.IEventBus;

@@ -21,13 +21,13 @@ public class ClientHandler {
         System.out.println("Client: Registering Prism Flower Pot Renderer!");
         event.registerBlockEntityRenderer(ModBlockEntities.PRISM_FLOWER_POT_ENTITY.get(), PrismFlowerPotRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.PRISM_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_HANGING_SIGN.get(), HangingSignRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_HANGING_SIGN_ENTITY.get(), HangingSignRenderer::new);
         BlockEntityRenderers.register(
                 ModBlockEntities.PRISM_SIGN_ENTITY.get(),
                 SignRenderer::new
         );
         BlockEntityRenderers.register(
-                ModBlockEntities.PRISM_HANGING_SIGN.get(),
+                ModBlockEntities.PRISM_HANGING_SIGN_ENTITY.get(),
                 HangingSignRenderer::new
         );
     }

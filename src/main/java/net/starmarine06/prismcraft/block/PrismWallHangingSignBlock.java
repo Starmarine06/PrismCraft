@@ -18,7 +18,7 @@ import net.starmarine06.prismcraft.blockentity.PrismSignBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
-public class PrismWallHangingSignBlock extends CeilingHangingSignBlock implements IPrismColoredBlock {
+public class PrismWallHangingSignBlock extends WallHangingSignBlock implements IPrismColoredBlock {
     public PrismWallHangingSignBlock(BlockBehaviour.Properties properties) {
         super(WoodType.OAK, properties);
     }
@@ -26,7 +26,7 @@ public class PrismWallHangingSignBlock extends CeilingHangingSignBlock implement
     @Override
     @Nullable
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return ModBlockEntities.PRISM_HANGING_SIGN.get().create(pos, state);
+        return ModBlockEntities.PRISM_HANGING_SIGN_ENTITY.get().create(pos, state);
     }
 
     @Override

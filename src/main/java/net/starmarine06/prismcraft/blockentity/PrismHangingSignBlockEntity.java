@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
-import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,7 +14,7 @@ public class PrismHangingSignBlockEntity extends SignBlockEntity {
     private int color = 0xFFFFFF;
 
     public PrismHangingSignBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.PRISM_HANGING_SIGN.get(),pos, state);
+        super(ModBlockEntities.PRISM_HANGING_SIGN_ENTITY.get(),pos, state);
     }
 
     @Override

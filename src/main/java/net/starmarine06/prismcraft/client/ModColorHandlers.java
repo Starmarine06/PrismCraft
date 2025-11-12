@@ -1,6 +1,8 @@
 package net.starmarine06.prismcraft.client;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -52,10 +54,7 @@ public class ModColorHandlers {
                     ModBlocks.DYE_MIXER,
                     ModBlocks.PRISM_COPPER_GRATE,
                     ModBlocks.PRISM_COPPER_DOOR,
-                    ModBlocks.PRISM_COPPER_TRAPDOOR,
-
-                    ModBlocks.PRISM_HANGING_SIGN,
-                    ModBlocks.PRISM_WALL_HANGING_SIGN
+                    ModBlocks.PRISM_COPPER_TRAPDOOR
             );
 
             for (DeferredBlock<?> block : cutoutBlocks) {
@@ -77,6 +76,7 @@ public class ModColorHandlers {
                 if (be instanceof PrismDecoratedPotBlockEntity dp) return dp.getColor();
                 if (be instanceof PrismFlowerPotBlockEntity fp) return fp.getColor();
                 if (be instanceof PrismSignBlockEntity sb) return sb.getColor();
+                if (be instanceof PrismHangingSignBlockEntity sb) return sb.getColor();
                 if (be instanceof PrismBarrelBlockEntity barrel) {
                     //System.out.println("Color handler called for " + state.getBlock() + " at " + pos + ": #" + String.format("%06X", barrel.getColor()));
                     return barrel.getColor();
@@ -84,6 +84,19 @@ public class ModColorHandlers {
             }
             return 0xFFFFFF;
         };
+
+        /*BlockColors bC = Minecraft.getInstance().getBlockColors();
+        bC.register((state, world, pos, tintIndex) -> {
+                    if (world != null && pos != null && world.getBlockEntity(pos) instanceof PrismColoredBlockEntity tile) {
+                        return tile.getColor();
+                    }
+                    return 0xFFFFFF;
+                },
+                ModBlocks.PRISM_SIGN.get(),
+                ModBlocks.PRISM_WALL_SIGN.get(),
+                ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
+                ModBlocks.PRISM_HANGING_SIGN.get());*/
+
 
         event.register(blockColor,
                 ModBlocks.PRISM_LOG.get(),
@@ -100,8 +113,8 @@ public class ModColorHandlers {
                 ModBlocks.PRISM_PRESSURE_PLATE.get(),
                 ModBlocks.PRISM_SIGN.get(),
                 ModBlocks.PRISM_WALL_SIGN.get(),
-                ModBlocks.PRISM_HANGING_SIGN.get(),
                 ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
+                ModBlocks.PRISM_HANGING_SIGN.get(),
                 ModBlocks.PRISM_FLOWER_POT.get(),
                 ModBlocks.PRISM_DECORATED_POT.get(),
                 ModBlocks.PRISM_SAND.get(),
@@ -133,7 +146,7 @@ public class ModColorHandlers {
                 ModBlocks.PRISM_CUT_COPPER.get(),
                 ModBlocks.PRISM_CUT_COPPER_SLAB.get(),
                 ModBlocks.PRISM_CUT_COPPER_STAIRS.get(),
-                //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped
+                //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped, Copper
                 ModBlocks.PRISM_OAK_DOOR.get(),
                 ModBlocks.PRISM_OAK_TRAPDOOR.get(),
                 ModBlocks.PRISM_SPRUCE_DOOR.get(),

@@ -35,12 +35,12 @@ public class ModBlockEntities {
                     ));
 
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismHangingSignBlockEntity>> PRISM_HANGING_SIGN =
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismHangingSignBlockEntity>> PRISM_HANGING_SIGN_ENTITY =
             BLOCK_ENTITIES.register("prism_hanging_sign", () ->
                     new BlockEntityType<>(
                             PrismHangingSignBlockEntity::new,
-                            ModBlocks.PRISM_HANGING_SIGN.get(),
-                            ModBlocks.PRISM_WALL_HANGING_SIGN.get()
+                            ModBlocks.PRISM_WALL_HANGING_SIGN.get(),
+                            ModBlocks.PRISM_HANGING_SIGN.get()
                     )
             );
     public static final Supplier<BlockEntityType<PrismDecoratedPotBlockEntity>> PRISM_DECORATED_POT =

@@ -69,7 +69,7 @@
     "rotation=13,attached=true,waterlogged=true":   { "model": "prismcraft:block/prism_hanging_sign", "y": 270 },
     "rotation=13,attached=false,waterlogged=false": { "model": "prismcraft:block/prism_hanging_sign", "y": 270 },
     "rotation=13,attached=false,waterlogged=true":  { "model": "prismcraft:block/prism_hanging_sign", "y": 270 },
-	
+
     "rotation=14,attached=true,waterlogged=false":  { "model": "prismcraft:block/prism_hanging_sign", "y": 0 },
     "rotation=14,attached=true,waterlogged=true":   { "model": "prismcraft:block/prism_hanging_sign", "y": 0 },
     "rotation=14,attached=false,waterlogged=false": { "model": "prismcraft:block/prism_hanging_sign", "y": 0 },
