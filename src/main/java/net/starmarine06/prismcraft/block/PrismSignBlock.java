@@ -33,12 +33,12 @@ public class PrismSignBlock extends StandingSignBlock implements IPrismColoredBl
         );
     }
 
-    @Override
+    /*@Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         // Vanilla style: player yaw converted to 0–15
         int rotation = (int) ((context.getRotation() + 11.25F) * 16.0F / 360.0F) & 15;
         return this.defaultBlockState().setValue(ROTATION, rotation);
-    }
+    }*/
 
     @Override
     @Nullable

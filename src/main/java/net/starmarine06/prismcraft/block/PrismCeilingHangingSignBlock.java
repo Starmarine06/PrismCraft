@@ -6,7 +6,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,8 +17,9 @@ import net.starmarine06.prismcraft.blockentity.PrismSignBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
 
-public class PrismWallHangingSignBlock extends CeilingHangingSignBlock implements IPrismColoredBlock {
-    public PrismWallHangingSignBlock(BlockBehaviour.Properties properties) {
+public class PrismCeilingHangingSignBlock extends WallHangingSignBlock implements IPrismColoredBlock {
+
+    public PrismCeilingHangingSignBlock(BlockBehaviour.Properties properties) {
         super(WoodType.OAK, properties);
     }
 

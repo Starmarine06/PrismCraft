@@ -82,17 +82,17 @@ public class ModBlocks {
             );
 
 
-    public static final DeferredBlock<CeilingHangingSignBlock> PRISM_HANGING_SIGN =
+    public static final DeferredBlock<PrismCeilingHangingSignBlock> PRISM_HANGING_SIGN =
             BLOCKS.register("prism_hanging_sign", registryName ->
-                    new PrismHangingSignBlock(
-                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
-                            WoodType.PALE_OAK));
+                    new PrismCeilingHangingSignBlock(
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    )
+            );
 
-    public static final DeferredBlock<WallHangingSignBlock> PRISM_WALL_HANGING_SIGN =
+    public static final DeferredBlock<PrismWallHangingSignBlock> PRISM_WALL_HANGING_SIGN =
             BLOCKS.register("prism_wall_hanging_sign", registryName ->
                     new PrismWallHangingSignBlock(
-                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
-                            WoodType.PALE_OAK
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))
                     )
             );
 

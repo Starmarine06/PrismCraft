@@ -26,12 +26,6 @@ public class PrismSignBlockEntity extends SignBlockEntity {
         return super.getText(p_277918_);
     }
 
-    @Override
-    public int getTextColor() {
-        // Always render black text
-        return 0x000000;
-    }
-
     public void setColor(int color) {
         this.color = color;
         setChanged();

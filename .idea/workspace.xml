@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Updated to 1.21.9">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismHangingSignRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/walls.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/wooden_fences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCeilingHangingSignBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -21,21 +18,14 @@
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDecoratedPotBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDecoratedPotBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismLadderBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismLadderBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSignBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallSignBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/ModBlockEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/ModBlockEntities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismDecoratedPotBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismDecoratedPotBlockEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismFlowerPotBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismFlowerPotBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismHangingSignBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismHangingSignBlockEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismSignBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismSignBlockEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismFlowerPotRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismFlowerPotRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismSignRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismSignRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/SignRenderState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismSignRenderState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismHangingSignRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismSignRenderState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/renderer/PrismSignRenderer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ModColorHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ModColorHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_sign.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/walls.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/fences.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -390,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762865633736</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updated to 1.21.9">
+      <option name="closed" value="true" />
+      <created>1762943318286</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762943318286</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

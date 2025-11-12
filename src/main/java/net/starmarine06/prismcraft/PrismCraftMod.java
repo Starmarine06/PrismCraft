@@ -11,7 +11,6 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.starmarine06.prismcraft.block.ModBlocks;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
 import net.starmarine06.prismcraft.blockentity.renderer.PrismFlowerPotRenderer;
-import net.starmarine06.prismcraft.blockentity.renderer.PrismSignRenderer;
 import net.starmarine06.prismcraft.item.ModCreativeTabs;
 import net.starmarine06.prismcraft.item.ModItems;
 import net.starmarine06.prismcraft.menu.ModMenuTypes;
@@ -46,12 +45,6 @@ public class PrismCraftMod {
     private void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.DYE_MIXER.get(), DyeMixerScreen::new);
         event.register(ModMenuTypes.PRISM_BARREL.get(), PrismBarrelScreen::new);
-    }
-
-    @SubscribeEvent
-    public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_FLOWER_POT_ENTITY.get(), PrismFlowerPotRenderer::new);
-        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_SIGN_ENTITY.get(), PrismSignRenderer::new);
     }
 
 }
