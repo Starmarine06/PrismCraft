@@ -44,7 +44,6 @@ public class PrismFlowerPotBlockEntity extends BlockEntity {
 
     public void setFlower(@Nullable Item flower) {
         this.flower = flower;
-        System.out.println("Flower set to: " + (flower != null ? flower.toString() : "null") + " on " + (level != null && level.isClientSide() ? "CLIENT" : "SERVER"));
         setChanged();
         if (level != null && !level.isClientSide()) {
             BlockState state = getBlockState();

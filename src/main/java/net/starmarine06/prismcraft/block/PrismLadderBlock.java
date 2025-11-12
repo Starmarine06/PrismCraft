@@ -10,6 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.RenderShape;
@@ -30,6 +31,11 @@ public class PrismLadderBlock extends LadderBlock implements EntityBlock, IPrism
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PrismColoredBlockEntity(pos, state);
+    }
+
+    @Override
+    public boolean isLadder(BlockState state, LevelReader world, BlockPos pos, LivingEntity entity) {
+        return true;
     }
 
     @Override

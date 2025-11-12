@@ -22,18 +22,12 @@ public class PrismDecoratedPotBlock extends DecoratedPotBlock implements IPrismC
 
     public PrismDecoratedPotBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(COLOR, 0xFFFFFF));
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PrismDecoratedPotBlockEntity(pos, state);
-    }
-
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext p_272711_) {
-        return this.defaultBlockState().setValue(COLOR, 0xFFFFFF);
     }
 
     @Override

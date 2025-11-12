@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "prismcraft:prism_concrete_wall",
+    "prismcraft:prism_andesite_wall",
+    "prismcraft:prism_stone_wall",
+    "prismcraft:prism_terracotta_wall"
+  ]
+}

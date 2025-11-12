@@ -14,6 +14,11 @@ import net.starmarine06.prismcraft.PrismCraftMod;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(PrismCraftMod.MOD_ID);
+    private static final BlockBehaviour.Properties SIGN_PROPS =
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .strength(1.0F)
+                    .noOcclusion();
 
     public static final BlockBehaviour.Properties WOOD_PROPS =
             BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).requiresCorrectToolForDrops();
@@ -62,17 +67,20 @@ public class ModBlocks {
     public static final DeferredBlock<PrismPressurePlateBlock> PRISM_PRESSURE_PLATE = BLOCKS.register(
             "prism_pressure_plate",
             registryName -> new PrismPressurePlateBlock(WOOD_PROPS.noCollision().setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<StandingSignBlock> PRISM_SIGN =
+    public static final DeferredBlock<PrismSignBlock> PRISM_SIGN =
             BLOCKS.register("prism_sign", registryName ->
                     new PrismSignBlock(
-                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
-                            WoodType.PALE_OAK));
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    )
+            );
 
-    public static final DeferredBlock<WallSignBlock> PRISM_WALL_SIGN =
+    public static final DeferredBlock<PrismWallSignBlock> PRISM_WALL_SIGN =
             BLOCKS.register("prism_wall_sign", registryName ->
                     new PrismWallSignBlock(
-                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName)),
-                            WoodType.PALE_OAK));
+                            WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    )
+            );
+
 
     public static final DeferredBlock<CeilingHangingSignBlock> PRISM_HANGING_SIGN =
             BLOCKS.register("prism_hanging_sign", registryName ->

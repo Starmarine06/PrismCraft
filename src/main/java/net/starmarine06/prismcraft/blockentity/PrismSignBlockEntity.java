@@ -4,16 +4,32 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
+import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrismSignBlockEntity extends SignBlockEntity {
     private int color = 0xFFFFFF;
 
     public PrismSignBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.PRISM_SIGN.get(), pos, state);
+        super(ModBlockEntities.PRISM_SIGN_ENTITY.get(),pos, state);
+    }
+
+    @Override
+    public SignText getText(boolean p_277918_) {
+        return super.getText(p_277918_);
+    }
+
+    @Override
+    public int getTextColor() {
+        // Always render black text
+        return 0x000000;
     }
 
     public void setColor(int color) {

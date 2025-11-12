@@ -12,8 +12,7 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
-import net.starmarine06.prismcraft.blockentity.PrismBarrelBlockEntity;
-import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.blockentity.*;
 
 import java.util.List;
 
@@ -67,8 +66,6 @@ public class ModColorHandlers {
 
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
-        //System.out.println("=== REGISTERING BLOCK COLORSasdaadawdwdadawd ===");
-
         BlockColor blockColor = (state, level, pos, tintIndex) -> {
             if (level != null && pos != null) {
                 BlockEntity be = level.getBlockEntity(pos);
@@ -77,8 +74,11 @@ public class ModColorHandlers {
                     //System.out.println("Color handler called for " + state.getBlock() + " at " + pos + ": #" + String.format("%06X", color));
                     return color;
                 }
+                if (be instanceof PrismDecoratedPotBlockEntity dp) return dp.getColor();
+                if (be instanceof PrismFlowerPotBlockEntity fp) return fp.getColor();
+                if (be instanceof PrismSignBlockEntity sb) return sb.getColor();
                 if (be instanceof PrismBarrelBlockEntity barrel) {
-                    System.out.println("Color handler called for " + state.getBlock() + " at " + pos + ": #" + String.format("%06X", barrel.getColor()));
+                    //System.out.println("Color handler called for " + state.getBlock() + " at " + pos + ": #" + String.format("%06X", barrel.getColor()));
                     return barrel.getColor();
                 }
             }

@@ -28,7 +28,6 @@ public class PrismFlowerPotRenderer implements BlockEntityRenderer<PrismFlowerPo
     private final ItemModelResolver itemModelResolver;
 
     public PrismFlowerPotRenderer(BlockEntityRendererProvider.Context context) {
-        System.out.println("PrismFlowerPotRenderer constructed");
         itemModelResolver = context.itemModelResolver();
     }
 
@@ -50,8 +49,8 @@ public class PrismFlowerPotRenderer implements BlockEntityRenderer<PrismFlowerPo
         ItemStack flowerStack = blockEntity.getFlower() != null ? new ItemStack(blockEntity.getFlower()) : ItemStack.EMPTY;
 
         // Debug logging
-        System.out.println("Renderer extracting flower: " + (blockEntity.getFlower() != null ? blockEntity.getFlower().toString() : "null"));
-        System.out.println("FlowerStack: " + flowerStack);
+        //System.out.println("Renderer extracting flower: " + (blockEntity.getFlower() != null ? blockEntity.getFlower().toString() : "null"));
+        //System.out.println("FlowerStack: " + flowerStack);
 
         itemModelResolver.updateForTopItem(renderState.itemStackRenderState,
                 flowerStack, ItemDisplayContext.FIXED, blockEntity.getLevel(), null, 0);
@@ -60,7 +59,7 @@ public class PrismFlowerPotRenderer implements BlockEntityRenderer<PrismFlowerPo
     @Override
     public void submit(PrismFlowerPotRenderState renderState, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState cameraRenderState) {
         // Debug logging
-        System.out.println("Renderer submit called!");  // type: Item
+        //System.out.println("Renderer submit called!");  // type: Item
 
         poseStack.pushPose();
 

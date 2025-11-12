@@ -1,5 +1,7 @@
 package net.starmarine06.prismcraft;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.tags.BlockTags;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -18,6 +20,8 @@ import net.starmarine06.prismcraft.screen.PrismBarrelScreen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
 @Mod(PrismCraftMod.MOD_ID)
 public class PrismCraftMod {
     public static final String MOD_ID = "prismcraft";
@@ -33,8 +37,9 @@ public class PrismCraftMod {
 
         modEventBus.addListener(this::registerScreens);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
-
-
+        /*System.out.println("The tags are: "+ BuiltInRegistries.BLOCK.get(BlockTags.WALLS)
+                .map(tag -> tag.stream().toList())
+                .orElse(List.of()));*/
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
@@ -46,7 +51,7 @@ public class PrismCraftMod {
     @SubscribeEvent
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.PRISM_FLOWER_POT_ENTITY.get(), PrismFlowerPotRenderer::new);
-        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_SIGN.get(), PrismSignRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.PRISM_SIGN_ENTITY.get(), PrismSignRenderer::new);
     }
 
 }

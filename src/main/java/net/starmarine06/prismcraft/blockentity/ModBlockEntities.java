@@ -2,6 +2,7 @@ package net.starmarine06.prismcraft.blockentity;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -25,14 +26,14 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("prism_barrel", () ->
                     new BlockEntityType<>(PrismBarrelBlockEntity::new, ModBlocks.PRISM_BARREL.get()));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismSignBlockEntity>> PRISM_SIGN =
-            BLOCK_ENTITIES.register("prism_sign", () ->
-                    new BlockEntityType<>(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismSignBlockEntity>> PRISM_SIGN_ENTITY =
+            BLOCK_ENTITIES.register("prism_sign",
+                    () -> new BlockEntityType<>(
                             PrismSignBlockEntity::new,
                             ModBlocks.PRISM_SIGN.get(),
                             ModBlocks.PRISM_WALL_SIGN.get()
-                    )
-            );
+                    ));
+
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismHangingSignBlockEntity>> PRISM_HANGING_SIGN =
             BLOCK_ENTITIES.register("prism_hanging_sign", () ->

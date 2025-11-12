@@ -34,7 +34,7 @@ public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity implem
 
     public void setColor(int color) {
         this.color = color;
-        System.out.println("SetColor:"+color);
+
         setChanged();
         if (level != null && !level.isClientSide()) {
             BlockState state = getBlockState();
@@ -43,7 +43,6 @@ public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity implem
     }
 
     public int getColor() {
-        System.out.println("GetColor:"+color);
         return color;
     }
     @Override
