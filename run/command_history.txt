@@ -1,6 +1,3 @@
-/give Dev prismcraft:prismcraft_icon
-/setblock -8 -61 24 prismcraft:prism_concrete
-/data get block -6 -60 12
 /setblock -8 -61 24 prismcraft:prism_concrete{Color:9678488}
 /give Dev minecraft:wooden_pickaxe
 /setblock 4 -59 14 sand
@@ -48,3 +45,6 @@
 /data get block 16 -60 0
 /give Dev minecraft:debug_stick
 /setblock 0 -56 10 air
+/data get block 3 -57 10
+/data modify block 3 -57 10 {messages:["Asadasd","","",""]}
+/data modify block 3 -57 10 {messages:["Asadasd","","",""]} append value 123

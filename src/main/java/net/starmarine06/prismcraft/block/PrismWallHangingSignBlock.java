@@ -34,7 +34,7 @@ public class PrismWallHangingSignBlock extends WallHangingSignBlock implements I
         super.setPlacedBy(level, pos, state, placer, stack);
         if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof PrismSignBlockEntity tile) {
+            if (be instanceof PrismHangingSignBlockEntity tile) {
                 int color = getColor(stack);
                 tile.setColor(color);
                 level.sendBlockUpdated(pos, state, state, 3);

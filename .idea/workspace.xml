@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Signs Are fixed!!!!!!">
+    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Now the signs are broken :(">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
@@ -15,16 +15,7 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCeilingHangingSignBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismHangingSignBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/ModBlockEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/ModBlockEntities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismHangingSignBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismHangingSignBlockEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ModColorHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/client/ModColorHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prismcraft/blockstates/prism_hanging_sign.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762945737525</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Now the signs are broken :(">
+      <option name="closed" value="true" />
+      <created>1762953479221</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762953479221</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,6 +424,7 @@
     <MESSAGE value="Added new blocks :*(" />
     <MESSAGE value="Updated to 1.21.9" />
     <MESSAGE value="Signs Are fixed!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Signs Are fixed!!!!!!" />
+    <MESSAGE value="Now the signs are broken :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now the signs are broken :(" />
   </component>
 </project>
