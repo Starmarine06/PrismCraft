@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Now the signs are broken :(">
+    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Fixed the flower pot voxel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
@@ -15,7 +15,11 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/PrismCraftMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/DyeMixerBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/DyeMixerBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismColoredBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismColoredBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModCreativeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModCreativeTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/item/ModItems.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,21 +91,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Gradle.prismcraft [:net.neoforged.devlaunch.Main.main()].executor": "Run",
-    "Gradle.prismcraft.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/flame/Documents/prismcraft/src/main/resources/data/minecraft/tags/block",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.prismcraft [:net.neoforged.devlaunch.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.prismcraft.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/flame/Documents/prismcraft/src/main/resources/data/minecraft/tags/block&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\minecraft\tags\block" />
@@ -111,11 +115,11 @@
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\block" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\prismcraft" />
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\minecraft" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\gui" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\gui\sprites" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\items" />
-      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\item" />
-      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\textures\gui\container" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.starmarine06.prismcraft.blockentity.renderer" />
@@ -394,7 +398,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762953479221</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Signs mostly fixed :)">
+      <option name="closed" value="true" />
+      <created>1762956354181</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1762956354181</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed the flower pot voxel">
+      <option name="closed" value="true" />
+      <created>1762958558418</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1762958558418</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,6 +445,8 @@
     <MESSAGE value="Updated to 1.21.9" />
     <MESSAGE value="Signs Are fixed!!!!!!" />
     <MESSAGE value="Now the signs are broken :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now the signs are broken :(" />
+    <MESSAGE value="Signs mostly fixed :)" />
+    <MESSAGE value="Fixed the flower pot voxel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the flower pot voxel" />
   </component>
 </project>

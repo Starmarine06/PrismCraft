@@ -3,12 +3,15 @@ package net.starmarine06.prismcraft.blockentity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
@@ -28,6 +31,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import net.starmarine06.prismcraft.item.ModItems;
+import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
 import net.starmarine06.prismcraft.menu.DyeMixerMenu;
 import org.jetbrains.annotations.Nullable;
 
@@ -134,6 +139,36 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
     public static void tick(Level level, BlockPos pos, BlockState state, DyeMixerBlockEntity blockEntity) {
         if (!level.isClientSide() && blockEntity.canCraft()) {
             blockEntity.craft();
+            ItemStack input1 = blockEntity.getItem(0);
+            ItemStack input2 = blockEntity.getItem(1);
+            ItemStack input3 = blockEntity.getItem(2);
+            ItemStack output = blockEntity.getItem(3);
+
+            // Check for two titanium dyes + colored block
+            boolean hasTwoTitaniumDyes =
+                    input1.is(ModItems.TITANIUM_DYE.get()) && input2.is(ModItems.TITANIUM_DYE.get());
+
+            boolean isColoredBlock =
+                    input3.getItem() instanceof IPrismColoredBlock ||
+                            input3.getHoverName().getString().contains("Prism"); // fallback if needed
+
+            if (hasTwoTitaniumDyes && isColoredBlock && output.isEmpty()) {
+                // Remove inputs
+                input1.shrink(1);
+                input2.shrink(1);
+                input3.shrink(1);
+
+                // Create reset (white) version of the block
+                ItemStack resetBlock = new ItemStack(input3.getItem());
+                PrismColoredBlockEntity pe = new PrismColoredBlockEntity(pos, state);
+                pe.setColor(0xFFFFFF); // reset to white
+
+                blockEntity.setItem(3,resetBlock);
+                setChanged(level, pos, state);
+            }
+            level.playSound(null, pos, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.addParticle(ParticleTypes.END_ROD, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, 0, 0.1, 0);
+
         }
     }
 

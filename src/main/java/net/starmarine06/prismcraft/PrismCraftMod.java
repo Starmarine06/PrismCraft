@@ -30,16 +30,13 @@ public class PrismCraftMod {
     public PrismCraftMod(IEventBus modEventBus, ModContainer modContainer) {
         LOGGER.info("Initializing PrismCraft mod...");
 
+        ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
         ModMenuTypes.MENUS.register(modEventBus);
 
         modEventBus.addListener(this::registerScreens);
-        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
-        /*System.out.println("The tags are: "+ BuiltInRegistries.BLOCK.get(BlockTags.WALLS)
-                .map(tag -> tag.stream().toList())
-                .orElse(List.of()));*/
+        ModCreativeTabs.register(modEventBus);
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})

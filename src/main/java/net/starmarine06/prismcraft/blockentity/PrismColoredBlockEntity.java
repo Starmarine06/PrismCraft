@@ -31,7 +31,6 @@ public class PrismColoredBlockEntity extends BlockEntity {
         }
     }
 
-
     public int getColor() {
         return color;
     }

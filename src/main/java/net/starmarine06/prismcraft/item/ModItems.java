@@ -1,10 +1,13 @@
 package net.starmarine06.prismcraft.item;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.item.Rarity;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.registries.*;
 import net.minecraft.core.registries.Registries;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
@@ -119,6 +122,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> PRISMCRAFT_ICON = ITEMS.registerSimpleItem(
             "prismcraft_icon",
+            new Item.Properties()
+    );
+    public static final DeferredItem<Item> TITANIUM_DYE = ITEMS.registerSimpleItem(
+            "titanium_dye",
             new Item.Properties()
     );
 }

@@ -1,28 +1,182 @@
-[12Nov2025 19:35:32.743] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 159ms
-[12Nov2025 19:35:32.792] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 10.0.14 (CLIENT in DEV)
-[12Nov2025 19:35:32.800] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: C:\Users\flame\Documents\prismcraft\run
-[12Nov2025 19:35:32.855] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 0 early service jars (out of 0) in 0ms
-[12Nov2025 19:35:32.865] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[12Nov2025 19:35:33.994] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
-[12Nov2025 19:35:34.153] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\classes\\java\\main;prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\resources\\main from env
-[12Nov2025 19:35:34.243] [fml-loadingscreen/INFO] [net.neoforged.fml.earlydisplay.render.LoadingScreenRenderer/]: GL info: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2 GL version 3.3.0 NVIDIA 580.88, NVIDIA Corporation
-[12Nov2025 19:35:34.768] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[12Nov2025 19:35:34.774] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[13Nov2025 15:15:57.799] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 179ms
+[13Nov2025 15:15:57.822] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 10.0.14 (CLIENT in DEV)
+[13Nov2025 15:15:57.822] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: C:\Users\flame\Documents\prismcraft\run
+[13Nov2025 15:15:57.908] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 0 early service jars (out of 0) in 17ms
+[13Nov2025 15:15:57.908] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[13Nov2025 15:15:58.728] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[13Nov2025 15:15:58.881] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\classes\\java\\main;prismcraft%%C:\\Users\\flame\\Documents\\prismcraft\\build\\resources\\main from env
+[13Nov2025 15:15:58.982] [fml-loadingscreen/INFO] [net.neoforged.fml.earlydisplay.render.LoadingScreenRenderer/]: GL info: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2 GL version 3.3.0 NVIDIA 580.88, NVIDIA Corporation
+[13Nov2025 15:15:59.095] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[13Nov2025 15:15:59.095] [ForkJoinPool.commonPool-worker-1/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
 		Minecraft 1.21.9 (minecraft)
 		NeoForge 21.9.16-beta (neoforge)
 		PrismCraft 1.0.0 (prismcraft)
-[12Nov2025 19:35:35.456] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/flame/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.16.4+mixin.0.8.7/26d01f0567ab46e9ca0d2ed89d0ecc11aadbd433/sponge-mixin-0.16.4+mixin.0.8.7.jar Service=FML Env=CLIENT
-[12Nov2025 19:35:35.567] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
-[12Nov2025 19:35:35.567] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - .cache/jij/51629231fe2baaddd60d570ef06ada2b2f1fe8a34133e63afdd748b9ef93f9f1/net.neoforged.neoforge-coremods-21.9.16-beta.jar
-[12Nov2025 19:35:36.771] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
+[13Nov2025 15:15:59.258] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/flame/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.16.4+mixin.0.8.7/26d01f0567ab46e9ca0d2ed89d0ecc11aadbd433/sponge-mixin-0.16.4+mixin.0.8.7.jar Service=FML Env=CLIENT
+[13Nov2025 15:15:59.320] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
+[13Nov2025 15:15:59.324] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - .cache/jij/51629231fe2baaddd60d570ef06ada2b2f1fe8a34133e63afdd748b9ef93f9f1/net.neoforged.neoforge-coremods-21.9.16-beta.jar
+[13Nov2025 15:15:59.538] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
  - minecraft (composite(jar(C:\Users\flame\Documents\prismcraft\build\moddev\artifacts\neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar), filtered(jar(C:\Users\flame\Documents\prismcraft\build\moddev\artifacts\neoforge-21.9.16-beta.jar))))
  - mixinextras.neoforge (jar(C:\Users\flame\Documents\prismcraft\run\.cache\jij\9c617719248f8b89847348fc7ea5e705739c147ae5e172551264d225bc9f2507\mixinextras-neoforge-0.5.0.jar))
  - neoforge (composite(filtered(jar(C:\Users\flame\Documents\prismcraft\build\moddev\artifacts\neoforge-21.9.16-beta.jar))))
  - net.neoforged.fml.generated (empty(VirtualJar\net.neoforged.fml.generated))
  - prismcraft (composite(folder(C:\Users\flame\Documents\prismcraft\build\classes\java\main), folder(C:\Users\flame\Documents\prismcraft\build\resources\main)))
-[12Nov2025 19:35:36.805] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 1014ms
-[12Nov2025 19:35:40.417] [pool-8-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[12Nov2025 19:35:44.965] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 281 Datafixer optimizations took 5688 milliseconds
+[13Nov2025 15:15:59.558] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 137ms
+[13Nov2025 15:16:01.364] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 281 Datafixer optimizations took 603 milliseconds
+[13Nov2025 15:16:01.427] [pool-8-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[13Nov2025 15:16:07.809] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[13Nov2025 15:16:07.817] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[13Nov2025 15:16:07.821] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[13Nov2025 15:16:07.823] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[13Nov2025 15:16:07.825] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[13Nov2025 15:16:07.826] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [waypoint, modify, waypoint, color, reset] and [waypoint, modify, waypoint, color, color] with inputs: [reset]
+[13Nov2025 15:16:07.900] [modloading-worker-0/INFO] [net.starmarine06.prismcraft.PrismCraftMod/]: Initializing PrismCraft mod...
+[13Nov2025 15:16:07.925] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.9.16-beta, for MC 1.21.9
+[13Nov2025 15:16:08.947] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[13Nov2025 15:16:08.987] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[13Nov2025 15:16:09.149] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[13Nov2025 15:16:09.341] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access
+[13Nov2025 15:16:09.901] [Download-2/ERROR] [net.minecraft.client.Minecraft/]: Failed to fetch user properties
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:59) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:150) ~[authlib-7.0.61.jar:?]
+	at TRANSFORMER/minecraft@1.21.9/net.minecraft.client.Minecraft.lambda$new$1(Minecraft.java:437) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:103) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:56) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:121) ~[authlib-7.0.61.jar:?]
+	... 5 more
+[13Nov2025 15:16:10.336] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/prismcraft, mod/neoforge
+[13Nov2025 15:16:10.603] [Download-2/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[13Nov2025 15:16:10.612] [Download-2/ERROR] [com.mojang.realmsclient.client.RealmsClient/]: Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at TRANSFORMER/minecraft@1.21.9/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:522) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at TRANSFORMER/minecraft@1.21.9/com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:163) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[13Nov2025 15:16:10.687] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_pua-16.0.03.hex, loading
+[13Nov2025 15:16:10.687] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-16.0.03.hex, loading
+[13Nov2025 15:16:10.946] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-16.0.03.hex, loading
+[13Nov2025 15:16:11.198] [resourceLoad/ERROR] [net.minecraft.client.resources.model.BlockStateModelLoader/]: Failed to load blockstate definition prismcraft:prism_sign from pack mod/prismcraft
+com.google.gson.JsonParseException: Invalid rotation 337 found, only 0/90/180/270 allowed; Invalid rotation 315 found, only 0/90/180/270 allowed; Invalid rotation 292 found, only 0/90/180/270 allowed; Invalid rotation 247 found, only 0/90/180/270 allowed; Invalid rotation 225 found, only 0/90/180/270 allowed; Invalid rotation 202 found, only 0/90/180/270 allowed; Invalid rotation 157 found, only 0/90/180/270 allowed; Invalid rotation 135 found, only 0/90/180/270 allowed; Invalid rotation 112 found, only 0/90/180/270 allowed; Invalid rotation 67 found, only 0/90/180/270 allowed; Invalid rotation 45 found, only 0/90/180/270 allowed; Invalid rotation 22 found, only 0/90/180/270 allowed missed input: {"rotation=1":{"model":"prismcraft:block/prism_sign","y":22.5},"rotation=2":{"model":"prismcraft:block/prism_sign","y":45},"rotation=3":{"model":"prismcraft:block/prism_sign","y":67.5},"rotation=5":{"model":"prismcraft:block/prism_sign","y":112.5},"rotation=6":{"model":"prismcraft:block/prism_sign","y":135},"rotation=7":{"model":"prismcraft:block/prism_sign","y":157.5},"rotation=9":{"model":"prismcraft:block/prism_sign","y":202.5},"rotation=10":{"model":"prismcraft:block/prism_sign","y":225},"rotation=11":{"model":"prismcraft:block/prism_sign","y":247.5},"rotation=13":{"model":"prismcraft:block/prism_sign","y":292.5},"rotation=14":{"model":"prismcraft:block/prism_sign","y":315},"rotation=15":{"model":"prismcraft:block/prism_sign","y":337.5}}
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar:?]
+	at TRANSFORMER/minecraft@1.21.9/net.minecraft.client.resources.model.BlockStateModelLoader.lambda$loadBlockStates$1(BlockStateModelLoader.java:61) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at TRANSFORMER/minecraft@1.21.9/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$prepareTasks$0(SimpleReloadInstance.java:65) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at TRANSFORMER/minecraft@1.21.9/net.minecraft.TracingExecutor.lambda$forName$0(TracingExecutor.java:18) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?]
+[13Nov2025 15:16:11.828] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=0,waterlogged=true]'
+[13Nov2025 15:16:11.829] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=0,waterlogged=false]'
+[13Nov2025 15:16:11.829] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=1,waterlogged=true]'
+[13Nov2025 15:16:11.829] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=1,waterlogged=false]'
+[13Nov2025 15:16:11.829] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=2,waterlogged=true]'
+[13Nov2025 15:16:11.830] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=2,waterlogged=false]'
+[13Nov2025 15:16:11.830] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=3,waterlogged=true]'
+[13Nov2025 15:16:11.830] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=3,waterlogged=false]'
+[13Nov2025 15:16:11.830] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=4,waterlogged=true]'
+[13Nov2025 15:16:11.831] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=4,waterlogged=false]'
+[13Nov2025 15:16:11.831] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=5,waterlogged=true]'
+[13Nov2025 15:16:11.831] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=5,waterlogged=false]'
+[13Nov2025 15:16:11.831] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=6,waterlogged=true]'
+[13Nov2025 15:16:11.832] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=6,waterlogged=false]'
+[13Nov2025 15:16:11.832] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=7,waterlogged=true]'
+[13Nov2025 15:16:11.832] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=7,waterlogged=false]'
+[13Nov2025 15:16:11.832] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=8,waterlogged=true]'
+[13Nov2025 15:16:11.833] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=8,waterlogged=false]'
+[13Nov2025 15:16:11.833] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=9,waterlogged=true]'
+[13Nov2025 15:16:11.833] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=9,waterlogged=false]'
+[13Nov2025 15:16:11.833] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=10,waterlogged=true]'
+[13Nov2025 15:16:11.834] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=10,waterlogged=false]'
+[13Nov2025 15:16:11.834] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=11,waterlogged=true]'
+[13Nov2025 15:16:11.834] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=11,waterlogged=false]'
+[13Nov2025 15:16:11.835] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=12,waterlogged=true]'
+[13Nov2025 15:16:11.835] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=12,waterlogged=false]'
+[13Nov2025 15:16:11.835] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=13,waterlogged=true]'
+[13Nov2025 15:16:11.835] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=13,waterlogged=false]'
+[13Nov2025 15:16:11.836] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=14,waterlogged=true]'
+[13Nov2025 15:16:11.836] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=14,waterlogged=false]'
+[13Nov2025 15:16:11.836] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=15,waterlogged=true]'
+[13Nov2025 15:16:11.836] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing model for variant: 'Block{prismcraft:prism_sign}[rotation=15,waterlogged=false]'
+[13Nov2025 15:16:12.575] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Headphones (Realtek(R) Audio)
+[13Nov2025 15:16:12.578] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[13Nov2025 15:16:12.579] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[13Nov2025 15:16:12.583] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[13Nov2025 15:16:12.583] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[13Nov2025 15:16:12.591] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[13Nov2025 15:16:12.592] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[13Nov2025 15:16:12.593] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x0 minecraft:textures/atlas/blocks.png-atlas
+[13Nov2025 15:16:12.607] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/chest.png-atlas
+[13Nov2025 15:16:12.609] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[13Nov2025 15:16:12.610] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/beds.png-atlas
+[13Nov2025 15:16:12.611] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[13Nov2025 15:16:12.614] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[13Nov2025 15:16:12.614] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/signs.png-atlas
+[13Nov2025 15:16:12.615] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[13Nov2025 15:16:12.828] [Render thread/WARN] [net.minecraft.client.resources.model.ModelManager/]: No model loaded for default item model ID prismcraft:titanium_dye of prismcraft:titanium_dye
+[13Nov2025 15:16:12.833] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[13Nov2025 15:16:13.907] [IO-Worker-1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[13Nov2025 15:16:13.908] [IO-Worker-1/ERROR] [com.mojang.realmsclient.RealmsAvailability/]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at TRANSFORMER/minecraft@1.21.9/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:522) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at TRANSFORMER/minecraft@1.21.9/com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:292) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at TRANSFORMER/minecraft@1.21.9/com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:51) ~[neoforge-21.9.16-beta-client-extra-aka-minecraft-resources.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[13Nov2025 15:16:23.006] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_concrete_slab' from 'prismcraft:recipe/prism_concrete_slab.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_concrete_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_concrete_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_concrete_planks; Not a JSON object: "prismcraft:prism_concrete_planks"']
+[13Nov2025 15:16:23.010] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_concrete_stairs' from 'prismcraft:recipe/prism_concrete_stairs.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_concrete_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_concrete_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_concrete_planks; Not a JSON object: "prismcraft:prism_concrete_planks"']
+[13Nov2025 15:16:23.016] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block' from 'prismcraft:recipe/prism_copper_block.json': DataResult.Error['Map entry 'C' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_copper_ingot"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_copper_ingot"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_ingot; Not a JSON object: "prismcraft:prism_copper_ingot"']
+[13Nov2025 15:16:23.018] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block_slab' from 'prismcraft:recipe/prism_copper_block_slab.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_slab; Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_copper_block_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_copper_block_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_planks; Not a JSON object: "prismcraft:prism_copper_block_planks"']
+[13Nov2025 15:16:23.020] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block_slab_stonecutting' from 'prismcraft:recipe/prism_copper_block_slab_stonecutting.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_slab']
+[13Nov2025 15:16:23.024] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block_stairs' from 'prismcraft:recipe/prism_copper_block_stairs.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_stairs; Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_copper_block_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_copper_block_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_planks; Not a JSON object: "prismcraft:prism_copper_block_planks"']
+[13Nov2025 15:16:23.027] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block_stairs_stonecutting' from 'prismcraft:recipe/prism_copper_block_stairs_stonecutting.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_stairs']
+[13Nov2025 15:16:23.028] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block_wall' from 'prismcraft:recipe/prism_copper_block_wall.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_wall']
+[13Nov2025 15:16:23.032] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_copper_block_wall_stonecutting' from 'prismcraft:recipe/prism_copper_block_wall_stonecutting.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_copper_block_wall']
+[13Nov2025 15:16:23.035] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_cut_copper_slab' from 'prismcraft:recipe/prism_cut_copper_slab.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_cut_copper_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_cut_copper_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_cut_copper_planks; Not a JSON object: "prismcraft:prism_cut_copper_planks"']
+[13Nov2025 15:16:23.037] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_cut_copper_stairs' from 'prismcraft:recipe/prism_cut_copper_stairs.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_cut_copper_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_cut_copper_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_cut_copper_planks; Not a JSON object: "prismcraft:prism_cut_copper_planks"']
+[13Nov2025 15:16:23.042] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_planks_from_log' from 'prismcraft:recipe/prism_planks_from_log.json': DataResult.Error['List is too short: 0, expected range [1-9]; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_planks_from_log']
+[13Nov2025 15:16:23.044] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_planks_from_stripped_log' from 'prismcraft:recipe/prism_planks_from_stripped_log.json': DataResult.Error['List is too short: 0, expected range [1-9]; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_planks_from_stripped_log']
+[13Nov2025 15:16:23.052] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_stone_slab' from 'prismcraft:recipe/prism_stone_slab.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_stone_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_stone_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_stone_planks; Not a JSON object: "prismcraft:prism_stone_planks"']
+[13Nov2025 15:16:23.054] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_stone_stairs' from 'prismcraft:recipe/prism_stone_stairs.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_stone_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_stone_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_stone_planks; Not a JSON object: "prismcraft:prism_stone_planks"']
+[13Nov2025 15:16:23.059] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_terracotta_slab' from 'prismcraft:recipe/prism_terracotta_slab.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_terracotta_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_terracotta_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_terracotta_planks; Not a JSON object: "prismcraft:prism_terracotta_planks"']
+[13Nov2025 15:16:23.066] [Worker-Main-9/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'prismcraft:prism_terracotta_stairs' from 'prismcraft:recipe/prism_terracotta_stairs.json': DataResult.Error['Map entry 'P' : Failed to parse either. First: Not a JSON object: "prismcraft:prism_terracotta_planks"; Second: Failed to parse either. First: Not a tag id; Second: Failed to parse either. First: Not a json array: "prismcraft:prism_terracotta_planks"; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: prismcraft:prism_terracotta_planks; Not a JSON object: "prismcraft:prism_terracotta_planks"']
+[13Nov2025 15:16:23.966] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1495 recipes
+[13Nov2025 15:16:23.985] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1574 advancements
+[13Nov2025 15:16:23.987] [Render thread/INFO] [net.neoforged.neoforge.common.crafting.RecipePriorityManager/]: Loaded 0 recipe priority overrides
+[13Nov2025 15:16:24.219] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.9
+[13Nov2025 15:16:24.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[13Nov2025 15:16:24.704] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 0 persistent chunks...
+[13Nov2025 15:16:24.705] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[13Nov2025 15:16:24.719] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[13Nov2025 15:16:25.282] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 49 chunks for player spawn...
+[13Nov2025 15:16:25.283] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[13Nov2025 15:16:25.474] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Time elapsed: 769 ms
+[13Nov2025 15:16:25.881] [Server thread/ERROR] [net.minecraft.stats.ServerRecipeBook/]: Tried to load unrecognized recipe: ResourceKey[minecraft:recipe / prismcraft:prism_planks_from_log] removed now.
+[13Nov2025 15:16:25.886] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:ec889c17] logged in with entity id 1 at (6.507710147897723, -59.0, 15.234477948709824)
+[13Nov2025 15:16:25.953] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[13Nov2025 15:16:26.083] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[13Nov2025 15:16:26.115] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[13Nov2025 15:16:26.119] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[13Nov2025 15:16:26.156] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[13Nov2025 15:16:26.161] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 145 advancements
+[13Nov2025 15:16:26.450] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[13Nov2025 15:16:26.507] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[13Nov2025 15:16:28.853] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[13Nov2025 15:16:54.072] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[13Nov2025 15:16:54.105] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[13Nov2025 15:16:54.124] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[13Nov2025 15:16:54.125] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
