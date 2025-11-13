@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "key": {
+    "C": "prismcraft:prism_copper_ingot"
+  },
+  "result": {
+    "id": "prismcraft:prism_copper_block",
+    "count": 1
+  }
+}

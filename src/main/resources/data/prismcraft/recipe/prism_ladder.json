@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "prismcraft:prism_ladder"
+  ],
+  "result": {
+    "id": "prismcraft:prism_ladder",
+    "count": 1
+  }
+}

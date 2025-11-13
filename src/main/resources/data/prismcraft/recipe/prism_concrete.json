@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "prismcraft:prism_concrete_powder",
+    "prismcraft:prism_concrete_powder",
+    "prismcraft:prism_concrete_powder",
+    "prismcraft:prism_concrete_powder"
+  ],
+  "result": {
+    "id": "prismcraft:prism_concrete",
+    "count": 4
+  }
+}

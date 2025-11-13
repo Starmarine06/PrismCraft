@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "PP"
+  ],
+  "key": {
+    "P": "prismcraft:prism_planks"
+  },
+  "result": {
+    "id": "prismcraft:prism_pressure_plate",
+    "count": 1
+  }
+}

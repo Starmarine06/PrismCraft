@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "PSP",
+    "PSP"
+  ],
+  "key": {
+    "P": "prismcraft:prism_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "prismcraft:prism_fence",
+    "count": 3
+  }
+}

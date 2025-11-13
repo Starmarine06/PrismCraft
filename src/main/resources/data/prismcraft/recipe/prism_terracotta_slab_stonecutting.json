@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "prismcraft:prism_terracotta",
+  "result": {
+    "id": "prismcraft:prism_terracotta_slab",
+    "count": 1
+  }
+}

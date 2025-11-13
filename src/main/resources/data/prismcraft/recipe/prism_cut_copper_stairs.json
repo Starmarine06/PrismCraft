@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "P  ",
+    "PP ",
+    "PPP"
+  ],
+  "key": {
+    "P": "prismcraft:prism_cut_copper_planks"
+  },
+  "result": {
+    "id": "prismcraft:prism_cut_copper_stairs",
+    "count": 4
+  }
+}

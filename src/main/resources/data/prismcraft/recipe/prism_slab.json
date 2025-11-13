@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PPP"
+  ],
+  "key": {
+    "P": "prismcraft:prism_planks"
+  },
+  "result": {
+    "id": "prismcraft:prism_slab",
+    "count": 6
+  }
+}

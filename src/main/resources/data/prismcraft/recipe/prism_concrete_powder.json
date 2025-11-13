@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "minecraft:gravel",
+    "prismcraft:titanium_dye"
+  ],
+  "result": {
+    "id": "prismcraft:prism_concrete_powder",
+    "count": 8
+  }
+}

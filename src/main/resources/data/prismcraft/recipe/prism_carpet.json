@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WW"
+  ],
+  "key": {
+    "W": "prismcraft:prism_wool"
+  },
+  "result": {
+    "id": "prismcraft:prism_carpet",
+    "count": 3
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "P S",
+    "P S"
+  ],
+  "key": {
+    "P": "prismcraft:prism_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "prismcraft:prism_fence_gate",
+    "count": 1
+  }
+}

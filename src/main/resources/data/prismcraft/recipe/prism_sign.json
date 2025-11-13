@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "PPP",
+    "PPP",
+    " S "
+  ],
+  "key": {
+    "P": "prismcraft:prism_planks",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "prismcraft:prism_sign",
+    "count": 3
+  }
+}

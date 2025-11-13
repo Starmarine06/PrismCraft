@@ -10,11 +10,12 @@ import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
+import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrismSignBlockEntity extends SignBlockEntity {
+public class PrismSignBlockEntity extends SignBlockEntity implements IPrismColoredBlock {
     private int color = 0xFFFFFF;
 
     public PrismSignBlockEntity(BlockPos pos, BlockState state) {
