@@ -1,8 +1,3 @@
-/data get block 15 -59 19
-/setblock -1 -60 8 minecraft:barrel
-/enchant Dev minecraft:efficiency 5
-/setblock 1 -60 2 prismcraft:dye_mixer
-/give Dev prismcraft:prism_concrete
 /give Dev prismcraft:prism_concrete 64
 /data get block 0 -59 0
 /data get block -1 -59 0
@@ -48,3 +43,8 @@
 /give Dev stick
 /setblock 5 -60 12 minecraft:quartz_block
 /setblock 1 -59 8 ladder
+/give Dev minecraft:copper_axe
+/give Dev minecraft:decorated_pot
+/give Dev minecraft:diamond_pickaxe
+/setblock 10 -60 9 minecraft:black_concrete
+/give Dev minecraft:diamond_axe

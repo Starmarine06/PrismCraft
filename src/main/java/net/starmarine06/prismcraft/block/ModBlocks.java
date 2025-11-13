@@ -21,14 +21,14 @@ public class ModBlocks {
                     .noOcclusion();
 
     public static final BlockBehaviour.Properties WOOD_PROPS =
-            BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).requiresCorrectToolForDrops();
+            BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F);
 
     // Dye Mixer
     public static final DeferredBlock<DyeMixerBlock> DYE_MIXER = BLOCKS.register(
             "dye_mixer",
             registryName -> new DyeMixerBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).strength(3.5F)
-                    .noOcclusion().requiresCorrectToolForDrops()
+                    .noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
     // Pale Oak (no suffix)
@@ -98,13 +98,17 @@ public class ModBlocks {
 
     public static final DeferredBlock<PrismFlowerPotBlock> PRISM_FLOWER_POT =
             BLOCKS.register("prism_flower_pot", registryName ->
-                    new PrismFlowerPotBlock(WOOD_PROPS.noOcclusion().setId(ResourceKey.create(Registries.BLOCK, registryName))));
+                    new PrismFlowerPotBlock(BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(0F)
+                            .sound(SoundType.DECORATED_POT)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
     public static final DeferredBlock<PrismDecoratedPotBlock> PRISM_DECORATED_POT = BLOCKS.register(
             "prism_decorated_pot",
             registryName -> new PrismDecoratedPotBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
-                    .strength(2.5F)
+                    .strength(0F)
                     .sound(SoundType.DECORATED_POT)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
@@ -189,7 +193,7 @@ public class ModBlocks {
     public static final DeferredBlock<PrismConcreteBlock> PRISM_WOOL = BLOCKS.register(
             "prism_wool",
             registryName -> new PrismConcreteBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.WOOL).strength(0.8F).sound(SoundType.WOOL)
+                    .mapColor(MapColor.WOOL).strength(0.5F).sound(SoundType.WOOL)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
     //Terracotta Vars
     public static final DeferredBlock<PrismConcreteBlock> PRISM_TERRACOTTA = BLOCKS.register(
@@ -229,7 +233,7 @@ public class ModBlocks {
     public static final DeferredBlock<PrismLadderBlock> PRISM_LADDER = BLOCKS.register(
             "prism_ladder",
             registryName -> new PrismLadderBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE).strength(1.8F)
+                    .mapColor(MapColor.STONE).strength(1.0F)
                     .noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismSand> PRISM_SAND = BLOCKS.register(
