@@ -1,6 +1,3 @@
-/give Dev prismcraft:prism_concrete 64
-/data get block 0 -59 0
-/data get block -1 -59 0
 /give Dev prismcraft:prism_acacia_trapdoor
 /time set dayu
 /time set day
@@ -48,3 +45,6 @@
 /give Dev minecraft:diamond_pickaxe
 /setblock 10 -60 9 minecraft:black_concrete
 /give Dev minecraft:diamond_axe
+/setblock 20 -60 19 chest
+/fill 24 -61 25
+/fill 24 -61 25 -8 -61 27 stone
