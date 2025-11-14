@@ -4,9 +4,12 @@
     {
       "rolls": 1,
       "entries": [
+        { "type": "minecraft:item", "name": "prismcraft:prism_concrete" }
+      ],
+      "functions": [
         {
-          "type": "minecraft:item",
-          "name": "prismcraft:prism_concrete"
+          "function": "minecraft:copy_components",
+          "source": "block_entity"
         }
       ]
     }

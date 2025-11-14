@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Made Blocks drop items and break in survival">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_barrel.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_slime_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/tags/block/mineable/axe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/tags/block/mineable/pickaxe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/tags/block/mineable/shovel.json" afterDir="false" />
+    <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Fixed the drops">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
@@ -44,20 +39,79 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallSignBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismColoredBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/blockentity/PrismColoredBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/mineable/axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/mineable/axe.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_acacia_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_acacia_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_acacia_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_acacia_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite_wall.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_andesite_wall.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_bamboo_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_bamboo_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_bamboo_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_bamboo_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_barrel.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_barrel.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_birch_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_birch_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_birch_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_birch_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_button.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_candle.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_candle.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_carpet.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_carpet.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cherry_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cherry_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cherry_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cherry_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_chiseled_copper.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_chiseled_copper.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_powder.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_powder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_wall.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_wall.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_block.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_grate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_grate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_trapdoor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_crimson_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_crimson_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_crimson_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_crimson_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cut_copper.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cut_copper.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cut_copper_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cut_copper_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cut_copper_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cut_copper_stairs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_dark_oak_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_dark_oak_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_dark_oak_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_dark_oak_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_decorated_pot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_decorated_pot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_fence.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_fence.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_fence_gate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_flower_pot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_flower_pot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_hanging_sign.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_jungle_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_jungle_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_jungle_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_jungle_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_ladder.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_ladder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_mangrove_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_mangrove_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_mangrove_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_mangrove_trapdoor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_oak_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_oak_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_oak_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_oak_trapdoor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pale_oak_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pale_oak_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pale_oak_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pale_oak_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_planks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pressure_plate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_sand.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_sand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_slime_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_slime_block.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_spruce_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_spruce_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_spruce_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_spruce_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone_wall.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stone_wall.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stripped_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_stripped_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta_slab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta_stairs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta_wall.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_terracotta_wall.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_wall_hanging_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_wall_hanging_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_wall_sign.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_wall_sign.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_warped_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_warped_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_warped_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_warped_trapdoor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_wool.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_wool.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -484,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763057537546</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fixed the drops">
+      <option name="closed" value="true" />
+      <created>1763139437046</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1763139437046</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -519,6 +581,7 @@
     <MESSAGE value="Fixed the flower pot voxel" />
     <MESSAGE value="Added Recipes for everything" />
     <MESSAGE value="Made Blocks drop items and break in survival" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Blocks drop items and break in survival" />
+    <MESSAGE value="Fixed the drops" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the drops" />
   </component>
 </project>

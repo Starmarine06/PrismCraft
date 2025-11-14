@@ -56,7 +56,13 @@
           "name": "prismcraft:prism_candle"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1.0,
+      "functions": [
+        {
+          "function": "minecraft:copy_components",
+          "source": "block_entity"
+        }
+      ]
     }
   ],
   "random_sequence": "prismcraft:blocks/prism_candle"

@@ -8,6 +8,12 @@
           "type": "minecraft:item",
           "name": "prismcraft:prism_cut_copper_stairs"
         }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:copy_components",
+          "source": "block_entity"
+        }
       ]
     }
   ]

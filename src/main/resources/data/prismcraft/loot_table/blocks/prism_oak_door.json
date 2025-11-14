@@ -23,7 +23,13 @@
           "name": "prismcraft:prism_oak_door"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1.0,
+      "functions": [
+        {
+          "function": "minecraft:copy_components",
+          "source": "block_entity"
+        }
+      ]
     }
   ],
   "random_sequence": "prismcraft:blocks/prism_oak_door"

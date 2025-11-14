@@ -2,7 +2,9 @@ package net.starmarine06.prismcraft.block;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
@@ -11,6 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BarrelBlock;
@@ -102,5 +105,4 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
                 ? (lvl, pos, st, be) -> PrismBarrelBlockEntity.clientTick(lvl, pos, st, (PrismBarrelBlockEntity)be)
                 : null;
     }
-
 }

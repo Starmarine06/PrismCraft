@@ -8,6 +8,12 @@
           "type": "minecraft:item",
           "name": "prismcraft:prism_fence"
         }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:copy_components",
+          "source": "block_entity"
+        }
       ]
     }
   ]
