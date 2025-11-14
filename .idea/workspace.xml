@@ -5,12 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3708f1b-0e62-4edd-a9da-d7a51f3760e0" name="Changes" comment="Made Blocks drop items and break in survival">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_powder.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_barrel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_slime_block.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/tags/block/mineable/axe.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/tags/block/mineable/pickaxe.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/tags/block/mineable/shovel.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/mineable/shovel.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/block/mineable/shovel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismBarrelBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismBarrelBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismButtonBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismButtonBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCandleBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCandleBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCarpetBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismCarpetBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismConcreteBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismConcreteBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDecoratedPotBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDecoratedPotBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDoorBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismDoorBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceGateBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFenceGateBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFlowerPotBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismFlowerPotBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismHangingSignBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismLadderBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismLadderBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismPressurePlateBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismPressurePlateBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSignBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlabBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlabBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlimeBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismSlimeBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismStairsBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismStairsBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismTrapdoorBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismTrapdoorBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallHangingSignBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallSignBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWallSignBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/starmarine06/prismcraft/block/PrismWoodBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_acacia_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_acacia_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_bamboo_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_bamboo_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_birch_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_birch_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_candle.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_candle.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cherry_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_cherry_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_powder.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_concrete_powder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_copper_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_crimson_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_crimson_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_dark_oak_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_dark_oak_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_jungle_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_jungle_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_mangrove_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_mangrove_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_oak_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_oak_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pale_oak_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_pale_oak_door.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_spruce_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/prismcraft/loot_table/blocks/prism_spruce_door.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,17 +140,17 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/flame/Documents/prismcraft/src/main/resources/data/prismcraft/loot_table/blocks",
+    "last_opened_file_path": "C:/Users/flame/Documents/prismcraft/src/main/resources/data/prismcraft/tags/block",
     "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\prismcraft\tags\block" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\prismcraft\loot_table\blocks" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\minecraft\tags\block" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\items" />
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\blockstates" />
-      <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\assets\prismcraft\models\block" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\flame\Documents\prismcraft\src\main\resources\data\minecraft\tags\block" />
@@ -429,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763056232383</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Made Blocks drop items and break in survival">
+      <option name="closed" value="true" />
+      <created>1763057537546</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1763057537546</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
