@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:crafting_table",
+    "prismcraft:titanium_dye"
+  ],
+  "result": {
+    "id": "prismcraft:dye_mixer",
+    "count": 1
+  }
+}

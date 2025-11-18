@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "prismcraft:prism_fence"
+    "prismcraft:prism_fence",
+    "minecraft:nether_brick_fence"
   ]
 }
