@@ -8,9 +8,22 @@
 	},
 	"elements": [
 		{
-			"from": [-0.01, 4.33, 0.32],
-			"to": [16.01, 12.35, 1.69],
-			"rotation": {"angle": 0, "axis": "x", "origin": [8, 2, 8]},
+			"from": [7.315, -0.01, 7.315],
+			"to": [8.685, 9.36, 8.685],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0.5, 8, 1, 15], "texture": "#0"},
+				"east": {"uv": [0, 8, 0.5, 15], "texture": "#0"},
+				"south": {"uv": [1.5, 8, 2, 15], "texture": "#0"},
+				"west": {"uv": [1, 8, 1.5, 15], "texture": "#0"},
+				"up": {"uv": [0.5, 7, 1, 8], "texture": "#0"},
+				"down": {"uv": [1, 7, 1.5, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-0.01, 9.34, 7.315],
+			"to": [16.01, 17.36, 8.685],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"north": {"uv": [0.5, 1, 6.5, 7], "texture": "#0", "tintindex": 0},
 				"east": {"uv": [0, 1, 0.5, 7], "texture": "#0", "tintindex": 0},
@@ -23,23 +36,23 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, 90, 89],
-			"translation": [3.75, -1.5, 0.5],
+			"rotation": [0, 90, 13],
+			"translation": [5.5, 3.5, 2],
 			"scale": [0.75, 0.75, 0.75]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, 90, 89],
-			"translation": [3.75, -1.5, 0.5],
+			"rotation": [0, 90, 13],
+			"translation": [5.5, 3.5, 2],
 			"scale": [0.75, 0.75, 0.75]
 		},
 		"firstperson_righthand": {
-			"rotation": [0, -90, 25],
-			"translation": [1.13, -1.05, 1.13],
+			"rotation": [0, 90, -25],
+			"translation": [8.38, 1.45, 1.13],
 			"scale": [0.68, 0.68, 0.68]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, -90, 25],
-			"translation": [1.13, -1.3, 1.13],
+			"rotation": [0, 90, -25],
+			"translation": [8.38, 1.45, 1.13],
 			"scale": [0.68, 0.68, 0.68]
 		},
 		"ground": {
@@ -47,11 +60,11 @@
 		},
 		"gui": {
 			"rotation": [30, -135, 0],
-			"translation": [-3.75, -1, 0],
-			"scale": [0.77, 0.77, 0.77]
+			"translation": [-3.75, 0.5, 0],
+			"scale": [0.75, 0.75, 0.75]
 		},
 		"fixed": {
-			"translation": [0, 0, 7.5]
+			"translation": [0, -1, 7.5]
 		}
 	}
 }

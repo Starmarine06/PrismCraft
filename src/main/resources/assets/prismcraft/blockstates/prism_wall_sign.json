@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "prismcraft:block/prism_wall_sign",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "prismcraft:block/prism_wall_sign",
+      "y": 180
+    },
+    "facing=south": {
       "model": "prismcraft:block/prism_wall_sign"
+    },
+    "facing=west": {
+      "model": "prismcraft:block/prism_wall_sign",
+      "y": 90
     }
   }
 }

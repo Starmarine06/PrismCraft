@@ -10,27 +10,27 @@
 		{
 			"from": [7.315, -0.01, 7.315],
 			"to": [8.685, 9.36, 8.685],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
-				"north": {"uv": [0.5, 8, 1, 15], "texture": "#0"},
-				"east": {"uv": [0, 8, 0.5, 15], "texture": "#0"},
-				"south": {"uv": [1.5, 8, 2, 15], "texture": "#0"},
-				"west": {"uv": [1, 8, 1.5, 15], "texture": "#0"},
-				"up": {"uv": [0.5, 7, 1, 8], "texture": "#0"},
-				"down": {"uv": [1, 7, 1.5, 8], "texture": "#0"}
+				"north": {"uv": [1, 8, 1.5, 15], "texture": "#0"},
+				"east": {"uv": [0.5, 8, 1, 15], "texture": "#0"},
+				"south": {"uv": [0, 8, 0.5, 15], "texture": "#0"},
+				"west": {"uv": [1.5, 8, 2, 15], "texture": "#0"},
+				"up": {"uv": [0.5, 7, 1, 8], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [1, 7, 1.5, 8], "rotation": 270, "texture": "#0"}
 			}
 		},
 		{
-			"from": [-0.01, 9.34, 7.315],
-			"to": [16.01, 17.36, 8.685],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"from": [7.315, 9.34, -0.01],
+			"to": [8.685, 17.36, 16.01],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
-				"north": {"uv": [0.5, 1, 6.5, 7], "texture": "#0", "tintindex": 0},
-				"east": {"uv": [0, 1, 0.5, 7], "texture": "#0", "tintindex": 0},
-				"south": {"uv": [7, 1, 13, 7], "texture": "#0", "tintindex": 0},
-				"west": {"uv": [6.5, 1, 7, 7], "texture": "#0", "tintindex": 0},
-				"up": {"uv": [6.5, 1, 12.5, 0], "texture": "#0", "tintindex": 0},
-				"down": {"uv": [0.5, 0, 6.5, 1], "texture": "#0", "tintindex": 0}
+				"north": {"uv": [6.5, 1, 7, 7], "texture": "#0", "tintindex": 0},
+				"east": {"uv": [0.5, 1, 6.5, 7], "texture": "#0", "tintindex": 0},
+				"south": {"uv": [0, 1, 0.5, 7], "texture": "#0", "tintindex": 0},
+				"west": {"uv": [7, 1, 13, 7], "texture": "#0", "tintindex": 0},
+				"up": {"uv": [6.5, 1, 12.5, 0], "rotation": 90, "texture": "#0", "tintindex": 0},
+				"down": {"uv": [0.5, 0, 6.5, 1], "rotation": 270, "texture": "#0", "tintindex": 0}
 			}
 		}
 	],
