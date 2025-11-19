@@ -9,6 +9,7 @@ import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
@@ -22,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity implements IPrismColoredBlock {
     private int color = 0xFFFFFF;
+    public final AnimationState potAnim = new AnimationState();
 
     public PrismDecoratedPotBlockEntity(BlockPos pos, BlockState state) {
         super(pos, state);
@@ -30,6 +32,14 @@ public class PrismDecoratedPotBlockEntity extends DecoratedPotBlockEntity implem
     @Override
     public BlockEntityType<?> getType() {
         return ModBlockEntities.PRISM_DECORATED_POT.get();
+    }
+
+
+    public void playPotAnimation() {
+        if (level != null) {
+            potAnim.start((int) level.getGameTime());
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
     public void setColor(int color) {

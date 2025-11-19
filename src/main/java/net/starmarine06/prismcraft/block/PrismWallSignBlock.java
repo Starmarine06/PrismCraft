@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -56,4 +57,15 @@ public class PrismWallSignBlock extends WallSignBlock implements IPrismColoredBl
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
+
+    @Override
+    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        Direction direction = state.getValue(FACING);
+        BlockPos attachedPos = pos.relative(direction.getOpposite());
+        BlockState attachedState = level.getBlockState(attachedPos);
+        // Allow placement on solid faces OR other wall signs
+        return attachedState.isFaceSturdy(level, attachedPos, direction) ||
+                attachedState.getBlock() instanceof WallSignBlock;
+    }
+
 }

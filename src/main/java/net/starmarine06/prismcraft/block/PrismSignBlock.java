@@ -12,7 +12,9 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -68,4 +70,13 @@ public class PrismSignBlock extends StandingSignBlock implements IPrismColoredBl
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
+
+    @Override
+    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockState below = level.getBlockState(pos.below());
+        // Allow placement on solid blocks OR other signs
+        return below.isFaceSturdy(level, pos.below(), Direction.UP) ||
+                below.getBlock() instanceof SignBlock;
+    }
+
 }
