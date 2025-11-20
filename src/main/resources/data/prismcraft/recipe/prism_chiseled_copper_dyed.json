@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "category": "decorations",
   "ingredients": [
-    "minecraft:copper_block",
+    "minecraft:chiseled_copper",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_copper_block",
+    "id": "prismcraft:prism_chiseled_copper",
     "count": 1
   }
 }

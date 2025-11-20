@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "prismcraft:prism_planks_from_log"
+    "prismcraft:prism_log"
   ],
   "result": {
-    "id": "prismcraft:prism_planks_from_log",
-    "count": 1
+    "id": "prismcraft:prism_planks",
+    "count": 4
   }
 }

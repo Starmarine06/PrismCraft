@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "prismcraft:prism_wall_hanging_sign",
+    "minecraft:flower_pot",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_wall_hanging_sign",
+    "id": "prismcraft:prism_flower_pot",
     "count": 1
   }
 }

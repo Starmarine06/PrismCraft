@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "minecraft:copper_block",
+    "prismcraft:prism_cut_copper_slab",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_copper_block",
+    "id": "prismcraft:prism_cut_copper_slab",
     "count": 1
   }
 }

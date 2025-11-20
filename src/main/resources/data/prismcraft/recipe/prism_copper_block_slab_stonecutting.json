@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": "prismcraft:prism_copper_block",
   "result": {
-    "id": "prismcraft:prism_copper_block_slab",
+    "id": "prismcraft:prism_cut_copper_slab",
     "count": 1
   }
 }
