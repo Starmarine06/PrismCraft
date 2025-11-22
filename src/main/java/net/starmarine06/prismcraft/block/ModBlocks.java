@@ -241,9 +241,9 @@ public class ModBlocks {
             registryName -> new PrismSand(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.SAND)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
-    public static final DeferredBlock<PrismSand> PRISM_CONCRETE_POWDER = BLOCKS.register(
+    public static final DeferredBlock<PrismConcretePowder> PRISM_CONCRETE_POWDER = BLOCKS.register(
             "prism_concrete_powder",
-            registryName -> new PrismSand(BlockBehaviour.Properties.of()
+            registryName -> new PrismConcretePowder(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.SAND)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
     public static final DeferredBlock<PrismSlimeBlock> PRISM_SLIME_BLOCK = BLOCKS.register(
