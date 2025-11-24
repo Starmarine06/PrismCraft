@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "prismcraft:prism_andesite"
+  },
+  "result": {
+    "id": "prismcraft:prism_andesite_slab",
+    "count": 6
+  }
+}

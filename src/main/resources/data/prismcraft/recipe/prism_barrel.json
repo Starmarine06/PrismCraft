@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#_#",
+    "# #",
+    "#_#"
+  ],
+  "key": {
+    "#": "prismcraft:prism_planks",
+    "_": "prismcraft:prism_slab"
+  },
+  "result": {
+    "id": "prismcraft:prism_barrel",
+    "count": 1
+  }
+}

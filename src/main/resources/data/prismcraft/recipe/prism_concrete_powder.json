@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
+    "prismcraft:titanium_dye",
+    "minecraft:sand",
+    "minecraft:sand",
+    "minecraft:sand",
     "minecraft:sand",
     "minecraft:gravel",
-    "minecraft:sand",
     "minecraft:gravel",
-    "minecraft:sand",
     "minecraft:gravel",
-    "minecraft:sand",
-    "minecraft:gravel",
-    "prismcraft:titanium_dye"
+    "minecraft:gravel"
   ],
   "result": {
     "id": "prismcraft:prism_concrete_powder",

@@ -2,12 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "decorations",
   "pattern": [
-    "P P",
+    "X X",
     "PPP",
-    "   "
+    "PPP"
   ],
   "key": {
-    "P": "prismcraft:prism_planks"
+    "X": "minecraft:iron_chain",
+    "P": "prismcraft:prism_stripped_log"
   },
   "result": {
     "id": "prismcraft:prism_hanging_sign",
