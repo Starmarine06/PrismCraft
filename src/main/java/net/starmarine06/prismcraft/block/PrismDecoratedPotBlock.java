@@ -14,6 +14,7 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -24,6 +25,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
 import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import net.starmarine06.prismcraft.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismDecoratedPotBlock extends DecoratedPotBlock implements IPrismColoredBlock {
@@ -56,7 +58,16 @@ public class PrismDecoratedPotBlock extends DecoratedPotBlock implements IPrismC
     }
 
     @Override
-    protected InteractionResult useItemOn(ItemStack p_316569_, BlockState p_316562_, Level p_316177_, BlockPos p_316898_, Player p_316632_, InteractionHand p_316424_, BlockHitResult p_316345_) {
-        return super.useItemOn(p_316569_, p_316562_, p_316177_, p_316898_, p_316632_, p_316424_, p_316345_);
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(ModItems.PRISM_DECORATED_POT.get());
+
+        // Copy color from block entity
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof PrismDecoratedPotBlockEntity tile) {
+            int color = tile.getColor();
+            stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
+        }
+
+        return stack;
     }
 }

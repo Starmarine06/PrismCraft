@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.PushReaction;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import org.jetbrains.annotations.Nullable;
@@ -68,10 +69,7 @@ public class PrismFenceBlock extends FenceBlock implements EntityBlock, IPrismCo
     }
 
     @Override
-    public boolean connectsTo(BlockState state, boolean isSideSolid, Direction direction) {
-        Block block = state.getBlock();
-        boolean isFence = block instanceof FenceBlock;
-        boolean isGate= block instanceof FenceGateBlock;
-        return isFence || isGate || super.connectsTo(state, isSideSolid, direction);
+    public @Nullable PushReaction getPistonPushReaction(BlockState state) {
+        return PushReaction.NORMAL;
     }
 }

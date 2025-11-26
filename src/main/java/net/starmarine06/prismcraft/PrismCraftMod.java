@@ -9,12 +9,15 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.starmarine06.prismcraft.block.ModBlocks;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
 import net.starmarine06.prismcraft.blockentity.renderer.PrismFlowerPotRenderer;
 import net.starmarine06.prismcraft.item.ModCreativeTabs;
 import net.starmarine06.prismcraft.item.ModItems;
+import net.starmarine06.prismcraft.menu.DyeMixerMenu;
 import net.starmarine06.prismcraft.menu.ModMenuTypes;
+import net.starmarine06.prismcraft.network.CraftDyeMixerPacket;
 import net.starmarine06.prismcraft.screen.DyeMixerScreen;
 import net.starmarine06.prismcraft.screen.PrismBarrelScreen;
 import org.slf4j.Logger;
@@ -36,6 +39,7 @@ public class PrismCraftMod {
         ModMenuTypes.MENUS.register(modEventBus);
 
         modEventBus.addListener(this::registerScreens);
+        modEventBus.addListener(PrismCraftMod::registerPackets);
         ModCreativeTabs.register(modEventBus);
     }
 
@@ -44,5 +48,26 @@ public class PrismCraftMod {
         event.register(ModMenuTypes.DYE_MIXER.get(), DyeMixerScreen::new);
         event.register(ModMenuTypes.PRISM_BARREL.get(), PrismBarrelScreen::new);
     }
+    public static void registerPackets(RegisterPayloadHandlersEvent event) {
+        event.registrar("1")
+                .playToServer(
+                        CraftDyeMixerPacket.TYPE,
+                        CraftDyeMixerPacket.CODEC,
+                        (packet, context) -> {
+                            context.enqueueWork(() -> {
+                                LOGGER.info("Received craft packet from player: " + context.player().getName().getString());
+
+                                if (context.player().containerMenu instanceof DyeMixerMenu menu) {
+                                    LOGGER.info("Player has DyeMixerMenu open, crafting...");
+                                    menu.craftItem(context.player());
+                                } else {
+                                    LOGGER.warn("Player does not have DyeMixerMenu open!");
+                                }
+                            });
+                        }
+                );
+    }
+
+
 
 }

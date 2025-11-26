@@ -49,7 +49,7 @@ public class ModColorHandlers {
                     ModBlocks.PRISM_BAMBOO_TRAPDOOR,
                     ModBlocks.PRISM_CRIMSON_TRAPDOOR,
                     ModBlocks.PRISM_WARPED_TRAPDOOR,
-
+                    ModBlocks.PRISM_SLIME_BLOCK,
                     ModBlocks.PRISM_LADDER,
                     ModBlocks.DYE_MIXER,
                     ModBlocks.PRISM_COPPER_GRATE,

@@ -4,6 +4,7 @@
 		"particle": "prismcraft:block/prism_slime_block",
 		"texture": "prismcraft:block/prism_slime_block"
 	},
+	"render_type": "translucent",
 	"elements": [
 		{
 			"from": [3, 3, 3],
