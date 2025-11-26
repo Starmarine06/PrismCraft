@@ -14,7 +14,7 @@ import net.starmarine06.prismcraft.network.CraftDyeMixerPacket;
 
 public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
     private static final ResourceLocation BACKGROUND_LOCATION =
-            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer.png");
+            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer2.png");
 
     private Button craftButton;
 

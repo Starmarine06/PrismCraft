@@ -1,5 +1,8 @@
 package net.starmarine06.prismcraft.menu;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -12,6 +15,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.starmarine06.prismcraft.block.ModBlocks;
 
@@ -39,7 +43,7 @@ public class DyeMixerMenu extends AbstractContainerMenu {
         this.resultContainer = new SimpleContainer(1);
 
         // Dye slots (0, 1)
-        this.addSlot(new Slot(container, DYE_SLOT_1, 27, 35) {
+        this.addSlot(new Slot(container, DYE_SLOT_1, 26, 25) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return stack.getItem() instanceof DyeItem;
@@ -51,7 +55,7 @@ public class DyeMixerMenu extends AbstractContainerMenu {
                 updateResultPreview();
             }
         });
-        this.addSlot(new Slot(container, DYE_SLOT_2, 51, 35) {
+        this.addSlot(new Slot(container, DYE_SLOT_2, 50, 25) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return stack.getItem() instanceof DyeItem;
@@ -65,7 +69,7 @@ public class DyeMixerMenu extends AbstractContainerMenu {
         });
 
         // Input slot (2)
-        this.addSlot(new Slot(container, INPUT_SLOT, 80, 35) {
+        this.addSlot(new Slot(container, INPUT_SLOT, 79, 25) {
             @Override
             public void setChanged() {
                 super.setChanged();
@@ -74,7 +78,7 @@ public class DyeMixerMenu extends AbstractContainerMenu {
         });
 
         // Result preview slot
-        this.addSlot(new Slot(resultContainer, 0, 134, 35) {
+        this.addSlot(new Slot(resultContainer, 0, 134, 25) {
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return false;
@@ -116,22 +120,56 @@ public class DyeMixerMenu extends AbstractContainerMenu {
         ItemStack dye2 = this.container.getItem(DYE_SLOT_2);
         ItemStack input = this.container.getItem(INPUT_SLOT);
 
-        System.out.println("CALCULATE: dye1=" + dye1 + ", dye2=" + dye2 + ", input=" + input);
-
         if (input.isEmpty() || (dye1.isEmpty() && dye2.isEmpty())) {
-            System.out.println("EMPTY RESULT - missing inputs");
             return ItemStack.EMPTY;
         }
 
         int color = mixColors(dye1, dye2);
-        System.out.println("MIXED COLOR: " + color);
 
-        ItemStack result = new ItemStack(ModBlocks.PRISM_CONCRETE_POWDER.get());
+        ItemStack result = input.copy();
+        result.setCount(1);
         result.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
 
-        System.out.println("CREATED RESULT: " + result);
+        // Get existing custom data
+        CompoundTag customData = result.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
+
+        // Get or create dye ingredients list
+        ListTag dyeList = customData.getListOrEmpty("prismcraft:dye_ingredients");
+
+        // Add dyes to the list
+        if (!dye1.isEmpty()) {
+            addOrIncrementDye(dyeList, dye1);
+        }
+        if (!dye2.isEmpty()) {
+            addOrIncrementDye(dyeList, dye2);
+        }
+
+        customData.put("prismcraft:dye_ingredients", dyeList);
+        result.set(DataComponents.CUSTOM_DATA, CustomData.of(customData));
+
         return result;
     }
+
+    private void addOrIncrementDye(ListTag dyeList, ItemStack dye) {
+        String dyeId = BuiltInRegistries.ITEM.getKey(dye.getItem()).toString();
+
+        // Check if this dye already exists in the list
+        for (int i = 0; i < dyeList.size(); i++) {
+            CompoundTag existing = dyeList.getCompoundOrEmpty(i);
+            if (existing.getString("id").equals(dyeId)) {
+                // Increment count
+                existing.putInt("count", existing.getIntOr("count",1) + 1);
+                return;
+            }
+        }
+
+        // Dye not found, add new entry
+        CompoundTag newDye = new CompoundTag();
+        newDye.putString("id", dyeId);
+        newDye.putInt("count", 1);
+        dyeList.add(newDye);
+    }
+
 
     private int mixColors(ItemStack dye1, ItemStack dye2) {
         int color1 = 0;
@@ -176,8 +214,26 @@ public class DyeMixerMenu extends AbstractContainerMenu {
         }
 
         int color = mixColors(dye1, dye2);
-        ItemStack result = new ItemStack(ModBlocks.PRISM_CONCRETE_POWDER.get());
+        ItemStack result = input.copy();
+        result.setCount(1);
         result.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
+
+        // Get existing custom data
+        CompoundTag customData = result.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
+
+        // Get or create dye ingredients list
+        ListTag dyeList = customData.getListOrEmpty("prismcraft:dye_ingredients");
+
+        // Add dyes to the list
+        if (!dye1.isEmpty()) {
+            addOrIncrementDye(dyeList, dye1);
+        }
+        if (!dye2.isEmpty()) {
+            addOrIncrementDye(dyeList, dye2);
+        }
+
+        customData.put("prismcraft:dye_ingredients", dyeList);
+        result.set(DataComponents.CUSTOM_DATA, CustomData.of(customData));
 
         if (!dye1.isEmpty()) dye1.shrink(1);
         if (!dye2.isEmpty()) dye2.shrink(1);
