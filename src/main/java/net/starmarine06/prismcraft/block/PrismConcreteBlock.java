@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -81,5 +82,18 @@ public class PrismConcreteBlock extends BaseEntityBlock implements IPrismColored
     public static int getColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState state = super.getStateForPlacement(context);
+
+        // Pre-set color data before block is placed (client-side prediction)
+        if (context.getLevel().isClientSide()) {
+            ItemStack stack = context.getItemInHand();
+            // Store color temporarily for rendering
+        }
+
+        return state;
     }
 }

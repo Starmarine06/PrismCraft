@@ -39,7 +39,7 @@ public class PrismCraftMod {
         ModMenuTypes.MENUS.register(modEventBus);
 
         modEventBus.addListener(this::registerScreens);
-        modEventBus.addListener(PrismCraftMod::registerPackets);
+        //modEventBus.addListener(PrismCraftMod::registerPackets);
         ModCreativeTabs.register(modEventBus);
     }
 
@@ -48,7 +48,7 @@ public class PrismCraftMod {
         event.register(ModMenuTypes.DYE_MIXER.get(), DyeMixerScreen::new);
         event.register(ModMenuTypes.PRISM_BARREL.get(), PrismBarrelScreen::new);
     }
-    public static void registerPackets(RegisterPayloadHandlersEvent event) {
+    /*public static void registerPackets(RegisterPayloadHandlersEvent event) {
         event.registrar("1")
                 .playToServer(
                         CraftDyeMixerPacket.TYPE,
@@ -66,7 +66,7 @@ public class PrismCraftMod {
                             });
                         }
                 );
-    }
+    }*/
 
 
 
