@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "prismcraft:block/prism_wood_wall"
+        "model": "prismcraft:block/prism_wood_wall_post"
       },
       "when": {
         "up": "true"
