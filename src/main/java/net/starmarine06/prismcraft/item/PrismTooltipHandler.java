@@ -44,10 +44,16 @@ public class PrismTooltipHandler {
                     ListTag dyeList = dyeData.getListOrEmpty("prismcraft:dye_ingredients");
                     if (!dyeList.isEmpty()) {
                         tooltip.add(Either.left(Component.literal("Used Dyes:").withStyle(ChatFormatting.GRAY)));
+
+                        // Iterate through the list from start to end
+                        String lastId = null;
+                        String lastDisplayName = null;
+                        int lastCount = 0;
+
                         for (int i = 0; i < dyeList.size(); i++) {
                             CompoundTag dyeTag = dyeList.getCompoundOrEmpty(i);
-                            String idString = dyeTag.getStringOr("id","");
-                            int count = dyeTag.getIntOr("count",1);
+                            String idString = dyeTag.getStringOr("id", "");
+                            int count = dyeTag.getIntOr("count", 1);
                             ResourceLocation dyeLoc = ResourceLocation.tryParse(idString);
                             String displayName = idString;
                             if (dyeLoc != null) {
@@ -56,7 +62,27 @@ public class PrismTooltipHandler {
                                     displayName = Component.translatable(itemOpt.get().getDescriptionId()).getString();
                                 }
                             }
-                            tooltip.add(Either.left(Component.literal("• " + displayName + " x" + count).withStyle(ChatFormatting.AQUA)));
+
+                            // If the same as the previous and directly consecutive → merge counts
+                            if (lastId != null && lastId.equals(idString)) {
+                                lastCount += count;
+                            } else {
+                                // If there was a previous entry, write it out first
+                                if (lastId != null) {
+                                    tooltip.add(Either.left(Component.literal("• " + lastDisplayName + " x" + lastCount)
+                                            .withStyle(ChatFormatting.AQUA)));
+                                }
+                                // Start a new block
+                                lastId = idString;
+                                lastDisplayName = displayName;
+                                lastCount = count;
+                            }
+                        }
+
+                        // Write out the last block as well
+                        if (lastId != null) {
+                            tooltip.add(Either.left(Component.literal("• " + lastDisplayName + " x" + lastCount)
+                                    .withStyle(ChatFormatting.AQUA)));
                         }
                     }
                 }
