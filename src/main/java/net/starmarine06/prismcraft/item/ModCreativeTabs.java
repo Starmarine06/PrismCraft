@@ -34,6 +34,7 @@ public class ModCreativeTabs {
                         output.accept(new ItemStack(ModItems.PRISM_PLANKS.get()));
                         output.accept(new ItemStack(ModItems.PRISM_SLAB.get()));
                         output.accept(new ItemStack(ModItems.PRISM_STAIRS.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_WOOD_WALL.get()));
                         output.accept(new ItemStack(ModItems.PRISM_FENCE.get()));
                         output.accept(new ItemStack(ModItems.PRISM_FENCE_GATE.get()));
                         output.accept(new ItemStack(ModItems.PRISM_BUTTON.get()));
@@ -43,7 +44,7 @@ public class ModCreativeTabs {
                         output.accept(new ItemStack(ModItems.PRISM_STRIPPED_LOG.get()));
                         output.accept(new ItemStack(ModItems.PRISM_SIGN_ITEM.get()));
                         output.accept(new ItemStack(ModItems.PRISM_HANGING_SIGN_ITEM.get()));
-                        output.accept(new ItemStack(ModItems.PRISM_WOOD_WALL.get()));
+
                         //output.accept(new ItemStack(ModItems.PRISM_STANDING_SIGN.get()));
                         //output.accept(new ItemStack(ModItems.PRISM_WALL_SIGN.get()));
                         //output.accept(new ItemStack(ModItems.PRISM_CEILING_HANGING_SIGN.get()));
