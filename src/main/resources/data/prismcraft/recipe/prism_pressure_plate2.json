@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "#minecraft:stairs",
+    "#minecraft:wooden_pressure_plates",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_stairs",
+    "id": "prismcraft:prism_pressure_plate",
     "count": 1
   }
 }

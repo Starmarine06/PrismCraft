@@ -12,6 +12,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.DyeItem;
 import net.starmarine06.prismcraft.blockentity.DyeMixerBlockEntity;
+import net.starmarine06.prismcraft.item.ModItems;
 
 public class DyeMixerMenu extends AbstractContainerMenu {
     private final Container container;
@@ -38,13 +39,13 @@ public class DyeMixerMenu extends AbstractContainerMenu {
         this.addSlot(new Slot(container, DYE_SLOT_1, 27, 35) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() instanceof DyeItem;
+                return stack.getItem() instanceof DyeItem || stack.is(ModItems.TITANIUM_DYE.get());
             }
         });
         this.addSlot(new Slot(container, DYE_SLOT_2, 51, 35) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() instanceof DyeItem;
+                return stack.getItem() instanceof DyeItem || stack.is(ModItems.TITANIUM_DYE.get());
             }
         });
 

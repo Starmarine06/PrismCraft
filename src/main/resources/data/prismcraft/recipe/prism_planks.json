@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "prismcraft:prism_acacia_door",
+    "#minecraft:planks",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_acacia_door",
+    "id": "prismcraft:prism_planks",
     "count": 1
   }
 }

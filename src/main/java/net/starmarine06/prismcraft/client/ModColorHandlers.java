@@ -107,6 +107,7 @@ public class ModColorHandlers {
                 ModBlocks.PRISM_STAIRS.get(),
                 ModBlocks.PRISM_FENCE.get(),
                 ModBlocks.PRISM_FENCE_GATE.get(),
+                ModBlocks.PRISM_WOOD_WALL.get(),
                 //ModBlocks.PRISM_DOOR.get(),
                 //ModBlocks.PRISM_TRAPDOOR.get(),
                 ModBlocks.PRISM_BUTTON.get(),

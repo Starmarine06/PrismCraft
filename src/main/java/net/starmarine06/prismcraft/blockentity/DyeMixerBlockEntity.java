@@ -35,11 +35,18 @@ import net.starmarine06.prismcraft.item.ModItems;
 import net.starmarine06.prismcraft.menu.DyeMixerMenu;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiConsumer;
 
 public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Container {
 
-    private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
+    // Configuration - change these to add more slots
+    private static final int TOTAL_SLOTS = 4; // Total container size
+    private static final int INPUT_SLOT = TOTAL_SLOTS - 2; // Second to last slot
+    private static final int RESULT_SLOT = TOTAL_SLOTS - 1; // Last slot
+
+    private NonNullList<ItemStack> items = NonNullList.withSize(TOTAL_SLOTS, ItemStack.EMPTY);
 
     private final ContainerData data = new ContainerData() {
         @Override public int get(int index) { return 0; }
@@ -53,7 +60,7 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
 
     @Override
     public int getContainerSize() {
-        return 4;
+        return TOTAL_SLOTS;
     }
 
     @Override
@@ -99,12 +106,14 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
 
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
-        return switch (slot) {
-            case 0, 1 -> stack.getItem() instanceof DyeItem;
-            case 2 -> isPrismBlock(stack);
-            case 3 -> false; // Result slot - cannot place
-            default -> false;
-        };
+        if (slot == INPUT_SLOT) {
+            return isPrismBlock(stack);
+        } else if (slot == RESULT_SLOT) {
+            return false; // Result slot - cannot place
+        } else {
+            // All other slots are dye slots - accept DyeItem OR titanium dye
+            return stack.getItem() instanceof DyeItem || stack.is(ModItems.TITANIUM_DYE.get());
+        }
     }
 
     @Override
@@ -146,65 +155,138 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
 
     private void updateResultPreview() {
         if (canCraft()) {
-            // Calculate result but DON'T consume ingredients
             ItemStack result = calculateResult();
-            setItem(3, result);
+            setItem(RESULT_SLOT, result);
         } else {
-            // Clear result if can't craft
-            if (!getItem(3).isEmpty()) {
-                setItem(3, ItemStack.EMPTY);
+            if (!getItem(RESULT_SLOT).isEmpty()) {
+                setItem(RESULT_SLOT, ItemStack.EMPTY);
             }
         }
     }
 
     private boolean canCraft() {
-        ItemStack dye1 = getItem(0);
-        ItemStack dye2 = getItem(1);
-        ItemStack input = getItem(2);
+        ItemStack input = getItem(INPUT_SLOT);
+        if (input.isEmpty() || !isPrismBlock(input)) {
+            return false;
+        }
 
-        return !dye1.isEmpty()
-                && !dye2.isEmpty()
-                && !input.isEmpty()
-                && dye1.getItem() instanceof DyeItem
-                && dye2.getItem() instanceof DyeItem
-                && isPrismBlock(input);
+        // Check if we can do normal dyeing OR reset
+        return canDye() || canReset();
+    }
+
+    private boolean canDye() {
+        // Check if at least one regular dye slot has a dye
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            ItemStack stack = getItem(i);
+            if (!stack.isEmpty() && stack.getItem() instanceof DyeItem) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean canReset() {
+        ItemStack input = getItem(INPUT_SLOT);
+        if (input.isEmpty() || !isPrismBlock(input)) {
+            return false;
+        }
+
+        // Check if we have at least one titanium dye and NO regular dyes
+        boolean hasTitanium = false;
+        boolean hasRegularDye = false;
+
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            ItemStack stack = getItem(i);
+            if (stack.isEmpty()) continue;
+
+            if (stack.is(ModItems.TITANIUM_DYE.get())) {
+                hasTitanium = true;
+            } else if (stack.getItem() instanceof DyeItem) {
+                hasRegularDye = true;
+            }
+        }
+
+        // Can reset if we have titanium dye(s) and NO regular dyes
+        return hasTitanium && !hasRegularDye;
     }
 
     private ItemStack calculateResult() {
-        ItemStack dye1 = getItem(0);
-        ItemStack dye2 = getItem(1);
-        ItemStack input = getItem(2);
+        ItemStack input = getItem(INPUT_SLOT);
 
-        // Special case: Titanium Dye reset recipe
-        if (dye1.is(ModItems.TITANIUM_DYE.get()) && dye2.is(ModItems.TITANIUM_DYE.get())) {
+        // Priority 1: Check for reset recipe
+        if (canReset()) {
             return processResetRecipe(input);
         }
 
-        // Normal color mixing
-        int color1 = ((DyeItem) dye1.getItem()).getDyeColor().getTextureDiffuseColor();
-        int color2 = ((DyeItem) dye2.getItem()).getDyeColor().getTextureDiffuseColor();
-        int existingColor = getBlockColor(input);
-        int mixedColor = mixThreeColors(existingColor, color1, color2);
+        // Priority 2: Normal dyeing
+        if (canDye()) {
+            List<ItemStack> dyes = getRegularDyeSlots();
+            List<Integer> colors = new ArrayList<>();
 
-        ItemStack result = new ItemStack(input.getItem(), 1);
-        setBlockColor(result, mixedColor);
+            // Add existing color from input block
+            int existingColor = getBlockColor(input);
+            colors.add(existingColor);
 
-        // Track dye ingredients
-        addDyeIngredients(result, dye1, dye2, input);
+            // Add all dye colors
+            for (ItemStack dye : dyes) {
+                if (dye.getItem() instanceof DyeItem dyeItem) {
+                    colors.add(dyeItem.getDyeColor().getTextureDiffuseColor());
+                }
+            }
 
-        return result;
+            int mixedColor = mixColors(colors);
+
+            ItemStack result = new ItemStack(input.getItem(), 1);
+            setBlockColor(result, mixedColor);
+
+            // Track dye ingredients
+            addDyeIngredients(result, dyes, input);
+
+            return result;
+        }
+
+        return ItemStack.EMPTY;
+    }
+
+    // Get only regular dye slots (not titanium)
+    private List<ItemStack> getRegularDyeSlots() {
+        List<ItemStack> dyes = new ArrayList<>();
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            ItemStack stack = getItem(i);
+            if (!stack.isEmpty() && stack.getItem() instanceof DyeItem) {
+                dyes.add(stack);
+            }
+        }
+        return dyes;
+    }
+
+    // Get all dye slots including titanium
+    private List<ItemStack> getDyeSlots() {
+        List<ItemStack> dyes = new ArrayList<>();
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            ItemStack stack = getItem(i);
+            if (!stack.isEmpty() && (stack.getItem() instanceof DyeItem || stack.is(ModItems.TITANIUM_DYE.get()))) {
+                dyes.add(stack);
+            }
+        }
+        return dyes;
     }
 
     // Called when player takes from result slot
     public void onResultTaken(Player player, ItemStack result) {
-        // Now consume the ingredients
-        ItemStack dye1 = getItem(0);
-        ItemStack dye2 = getItem(1);
-        ItemStack input = getItem(2);
+        // Consume all dye slots
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            ItemStack dye = getItem(i);
+            if (!dye.isEmpty()) {
+                dye.shrink(1);
+            }
+        }
 
-        if (!dye1.isEmpty()) dye1.shrink(1);
-        if (!dye2.isEmpty()) dye2.shrink(1);
-        if (!input.isEmpty()) input.shrink(1);
+        // Consume input
+        ItemStack input = getItem(INPUT_SLOT);
+        if (!input.isEmpty()) {
+            input.shrink(1);
+        }
 
         // Play sound and particle effects
         if (level != null) {
@@ -215,7 +297,7 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         setChanged();
     }
 
-    private void addDyeIngredients(ItemStack result, ItemStack dye1, ItemStack dye2, ItemStack input) {
+    private void addDyeIngredients(ItemStack result, List<ItemStack> dyes, ItemStack input) {
         ListTag dyeList = new ListTag();
 
         BiConsumer<ResourceLocation, Integer> addOrMergeDye = (dyeRL, amount) -> {
@@ -233,11 +315,11 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
             dyeList.add(dyeTag);
         };
 
-        // Add new dyes
-        ResourceLocation dye1RL = BuiltInRegistries.ITEM.getKey(dye1.getItem());
-        ResourceLocation dye2RL = BuiltInRegistries.ITEM.getKey(dye2.getItem());
-        addOrMergeDye.accept(dye1RL, 1);
-        addOrMergeDye.accept(dye2RL, 1);
+        // Add all new dyes
+        for (ItemStack dye : dyes) {
+            ResourceLocation dyeRL = BuiltInRegistries.ITEM.getKey(dye.getItem());
+            addOrMergeDye.accept(dyeRL, 1);
+        }
 
         // Get existing dye ingredients from input
         CustomData inputCustomData = input.get(DataComponents.CUSTOM_DATA);
@@ -248,9 +330,12 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
                 for (int i = 0; i < oldList.size(); i++) {
                     CompoundTag t = oldList.getCompoundOrEmpty(i);
                     String idStr = t.getStringOr("id","");
-                    ResourceLocation rl = ResourceLocation.parse(idStr);
-                    int count = t.getIntOr("count",1);
-                    addOrMergeDye.accept(rl, count);
+                    if (!idStr.isEmpty()) {
+                        ResourceLocation rl = ResourceLocation.parse(idStr);
+                        int count = t.getIntOr("count",1);
+                        if (count == 0) count = 1;
+                        addOrMergeDye.accept(rl, count);
+                    }
                 }
             }
         }
@@ -267,10 +352,8 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         ItemStack result = input.copyWithCount(1);
 
         // Remove all components from the item
-        var compMap = input.getComponents();
-        for (DataComponentType<?> type : compMap.keySet()) {
-            result.remove(type);
-        }
+        result.remove(DataComponents.DYED_COLOR);
+        result.remove(DataComponents.CUSTOM_DATA);
 
         return result;
     }
@@ -284,22 +367,22 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
     }
 
-    private int mixThreeColors(int color1, int color2, int color3) {
-        int r1 = (color1 >> 16) & 0xFF;
-        int g1 = (color1 >> 8) & 0xFF;
-        int b1 = color1 & 0xFF;
+    // Mix any number of colors
+    private int mixColors(List<Integer> colors) {
+        if (colors.isEmpty()) return 0xFFFFFF;
+        if (colors.size() == 1) return colors.get(0);
 
-        int r2 = (color2 >> 16) & 0xFF;
-        int g2 = (color2 >> 8) & 0xFF;
-        int b2 = color2 & 0xFF;
+        int totalR = 0, totalG = 0, totalB = 0;
 
-        int r3 = (color3 >> 16) & 0xFF;
-        int g3 = (color3 >> 8) & 0xFF;
-        int b3 = color3 & 0xFF;
+        for (int color : colors) {
+            totalR += (color >> 16) & 0xFF;
+            totalG += (color >> 8) & 0xFF;
+            totalB += color & 0xFF;
+        }
 
-        int r = (r1 + r2 + r3) / 3;
-        int g = (g1 + g2 + g3) / 3;
-        int b = (b1 + b2 + b3) / 3;
+        int r = totalR / colors.size();
+        int g = totalG / colors.size();
+        int b = totalB / colors.size();
 
         return (r << 16) | (g << 8) | b;
     }
@@ -307,5 +390,18 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
     private boolean isPrismBlock(ItemStack stack) {
         if (!(stack.getItem() instanceof BlockItem blockItem)) return false;
         return blockItem.getBlock() instanceof IPrismColoredBlock;
+    }
+
+    // Helper methods for menu to know slot configuration
+    public static int getInputSlotIndex() {
+        return INPUT_SLOT;
+    }
+
+    public static int getResultSlotIndex() {
+        return RESULT_SLOT;
+    }
+
+    public static int getTotalSlots() {
+        return TOTAL_SLOTS;
     }
 }

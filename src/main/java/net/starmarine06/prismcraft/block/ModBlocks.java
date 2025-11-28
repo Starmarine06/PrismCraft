@@ -96,6 +96,14 @@ public class ModBlocks {
                     )
             );
 
+    public static final DeferredBlock<PrismWallBlock> PRISM_WOOD_WALL = BLOCKS.register(
+            "prism_wood_wall",
+            registryName -> new PrismWallBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
     public static final DeferredBlock<PrismFlowerPotBlock> PRISM_FLOWER_POT =
             BLOCKS.register("prism_flower_pot", registryName ->
                     new PrismFlowerPotBlock(BlockBehaviour.Properties.of()

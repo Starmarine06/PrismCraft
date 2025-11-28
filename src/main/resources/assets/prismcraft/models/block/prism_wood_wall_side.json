@@ -1,0 +1,6 @@
+{
+  "parent": "prismcraft:block/template_wall_side",
+  "textures": {
+    "wall": "prismcraft:block/prism_planks"
+  }
+}

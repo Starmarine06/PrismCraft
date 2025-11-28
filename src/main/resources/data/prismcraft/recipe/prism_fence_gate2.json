@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "#minecraft:stairs",
+    "#minecraft:fence_gates",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_stairs",
+    "id": "prismcraft:prism_planks",
     "count": 1
   }
 }

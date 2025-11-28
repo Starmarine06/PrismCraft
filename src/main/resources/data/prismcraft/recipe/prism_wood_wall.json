@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": "prismcraft:prism_planks"
+  },
+  "result": {
+    "id": "prismcraft:prism_wood_wall",
+    "count": 6
+  }
+}

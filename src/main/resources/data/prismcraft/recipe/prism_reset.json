@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "#minecraft:stairs",
+    "#prismcraft:prism_acacia_door",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_stairs",
+    "id": "prismcraft:prism_acacia_door",
     "count": 1
   }
 }

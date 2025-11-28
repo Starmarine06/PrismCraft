@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "#minecraft:stairs",
+    "#minecraft:hanging_signs",
     "prismcraft:titanium_dye"
   ],
   "result": {
-    "id": "prismcraft:prism_stairs",
+    "id": "prismcraft:prism_hanging_sign",
     "count": 1
   }
 }
