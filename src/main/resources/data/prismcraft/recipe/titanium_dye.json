@@ -2,7 +2,6 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "WW",
     "WW"
   ],
   "key": {
@@ -10,6 +9,6 @@
   },
   "result": {
     "id": "prismcraft:titanium_dye",
-    "count": 1
+    "count": 2
   }
 }

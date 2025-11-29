@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "decorations",
   "pattern": [
-    "P S",
-    "P S"
+    "SPS",
+    "SPS"
   ],
   "key": {
     "P": "prismcraft:prism_planks",
