@@ -334,12 +334,6 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
             dyeList.add(dyeTag);
         };
 
-        // Add all new dyes
-        for (ItemStack dye : dyes) {
-            ResourceLocation dyeRL = BuiltInRegistries.ITEM.getKey(dye.getItem());
-            addOrMergeDye.accept(dyeRL, 1);
-        }
-
         // Get existing dye ingredients from input
         CustomData inputCustomData = input.get(DataComponents.CUSTOM_DATA);
         if (inputCustomData != null) {
@@ -357,6 +351,12 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
                     }
                 }
             }
+        }
+
+        // Add all new dyes
+        for (ItemStack dye : dyes) {
+            ResourceLocation dyeRL = BuiltInRegistries.ITEM.getKey(dye.getItem());
+            addOrMergeDye.accept(dyeRL, 1);
         }
 
         // Save dye ingredients to result
