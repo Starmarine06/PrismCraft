@@ -1,6 +1,7 @@
 package net.starmarine06.prismcraft.blockentity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
@@ -8,7 +9,11 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -28,6 +33,7 @@ import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
@@ -157,12 +163,25 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         if (canCraft()) {
             ItemStack result = calculateResult();
             setItem(RESULT_SLOT, result);
+
+            // ensure clients see the new result
+            if (level != null && !level.isClientSide()) {
+                setChanged(); // mark dirty for saving
+                level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+                System.out.println("[DyeMixerBlockEntity] server set result -> " + result); // debug log
+            }
         } else {
             if (!getItem(RESULT_SLOT).isEmpty()) {
                 setItem(RESULT_SLOT, ItemStack.EMPTY);
+                if (level != null && !level.isClientSide()) {
+                    setChanged();
+                    level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+                    System.out.println("[DyeMixerBlockEntity] server cleared result");
+                }
             }
         }
     }
+
 
     private boolean canCraft() {
         ItemStack input = getItem(INPUT_SLOT);
@@ -404,4 +423,18 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
     public static int getTotalSlots() {
         return TOTAL_SLOTS;
     }
+
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
+        // reuse saveWithoutMetadata like the Pedestal example - this returns a CompoundTag and includes inventory serialization
+        return this.saveWithoutMetadata(pRegistries);
+    }
+
 }

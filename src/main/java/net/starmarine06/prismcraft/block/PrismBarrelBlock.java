@@ -56,7 +56,7 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismBarrelBlockEntity tile) {
                 int color = getColor(stack);
-                System.out.println("[BARREL SETPLACEDBY DEBUG] ItemStack color: " + Integer.toHexString(color));
+                //System.out.println("[BARREL SETPLACEDBY DEBUG] ItemStack color: " + Integer.toHexString(color));
                 tile.setColor(color);
                 BlockState currentState = level.getBlockState(pos);
                 level.sendBlockUpdated(pos, currentState, currentState, 3);
@@ -81,12 +81,12 @@ public class PrismBarrelBlock extends BarrelBlock implements EntityBlock, IPrism
 
     public static void setColor(ItemStack stack, int color) {
         stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
-        System.out.println("[BARREL BLOCK CCOLOR DEBUG] color=" + Integer.toHexString(color));
+        //System.out.println("[BARREL BLOCK CCOLOR DEBUG] color=" + Integer.toHexString(color));
     }
 
     public static int getColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
-        System.out.println("[BARREL BLOCK COLOR DEBUG] get_color=" + dyedColor);
+        //System.out.println("[BARREL BLOCK COLOR DEBUG] get_color=" + dyedColor);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
 

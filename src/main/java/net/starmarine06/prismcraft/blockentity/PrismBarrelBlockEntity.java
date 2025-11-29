@@ -35,7 +35,7 @@ public class PrismBarrelBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     public int getColor() {
-        System.out.println("GetColor:"+color);
+        //System.out.println("GetColor:"+color);
         return color;
     }
 
