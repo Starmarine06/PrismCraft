@@ -10,6 +10,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.Connection;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -97,8 +98,10 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         if (!stack.isEmpty()) {
             stack.limitSize(getMaxStackSize(stack));
         }
+
         setChanged();
     }
+
 
     @Override
     public boolean stillValid(Player player) {
@@ -130,13 +133,137 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int containerId, Inventory playerInventory, Player player) {
+        // The server needs to send the BlockPos - we do this via ContainerLevelAccess
         return new DyeMixerMenu(containerId, playerInventory, this, this.data);
     }
 
     @Override
+    public void onLoad() {
+        super.onLoad();
+        if (level != null && !level.isClientSide()) {
+            // Send initial sync when block entity loads
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
+    }
+
+
+    // Add after the existing fields
+    private final boolean[] selectedSlots = new boolean[16];
+
+    // Add this method to set selected slots
+    public void setSelectedSlots(boolean[] selected) {
+        if (selected.length != 16) return;
+        System.arraycopy(selected, 0, this.selectedSlots, 0, 16);
+
+        // DEBUG: Print what slots are selected
+        //System.out.println("[DyeMixerBE] Selected slots updated:");
+
+
+        setChanged();
+        if (level != null && !level.isClientSide()) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
+    }
+
+    public boolean[] getSelectedSlots() {
+        return selectedSlots.clone();
+    }
+
+    // Update the existing updateResultPreview to be public
+    public void updateResultPreview() {
+        //System.out.println("[DyeMixerBE] updateResultPreview called on " +
+                //(level != null && level.isClientSide() ? "CLIENT" : "SERVER"));
+        //System.out.println("[DyeMixerBE] canCraft: " + canCraft());
+
+        if (canCraft()) {
+            ItemStack result = calculateResult();
+            //System.out.println("[DyeMixerBE] Calculated result: " + result);
+            setItem(RESULT_SLOT, result);
+            if (level != null && !level.isClientSide()) {
+                setChanged();
+                level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+            }
+        } else {
+            if (!getItem(RESULT_SLOT).isEmpty()) {
+                setItem(RESULT_SLOT, ItemStack.EMPTY);
+                //System.out.println("[DyeMixerBE] Cleared result");
+                if (level != null && !level.isClientSide()) {
+                    setChanged();
+                    level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+                }
+            }
+        }
+    }
+
+    // Update getRegularDyeSlots to only use SELECTED slots
+    private List<ItemStack> getRegularDyeSlots() {
+        List<ItemStack> dyes = new ArrayList<>();
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            // Only include if slot is SELECTED
+            if (!selectedSlots[i]) continue;
+
+            ItemStack stack = getItem(i);
+            if (!stack.isEmpty() && stack.getItem() instanceof DyeItem) {
+                dyes.add(stack);
+            }
+        }
+        return dyes;
+    }
+
+    // Update canDye to check selected slots
+    private boolean canDye() {
+        int selectedCount = 0;
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            if (!selectedSlots[i]) continue;
+            selectedCount++;
+
+            ItemStack stack = getItem(i);
+            if (!stack.isEmpty() && stack.getItem() instanceof DyeItem) {
+                //System.out.println("[DyeMixerBE] canDye: Found dye in slot " + i);
+                return true;
+            }
+        }
+        //System.out.println("[DyeMixerBE] canDye: " + selectedCount + " slots selected, but no dyes found");
+        return false;
+    }
+
+    // Update canReset to check selected slots
+    private boolean canReset() {
+        ItemStack input = getItem(INPUT_SLOT);
+        if (input.isEmpty() || !isPrismBlock(input)) {
+            return false;
+        }
+
+        boolean hasTitanium = false;
+        boolean hasRegularDye = false;
+        for (int i = 0; i < INPUT_SLOT; i++) {
+            if (!selectedSlots[i]) continue; // Skip unselected
+
+            ItemStack stack = getItem(i);
+            if (stack.isEmpty()) continue;
+            if (stack.is(ModItems.TITANIUM_DYE.get())) {
+                hasTitanium = true;
+            } else if (stack.getItem() instanceof DyeItem) {
+                hasRegularDye = true;
+            }
+        }
+        return hasTitanium && !hasRegularDye;
+    }
+
+    // Update saveAdditional to save selection state
+    @Override
     protected void saveAdditional(ValueOutput output) {
         super.saveAdditional(output);
         ContainerHelper.saveAllItems(output, items, true);
+
+        // Save selection state as compact integers
+        int selectedBits = 0;
+        for (int i = 0; i < 16; i++) {
+            if (selectedSlots[i]) {
+                selectedBits |= (1 << i);
+            }
+        }
+        output.putInt("SelectedSlots", selectedBits);
     }
 
     @Override
@@ -144,7 +271,15 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         super.loadAdditional(input);
         items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         ContainerHelper.loadAllItems(input, items);
+
+        // Load selection state from integer bitfield
+        int selectedBits = input.getIntOr("SelectedSlots",0);
+        for (int i = 0; i < 16; i++) {
+            selectedSlots[i] = ((selectedBits >> i) & 1) == 1;
+        }
     }
+
+
 
     public void drops() {
         for (int i = 0; i < getContainerSize(); i++) {
@@ -159,29 +294,6 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         }
     }
 
-    private void updateResultPreview() {
-        if (canCraft()) {
-            ItemStack result = calculateResult();
-            setItem(RESULT_SLOT, result);
-
-            // ensure clients see the new result
-            if (level != null && !level.isClientSide()) {
-                setChanged(); // mark dirty for saving
-                level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
-                System.out.println("[DyeMixerBlockEntity] server set result -> " + result); // debug log
-            }
-        } else {
-            if (!getItem(RESULT_SLOT).isEmpty()) {
-                setItem(RESULT_SLOT, ItemStack.EMPTY);
-                if (level != null && !level.isClientSide()) {
-                    setChanged();
-                    level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
-                    System.out.println("[DyeMixerBlockEntity] server cleared result");
-                }
-            }
-        }
-    }
-
 
     private boolean canCraft() {
         ItemStack input = getItem(INPUT_SLOT);
@@ -191,42 +303,6 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
 
         // Check if we can do normal dyeing OR reset
         return canDye() || canReset();
-    }
-
-    private boolean canDye() {
-        // Check if at least one regular dye slot has a dye
-        for (int i = 0; i < INPUT_SLOT; i++) {
-            ItemStack stack = getItem(i);
-            if (!stack.isEmpty() && stack.getItem() instanceof DyeItem) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private boolean canReset() {
-        ItemStack input = getItem(INPUT_SLOT);
-        if (input.isEmpty() || !isPrismBlock(input)) {
-            return false;
-        }
-
-        // Check if we have at least one titanium dye and NO regular dyes
-        boolean hasTitanium = false;
-        boolean hasRegularDye = false;
-
-        for (int i = 0; i < INPUT_SLOT; i++) {
-            ItemStack stack = getItem(i);
-            if (stack.isEmpty()) continue;
-
-            if (stack.is(ModItems.TITANIUM_DYE.get())) {
-                hasTitanium = true;
-            } else if (stack.getItem() instanceof DyeItem) {
-                hasRegularDye = true;
-            }
-        }
-
-        // Can reset if we have titanium dye(s) and NO regular dyes
-        return hasTitanium && !hasRegularDye;
     }
 
     private ItemStack calculateResult() {
@@ -267,18 +343,6 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         return ItemStack.EMPTY;
     }
 
-    // Get only regular dye slots (not titanium)
-    private List<ItemStack> getRegularDyeSlots() {
-        List<ItemStack> dyes = new ArrayList<>();
-        for (int i = 0; i < INPUT_SLOT; i++) {
-            ItemStack stack = getItem(i);
-            if (!stack.isEmpty() && stack.getItem() instanceof DyeItem) {
-                dyes.add(stack);
-            }
-        }
-        return dyes;
-    }
-
     // Get all dye slots including titanium
     private List<ItemStack> getDyeSlots() {
         List<ItemStack> dyes = new ArrayList<>();
@@ -293,11 +357,17 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
 
     // Called when player takes from result slot
     public void onResultTaken(Player player, ItemStack result) {
-        // Consume all dye slots
+        // Consume ONLY SELECTED dye slots
         for (int i = 0; i < INPUT_SLOT; i++) {
+            if (!selectedSlots[i]) continue; // Skip unselected
+
             ItemStack dye = getItem(i);
             if (!dye.isEmpty()) {
                 dye.shrink(1);
+                // Deselect if the slot becomes empty
+                if (dye.isEmpty()) {
+                    selectedSlots[i] = false;
+                }
             }
         }
 
@@ -314,6 +384,9 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         }
 
         setChanged();
+        if (level != null && !level.isClientSide()) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
     private void addDyeIngredients(ItemStack result, List<ItemStack> dyes, ItemStack input) {
@@ -434,5 +507,9 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
     public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
         // reuse saveWithoutMetadata like the Pedestal example - this returns a CompoundTag and includes inventory serialization
         return this.saveWithoutMetadata(pRegistries);
+    }
+
+    public void writeToBuffer(FriendlyByteBuf buf) {
+        buf.writeBlockPos(this.worldPosition);
     }
 }
