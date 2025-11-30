@@ -48,7 +48,7 @@ import java.util.function.BiConsumer;
 public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Container {
 
     // Configuration - change these to add more slots
-    private static final int TOTAL_SLOTS = 4; // Total container size
+    private static final int TOTAL_SLOTS = 18; // Total container size
     private static final int INPUT_SLOT = TOTAL_SLOTS - 2; // Second to last slot
     private static final int RESULT_SLOT = TOTAL_SLOTS - 1; // Last slot
 
@@ -424,7 +424,6 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         return TOTAL_SLOTS;
     }
 
-
     @Nullable
     @Override
     public Packet<ClientGamePacketListener> getUpdatePacket() {
@@ -436,5 +435,4 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
         // reuse saveWithoutMetadata like the Pedestal example - this returns a CompoundTag and includes inventory serialization
         return this.saveWithoutMetadata(pRegistries);
     }
-
 }
