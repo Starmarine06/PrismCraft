@@ -76,6 +76,7 @@ public class ModItems {
     public static final DeferredItem<Item> PRISM_COPPER_GRATE = registerColoredBlockItem("prism_copper_grate", ModBlocks.PRISM_COPPER_GRATE);
     public static final DeferredItem<Item> PRISM_CUT_COPPER_SLAB = registerColoredBlockItem("prism_cut_copper_slab", ModBlocks.PRISM_CUT_COPPER_SLAB);
     public static final DeferredItem<Item> PRISM_CUT_COPPER_STAIRS = registerColoredBlockItem("prism_cut_copper_stairs", ModBlocks.PRISM_CUT_COPPER_STAIRS);
+    public static final DeferredItem<Item> PRISM_COPPER_BULB = registerColoredBlockItem("prism_copper_bulb", ModBlocks.PRISM_COPPER_BULB);
     public static final DeferredItem<Item> PRISM_OAK_DOOR = registerColoredBlockItem("prism_oak_door", ModBlocks.PRISM_OAK_DOOR);
     public static final DeferredItem<Item> PRISM_OAK_TRAPDOOR = registerColoredBlockItem("prism_oak_trapdoor", ModBlocks.PRISM_OAK_TRAPDOOR);
     public static final DeferredItem<Item> PRISM_SPRUCE_DOOR = registerColoredBlockItem("prism_spruce_door", ModBlocks.PRISM_SPRUCE_DOOR);

@@ -81,6 +81,7 @@ public class ModCreativeTabs {
                         output.accept(new ItemStack(ModItems.PRISM_COPPER_BLOCK.get()));
                         output.accept(new ItemStack(ModItems.PRISM_CHISELED_COPPER.get()));
                         output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER.get()));
+                        output.accept(new ItemStack(ModItems.PRISM_COPPER_BULB.get()));
                         output.accept(new ItemStack(ModItems.PRISM_COPPER_GRATE.get()));
                         output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER_SLAB.get()));
                         output.accept(new ItemStack(ModItems.PRISM_CUT_COPPER_STAIRS.get()));

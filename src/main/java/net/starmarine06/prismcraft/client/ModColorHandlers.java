@@ -147,6 +147,7 @@ public class ModColorHandlers {
                 ModBlocks.PRISM_CUT_COPPER.get(),
                 ModBlocks.PRISM_CUT_COPPER_SLAB.get(),
                 ModBlocks.PRISM_CUT_COPPER_STAIRS.get(),
+                ModBlocks.PRISM_COPPER_BULB.get(),
                 //ORDER: Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak, Bamboo, Crimson, Warped, Copper
                 ModBlocks.PRISM_OAK_DOOR.get(),
                 ModBlocks.PRISM_OAK_TRAPDOOR.get(),

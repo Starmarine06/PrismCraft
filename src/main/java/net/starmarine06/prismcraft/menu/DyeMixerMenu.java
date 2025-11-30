@@ -251,7 +251,7 @@ public class DyeMixerMenu extends AbstractContainerMenu {
                     for (Player player : be.getLevel().players()) {
                         if (player instanceof ServerPlayer sp && player.containerMenu == this) {
                             PacketDistributor.sendToPlayer(sp, new SelectionSyncPacket(be.getSelectedSlots()));
-                            System.out.println("[DyeMixerMenu] Sent selection sync to client");
+                            //System.out.println("[DyeMixerMenu] Sent selection sync to client");
                             hasSyncedSelection = true;
                             break;
                         }

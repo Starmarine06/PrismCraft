@@ -37,7 +37,7 @@ public record SelectionSyncPacket(boolean[] selectedSlots) implements CustomPack
 
     public static void handle(SelectionSyncPacket packet, IPayloadContext context) {
         context.enqueueWork(() -> {
-            System.out.println("[SelectionSyncPacket] Received on client");
+            //System.out.println("[SelectionSyncPacket] Received on client");
 
             if (context.player().containerMenu instanceof DyeMixerMenu menu) {
                 menu.setSelectedSlots(packet.selectedSlots());
@@ -45,11 +45,11 @@ public record SelectionSyncPacket(boolean[] selectedSlots) implements CustomPack
                 // Print which slots are selected
                 for (int i = 0; i < 16; i++) {
                     if (packet.selectedSlots()[i]) {
-                        System.out.println("[SelectionSyncPacket] Slot " + i + " is selected");
+                        //System.out.println("[SelectionSyncPacket] Slot " + i + " is selected");
                     }
                 }
             } else {
-                System.out.println("[SelectionSyncPacket] ERROR: Container is not DyeMixerMenu");
+                //System.out.println("[SelectionSyncPacket] ERROR: Container is not DyeMixerMenu");
             }
         });
     }

@@ -59,6 +59,8 @@ public class ModBlockEntities {
                             ModBlocks.PRISM_FLOWER_POT.get()
                     )
             );
+
+
     /*public static final Supplier<BlockEntityType<PrismSignBlockEntity>> PRISM_SIGN =
             BLOCK_ENTITY_TYPES.register("prism_sign",
                     () -> BlockEntityType.Builder.of(PrismSignBlockEntity::new,
@@ -141,6 +143,7 @@ public class ModBlockEntities {
                             ModBlocks.PRISM_WARPED_TRAPDOOR.get(),
 
                             ModBlocks.PRISM_COPPER_DOOR.get(),
-                            ModBlocks.PRISM_COPPER_TRAPDOOR.get()
+                            ModBlocks.PRISM_COPPER_TRAPDOOR.get(),
+                            ModBlocks.PRISM_COPPER_BULB.get()
                     ));
 }

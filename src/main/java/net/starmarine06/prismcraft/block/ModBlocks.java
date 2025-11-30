@@ -120,6 +120,12 @@ public class ModBlocks {
                     .sound(SoundType.DECORATED_POT)
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))));
 
+    public static final DeferredBlock<PrismCopperBulbBlock> PRISM_COPPER_BULB = BLOCKS.register(
+            "prism_copper_bulb",
+            registryName -> new PrismCopperBulbBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).strength(1.8F).sound(SoundType.STONE)
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))));
+
 
     //*********************************************************************Other Blocks
     //Concrete Vars
