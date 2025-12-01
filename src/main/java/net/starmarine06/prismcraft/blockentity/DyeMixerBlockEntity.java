@@ -357,24 +357,27 @@ public class DyeMixerBlockEntity extends BlockEntity implements MenuProvider, Co
 
     // Called when player takes from result slot
     public void onResultTaken(Player player, ItemStack result) {
+        boolean isCreative = player.getAbilities().instabuild;
         // Consume ONLY SELECTED dye slots
-        for (int i = 0; i < INPUT_SLOT; i++) {
-            if (!selectedSlots[i]) continue; // Skip unselected
+        if (!isCreative) {
+            for (int i = 0; i < INPUT_SLOT; i++) {
+                if (!selectedSlots[i]) continue; // Skip unselected
 
-            ItemStack dye = getItem(i);
-            if (!dye.isEmpty()) {
-                dye.shrink(1);
-                // Deselect if the slot becomes empty
-                if (dye.isEmpty()) {
-                    selectedSlots[i] = false;
+                ItemStack dye = getItem(i);
+                if (!dye.isEmpty()) {
+                    dye.shrink(1);
+                    // Deselect if the slot becomes empty
+                    if (dye.isEmpty()) {
+                        selectedSlots[i] = false;
+                    }
                 }
             }
-        }
 
-        // Consume input
-        ItemStack input = getItem(INPUT_SLOT);
-        if (!input.isEmpty()) {
-            input.shrink(1);
+            // Consume input
+            ItemStack input = getItem(INPUT_SLOT);
+            if (!input.isEmpty()) {
+                input.shrink(1);
+            }
         }
 
         // Play sound and particle effects

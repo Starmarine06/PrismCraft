@@ -20,13 +20,9 @@ import static net.starmarine06.prismcraft.menu.DyeMixerMenu.DYE_SLOTS;
 
 public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
     private static final ResourceLocation MIXER_BG =
-            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer_wheel.png");
-    private static final ResourceLocation MIXER_BUTTON_ACTIVE =
-            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer_button_active.png");
-    private static final ResourceLocation MIXER_BUTTON_INACTIVE =
-            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer_button_inactive.png");
-    static final ResourceLocation MIXER_BUTTON_HOVER =
-            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer_button_hover.png");
+            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer.png");
+    private static final ResourceLocation MIXER_BUTTONS =
+            ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "textures/gui/container/dye_mixer_button.png");
 
     public DyeMixerScreen(DyeMixerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -48,33 +44,34 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
             final int bx = this.leftPos + mapping.buttonX();
             final int by = this.topPos + mapping.buttonY();
 
-            final boolean hovered = mouseX >= bx && mouseX < bx + 8 &&
-                    mouseY >= by && mouseY < by + 8;
+            final boolean hovered = mouseX >= bx && mouseX < bx + 10 &&
+                    mouseY >= by && mouseY < by + 10;
 
-            // Choose icon based on state
-            ResourceLocation icon;
+            int u = 0;
+            int v = 0;
+
             if (!active) {
-                // No item in slot
-                icon = MIXER_BUTTON_INACTIVE;
-            } else if (selected) {
-                // Selected = always use hover (colored) texture
-                icon = MIXER_BUTTON_HOVER;
+                u = 0; v = 0; // inactive
             } else if (hovered) {
-                // Hovering = use hover texture
-                icon = MIXER_BUTTON_HOVER;
+                u = 0; v = 10; // hover
+            } else if (selected) {
+                u = 10; v = 10; // active
             } else {
-                // Default = use active (gray/white) texture
-                icon = MIXER_BUTTON_ACTIVE;
+                u = 10; v = 0; // button
             }
 
             final Matrix3x2fStack stack = graphics.pose();
             stack.pushMatrix();
-            stack.translate(bx + 4, by + 4);
+            stack.translate(bx + 5, by + 5);
             stack.rotate((float) Math.toRadians(mapping.rotation()));
-            stack.translate(-4, -4);
+            stack.translate(-5, -5);
 
-            graphics.blit(RenderPipelines.GUI_TEXTURED, icon,
-                    0, 0, 0, 0, 8, 8, 8, 8);
+            graphics.blit(RenderPipelines.GUI_TEXTURED, MIXER_BUTTONS,
+                    0, 0,
+                    u, v,
+                    10, 10,
+                    20, 20
+            );
 
             stack.popMatrix();
         }
@@ -97,8 +94,8 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
                 continue;
             }
 
-            boolean hovered = mouseX >= bx && mouseX < bx + 8 &&
-                    mouseY >= by && mouseY < by + 8;
+            boolean hovered = mouseX >= bx && mouseX < bx + 10 &&
+                    mouseY >= by && mouseY < by + 10;
 
             if (hovered) {
                 //System.out.println("[Screen] Button CLICKED for slot " + mapping.slotIndex() + " color: " + mapping.dyeColor());
@@ -128,8 +125,6 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
         //System.out.println("[Screen] No button was clicked, calling super");
         return super.mouseClicked(event, unused);
     }
-
-
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {

@@ -46,22 +46,22 @@ public class DyeMixerMenu extends AbstractContainerMenu {
     public record DyeSlotMapping(int slotIndex, DyeColor dyeColor, int x, int y, int buttonX, int buttonY, float rotation) {}
 
     public static final DyeSlotMapping[] DYE_SLOTS = {
-            new DyeSlotMapping(0,  DyeColor.WHITE,      93,   24,  96, 40, 270),
-            new DyeSlotMapping(1,  DyeColor.ORANGE,     120, 157, 124, 149, 90),
+            new DyeSlotMapping(0,  DyeColor.WHITE,      93,   24,  96, 42, 270),
+            new DyeSlotMapping(1,  DyeColor.ORANGE,     120, 157, 123, 147, 90),
             new DyeSlotMapping(2,  DyeColor.MAGENTA,    39,  33,  43, 49, 270),
             new DyeSlotMapping(3,  DyeColor.LIGHT_BLUE, 11, 108,  27, 111, 180),
-            new DyeSlotMapping(4,  DyeColor.YELLOW,     93, 166,  96, 158, 90),
-            new DyeSlotMapping(5,  DyeColor.LIME,       66, 166,  69, 158, 90),
-            new DyeSlotMapping(6,  DyeColor.PINK,       66,  24,  69, 40, 270),
-            new DyeSlotMapping(7,  DyeColor.GRAY,       143, 56, 135, 59, 0),
-            new DyeSlotMapping(8,  DyeColor.LIGHT_GRAY, 120, 33, 124, 49, 270),
+            new DyeSlotMapping(4,  DyeColor.YELLOW,     93, 166,  96, 156, 90),
+            new DyeSlotMapping(5,  DyeColor.LIME,       66, 166,  69, 156, 90),
+            new DyeSlotMapping(6,  DyeColor.PINK,       66,  24,  69, 42, 270),
+            new DyeSlotMapping(7,  DyeColor.GRAY,       143, 56, 133, 59, 0),
+            new DyeSlotMapping(8,  DyeColor.LIGHT_GRAY, 120, 33, 123, 49, 270),
             new DyeSlotMapping(9,  DyeColor.CYAN,       17, 134,  33, 137, 180),
             new DyeSlotMapping(10, DyeColor.PURPLE,     17,  56,  33, 59, 180),
             new DyeSlotMapping(11, DyeColor.BLUE,       11,  82,  27, 85, 180),
-            new DyeSlotMapping(12, DyeColor.BROWN,      149,108, 141,111, 0),
-            new DyeSlotMapping(13, DyeColor.GREEN,      39, 157,  43,149, 90),
-            new DyeSlotMapping(14, DyeColor.RED,        143,134, 135,137, 0),
-            new DyeSlotMapping(15, DyeColor.BLACK,      149, 82, 141, 85, 0)
+            new DyeSlotMapping(12, DyeColor.BROWN,      149,108, 139,111, 0),
+            new DyeSlotMapping(13, DyeColor.GREEN,      39, 157,  43,147, 90),
+            new DyeSlotMapping(14, DyeColor.RED,        143,134, 133,137, 0),
+            new DyeSlotMapping(15, DyeColor.BLACK,      149, 82, 139, 85, 0)
     };
 
     // client ctor
