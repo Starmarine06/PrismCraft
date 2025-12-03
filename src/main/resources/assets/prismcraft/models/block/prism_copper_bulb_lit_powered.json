@@ -1,0 +1,13 @@
+{
+ "parent": "prismcraft:block/template_copper_bulb",
+  "textures": {
+	"all": "prismcraft:block/prism_copper_bulb_lit_powered",
+	"north": "#all",
+	"east": "#all",
+	"south": "#all",
+	"west": "#all",
+	"up": "#all",
+	"down": "#all",
+	"particle": "#all"
+  }
+}

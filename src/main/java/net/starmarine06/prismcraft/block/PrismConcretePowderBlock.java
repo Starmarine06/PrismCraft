@@ -4,26 +4,27 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.redstone.Orientation;
-import net.minecraft.world.level.storage.ValueOutput;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-public class PrismConcretePowder extends BaseEntityBlock implements IPrismColoredBlock {
-    public static final MapCodec<PrismConcretePowder> CODEC = simpleCodec(PrismConcretePowder::new);
-    public PrismConcretePowder(Properties properties) { super(properties); }
+public class PrismConcretePowderBlock extends BaseEntityBlock implements IPrismColoredBlock {
+    public static final MapCodec<PrismConcretePowderBlock> CODEC = simpleCodec(PrismConcretePowderBlock::new);
+    public PrismConcretePowderBlock(Properties properties) { super(properties); }
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
@@ -43,7 +44,6 @@ public class PrismConcretePowder extends BaseEntityBlock implements IPrismColore
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-
         if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismColoredBlockEntity tile) {
@@ -58,6 +58,17 @@ public class PrismConcretePowder extends BaseEntityBlock implements IPrismColore
     public static int getColor(ItemStack stack) {
         DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
         return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
+    }
+
+    @Override
+    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(this.asItem());
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof PrismColoredBlockEntity tile) {
+            int color = tile.getColor();
+            stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
+        }
+        return stack;
     }
 
     @Override

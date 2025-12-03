@@ -8,6 +8,4 @@ public class PrismHangingSignItem extends HangingSignItem {
     public PrismHangingSignItem(Block ceiling, Block wall, Properties properties) {
         super(ceiling, wall, properties);
     }
-
-
 }

@@ -52,6 +52,7 @@
   "item.prismcraft.prism_cut_copper_stairs": "Prism Cut  Copper Stairs",
   "item.prismcraft.prism_copper_door": "Prism Copper Door",
   "item.prismcraft.prism_copper_trapdoor": "Prism Copper Trapdoor",
+  "item.prismcraft.prism_copper_bulb": "Prism Copper Bulb",
 
   "item.prismcraft.prism_log": "Prism Log",
   "item.prismcraft.prism_planks": "Prism Planks",
@@ -195,5 +196,22 @@
   "item.prismcraft.prism_warped_button": "Prism Warped Button",
   "item.prismcraft.prism_warped_pressure_plate": "Prism Warped Pressure Plate",
   "item.prismcraft.prism_warped_door": "Prism Warped Door",
-  "item.prismcraft.prism_warped_trapdoor": "Prism Warped Trapdoor"
+  "item.prismcraft.prism_warped_trapdoor": "Prism Warped Trapdoor",
+
+  "item.prismcraft.prism_quartz_block": "Prism Quartz Block",
+  "item.prismcraft.prism_quartz_pillar": "Prism Quartz Pillar",
+  "item.prismcraft.prism_chiseled_quartz_block": "Prism Chiseled Quartz",
+
+  "item.prismcraft.prism_sandstone": "Prism Sandstone",
+  "item.prismcraft.prism_cut_sandstone": "Prism Cut Sandstone",
+  "item.prismcraft.prism_chiseled_sandstone": "Prism Chiseled Sandstone",
+  "item.prismcraft.prism_chiseled_red_sandstone": "Prism Chiseled Red Sandstone",
+
+  "item.prismcraft.prism_smooth_stone": "Prism Smooth Stone",
+  "item.prismcraft.prism_cobblestone": "Prism Cobblestone",
+  "item.prismcraft.prism_stone_bricks": "Prism Stone Bricks",
+  "item.prismcraft.prism_cracked_stone_bricks": "Prism Cracked Stone Bricks",
+
+  "item.prismcraft.prism_honey_block": "Prism Honey Block",
+  "item.prismcraft.prism_honeycomb_block": "Prism Honeycomb Block"
 }

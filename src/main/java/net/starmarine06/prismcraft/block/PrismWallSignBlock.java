@@ -23,8 +23,11 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.FluidState;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
+import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismSignBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismWallSignBlock extends WallSignBlock implements IPrismColoredBlock {
@@ -59,6 +62,17 @@ public class PrismWallSignBlock extends WallSignBlock implements IPrismColoredBl
     }
 
     @Override
+    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(this.asItem());
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof PrismColoredBlockEntity tile) {
+            int color = tile.getColor();
+            stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
+        }
+        return stack;
+    }
+
+    @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         Direction direction = state.getValue(FACING);
         BlockPos attachedPos = pos.relative(direction.getOpposite());
@@ -67,5 +81,4 @@ public class PrismWallSignBlock extends WallSignBlock implements IPrismColoredBl
         return attachedState.isFaceSturdy(level, attachedPos, direction) ||
                 attachedState.getBlock() instanceof WallSignBlock;
     }
-
 }

@@ -15,14 +15,14 @@ public record SelectionSyncPacket(boolean[] selectedSlots) implements CustomPack
             new Type<>(ResourceLocation.fromNamespaceAndPath(PrismCraftMod.MOD_ID, "selection_sync"));
 
     public static final StreamCodec<ByteBuf, SelectionSyncPacket> STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.BOOL.apply(ByteBufCodecs.list(16)),
+            ByteBufCodecs.BOOL.apply(ByteBufCodecs.list(17)),
             packet -> {
                 java.util.List<Boolean> list = new java.util.ArrayList<>();
                 for (boolean b : packet.selectedSlots) list.add(b);
                 return list;
             },
             list -> {
-                boolean[] array = new boolean[16];
+                boolean[] array = new boolean[17];
                 for (int i = 0; i < 16 && i < list.size(); i++) {
                     array[i] = list.get(i);
                 }
@@ -43,7 +43,7 @@ public record SelectionSyncPacket(boolean[] selectedSlots) implements CustomPack
                 menu.setSelectedSlots(packet.selectedSlots());
 
                 // Print which slots are selected
-                for (int i = 0; i < 16; i++) {
+                for (int i = 0; i <= 16; i++) {
                     if (packet.selectedSlots()[i]) {
                         //System.out.println("[SelectionSyncPacket] Slot " + i + " is selected");
                     }
@@ -53,5 +53,4 @@ public record SelectionSyncPacket(boolean[] selectedSlots) implements CustomPack
             }
         });
     }
-
 }

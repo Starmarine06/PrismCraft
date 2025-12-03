@@ -1,0 +1,7 @@
+{
+  "parent": "prismcraft:block/template_cube_column",
+  "textures": {
+    "end": "prismcraft:block/prism_quartz_pillar_top",
+    "side": "prismcraft:block/prism_quartz_pillar"
+  }
+}

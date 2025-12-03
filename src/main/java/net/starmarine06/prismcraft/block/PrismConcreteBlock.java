@@ -26,7 +26,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.HitResult;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -56,27 +58,16 @@ public class PrismConcreteBlock extends BaseEntityBlock implements IPrismColored
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-
         if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof PrismColoredBlockEntity tile) {
                 int color = getColor(stack);
                 tile.setColor(color);
-
-                // Force block update to sync immediately to client
                 BlockState currentState = level.getBlockState(pos);
                 level.sendBlockUpdated(pos, currentState, currentState, 3);
-
-                // Mark chunk for saving
                 level.blockEntityChanged(pos);
             }
         }
-    }
-
-
-
-    public static void setColor(ItemStack stack, int color) {
-        stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
     }
 
     public static int getColor(ItemStack stack) {
@@ -85,15 +76,13 @@ public class PrismConcreteBlock extends BaseEntityBlock implements IPrismColored
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState state = super.getStateForPlacement(context);
-
-        // Pre-set color data before block is placed (client-side prediction)
-        if (context.getLevel().isClientSide()) {
-            ItemStack stack = context.getItemInHand();
-            // Store color temporarily for rendering
+    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(this.asItem());
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof PrismColoredBlockEntity tile) {
+            int color = tile.getColor();
+            stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
         }
-
-        return state;
+        return stack;
     }
 }

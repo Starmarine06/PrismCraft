@@ -24,8 +24,11 @@ import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.MapColor;
 import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
+import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.blockentity.PrismSignBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismSignBlock extends StandingSignBlock implements IPrismColoredBlock {
@@ -72,11 +75,21 @@ public class PrismSignBlock extends StandingSignBlock implements IPrismColoredBl
     }
 
     @Override
+    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(this.asItem());
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof PrismSignBlockEntity tile) {
+            int color = tile.getColor();
+            stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
+        }
+        return stack;
+    }
+
+    @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState below = level.getBlockState(pos.below());
         // Allow placement on solid blocks OR other signs
         return below.isFaceSturdy(level, pos.below(), Direction.UP) ||
                 below.getBlock() instanceof SignBlock;
     }
-
 }

@@ -32,7 +32,39 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
         this.inventoryLabelY = this.imageHeight - 94;
     }
 
-    @Override
+	@Override
+	protected void init() {
+		super.init();
+
+		int x = (this.width - this.imageWidth) / 2;
+		int y = (this.height - this.imageHeight) / 2;
+
+		int buttonWidth = 60;
+		int buttonHeight = 20;
+
+		int buttonX = x + (this.imageWidth / 2) - (buttonWidth / 2);
+		int buttonY = y + 125;
+
+		this.addRenderableWidget(
+			net.minecraft.client.gui.components.Button.builder(
+				Component.literal("Reset"),
+				btn -> {
+					this.menu.resetSelected();
+
+					BlockPos pos = this.menu.getBlockPos();
+					if (!pos.equals(BlockPos.ZERO)) {
+						ClientPacketDistributor.sendToServer(
+							new DyeSelectionPacket(pos, -1, false)
+						);
+					}
+
+					btn.setFocused(false);
+				}
+			).bounds(buttonX, buttonY, buttonWidth, buttonHeight).build()
+		);
+	}
+
+	@Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;

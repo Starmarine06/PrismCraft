@@ -33,19 +33,28 @@ public record DyeSelectionPacket(BlockPos pos, int slotIndex, boolean selected) 
         return TYPE;
     }
 
-    public static void handle(DyeSelectionPacket packet, IPayloadContext context) {
-        context.enqueueWork(() -> {
-            if (context.player() instanceof ServerPlayer serverPlayer) {
-                BlockEntity be = serverPlayer.level().getBlockEntity(packet.pos());
-                if (be instanceof DyeMixerBlockEntity mixer) {
-                    boolean[] selectedSlots = mixer.getSelectedSlots();
-                    if (packet.slotIndex() >= 0 && packet.slotIndex() < 16) {
-                        selectedSlots[packet.slotIndex()] = packet.selected();
-                        mixer.setSelectedSlots(selectedSlots);
-                        mixer.updateResultPreview();
-                    }
-                }
-            }
-        });
-    }
+	public static void handle(DyeSelectionPacket packet, IPayloadContext context) {
+		context.enqueueWork(() -> {
+			if (context.player() instanceof ServerPlayer serverPlayer) {
+				BlockEntity be = serverPlayer.level().getBlockEntity(packet.pos());
+				if (be instanceof DyeMixerBlockEntity mixer) {
+					boolean[] selectedSlots = mixer.getSelectedSlots();
+
+					// Normal toggle: 0–16 dye slot
+					if (packet.slotIndex() >= 0 && packet.slotIndex() <= 16) {
+						selectedSlots[packet.slotIndex()] = packet.selected();
+						mixer.setSelectedSlots(selectedSlots);
+						mixer.updateResultPreview();
+					}
+
+					// Reset if slotIndex == -1
+					else if (packet.slotIndex() == -1) {
+						boolean[] reset = new boolean[selectedSlots.length];
+						mixer.setSelectedSlots(reset);
+						mixer.updateResultPreview();
+					}
+				}
+			}
+		});
+	}
 }

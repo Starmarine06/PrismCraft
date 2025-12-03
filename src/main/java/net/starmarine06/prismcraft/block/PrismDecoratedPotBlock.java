@@ -26,6 +26,7 @@ import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
 import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
 import net.starmarine06.prismcraft.item.ModItems;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class PrismDecoratedPotBlock extends DecoratedPotBlock implements IPrismColoredBlock {
@@ -58,16 +59,13 @@ public class PrismDecoratedPotBlock extends DecoratedPotBlock implements IPrismC
     }
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
-        ItemStack stack = new ItemStack(ModItems.PRISM_DECORATED_POT.get());
-
-        // Copy color from block entity
+    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(this.asItem());
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof PrismDecoratedPotBlockEntity tile) {
             int color = tile.getColor();
             stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
         }
-
         return stack;
     }
 }

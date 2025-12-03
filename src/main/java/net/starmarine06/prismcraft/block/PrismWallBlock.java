@@ -13,6 +13,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
@@ -21,7 +22,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.material.FluidState;
 import net.starmarine06.prismcraft.blockentity.PrismColoredBlockEntity;
+import net.starmarine06.prismcraft.blockentity.PrismDecoratedPotBlockEntity;
 import net.starmarine06.prismcraft.interfaces.IPrismColoredBlock;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -57,13 +60,20 @@ public class PrismWallBlock extends WallBlock implements EntityBlock, IPrismColo
         }
     }
 
-    public static void setColor(ItemStack stack, int color) {
-        stack.set(net.minecraft.core.component.DataComponents.DYED_COLOR, new DyedItemColor(color));
+    public static int getColor(ItemStack stack) {
+        DyedItemColor dyedColor = stack.get(DataComponents.DYED_COLOR);
+        return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
     }
 
-    public static int getColor(ItemStack stack) {
-        DyedItemColor dyedColor = stack.get(net.minecraft.core.component.DataComponents.DYED_COLOR);
-        return dyedColor != null ? dyedColor.rgb() : 0xFFFFFF;
+    @Override
+    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
+        ItemStack stack = new ItemStack(this.asItem());
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof PrismColoredBlockEntity tile) {
+            int color = tile.getColor();
+            stack.set(DataComponents.DYED_COLOR, new DyedItemColor(color));
+        }
+        return stack;
     }
 }
 

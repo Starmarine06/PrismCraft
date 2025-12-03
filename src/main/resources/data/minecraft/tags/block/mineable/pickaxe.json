@@ -23,6 +23,20 @@
     "prismcraft:prism_cut_copper_slab",
     "prismcraft:prism_cut_copper_stairs",
     "prismcraft:prism_copper_door",
-    "prismcraft:prism_copper_trapdoor"
+    "prismcraft:prism_copper_trapdoor",
+    "prismcraft:prism_copper_bulb",
+    "prismcraft:prism_quartz",
+    "prismcraft:prism_quartz_pillar",
+    "prismcraft:prism_chiseled_quartz",
+    "prismcraft:prism_sandstone",
+    "prismcraft:prism_cut_sandstone",
+    "prismcraft:prism_chiseled_sandstone",
+    "prismcraft:prism_chiseled_red_sandstone",
+    "prismcraft:prism_smooth_stone",
+    "prismcraft:prism_cobblestone",
+    "prismcraft:prism_stone_bricks",
+    "prismcraft:prism_cracked_stone_bricks",
+    "prismcraft:prism_honey_block",
+    "prismcraft:prism_honeycomb_block"
   ]
 }
