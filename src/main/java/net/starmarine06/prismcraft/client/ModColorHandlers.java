@@ -5,6 +5,7 @@ import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,6 +16,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.starmarine06.prismcraft.PrismCraftMod;
 import net.starmarine06.prismcraft.block.ModBlocks;
 import net.starmarine06.prismcraft.blockentity.*;
+import net.starmarine06.prismcraft.item.ModItems;
 
 import java.util.List;
 
@@ -188,7 +190,21 @@ public class ModColorHandlers {
 			ModBlocks.PRISM_STONE_BRICKS.get(),
 			ModBlocks.PRISM_CRACKED_STONE_BRICKS.get(),
 			ModBlocks.PRISM_HONEY_BLOCK.get(),
-			ModBlocks.PRISM_HONEYCOMB_BLOCK.get()
+			ModBlocks.PRISM_HONEYCOMB_BLOCK.get(),
+			ModBlocks.PRISM_DEEPSLATE.get(),
+			ModBlocks.PRISM_COBBLED_DEEPSLATE.get(),
+			ModBlocks.PRISM_CHISELED_DEEPSLATE.get(),
+			ModBlocks.PRISM_DEEPSLATE_TILES.get(),
+			ModBlocks.PRISM_CHISELED_TUFF.get(),
+			ModBlocks.PRISM_CHISELED_TUFF_BRICKS.get(),
+			ModBlocks.PRISM_PURPUR_BLOCK.get(),
+			ModBlocks.PRISM_PURPUR_PILLAR.get(),
+			ModBlocks.PRISM_RESIN_BLOCK.get(),
+			ModBlocks.PRISM_RESIN_BRICKS.get(),
+			ModBlocks.PRISM_CHISELED_RESIN_BRICKS.get(),
+			ModBlocks.PRISM_PRISMARINE_BRICKS.get(),
+			ModBlocks.PRISM_DARK_PRISMARINE.get(),
+			ModBlocks.PRISM_WART_BLOCK.get()
 		);
 
 		//System.out.println("=== COLORS REGISTERED SUCCESSFULLY ===");

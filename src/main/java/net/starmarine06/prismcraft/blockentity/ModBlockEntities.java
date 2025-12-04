@@ -157,6 +157,20 @@ public class ModBlockEntities {
 				ModBlocks.PRISM_STONE_BRICKS.get(),
 				ModBlocks.PRISM_CRACKED_STONE_BRICKS.get(),
 				ModBlocks.PRISM_HONEY_BLOCK.get(),
-				ModBlocks.PRISM_HONEYCOMB_BLOCK.get()
+				ModBlocks.PRISM_HONEYCOMB_BLOCK.get(),
+				ModBlocks.PRISM_DEEPSLATE.get(),
+				ModBlocks.PRISM_COBBLED_DEEPSLATE.get(),
+				ModBlocks.PRISM_CHISELED_DEEPSLATE.get(),
+				ModBlocks.PRISM_DEEPSLATE_TILES.get(),
+				ModBlocks.PRISM_CHISELED_TUFF.get(),
+				ModBlocks.PRISM_CHISELED_TUFF_BRICKS.get(),
+				ModBlocks.PRISM_PURPUR_BLOCK.get(),
+				ModBlocks.PRISM_PURPUR_PILLAR.get(),
+				ModBlocks.PRISM_RESIN_BLOCK.get(),
+				ModBlocks.PRISM_RESIN_BRICKS.get(),
+				ModBlocks.PRISM_CHISELED_RESIN_BRICKS.get(),
+				ModBlocks.PRISM_PRISMARINE_BRICKS.get(),
+				ModBlocks.PRISM_DARK_PRISMARINE.get(),
+				ModBlocks.PRISM_WART_BLOCK.get()
 			));
 }

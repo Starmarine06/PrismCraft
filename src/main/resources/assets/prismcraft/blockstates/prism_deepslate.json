@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "prismcraft:block/prism_deepslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate_mirrored",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate_mirrored",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "prismcraft:block/prism_deepslate"
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate_mirrored"
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate",
+        "y": 180
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate_mirrored",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "prismcraft:block/prism_deepslate",
+        "x": 90
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate_mirrored",
+        "x": 90
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "prismcraft:block/prism_deepslate_mirrored",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}

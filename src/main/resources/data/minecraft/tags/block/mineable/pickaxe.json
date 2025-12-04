@@ -37,6 +37,21 @@
     "prismcraft:prism_stone_bricks",
     "prismcraft:prism_cracked_stone_bricks",
     "prismcraft:prism_honey_block",
-    "prismcraft:prism_honeycomb_block"
+    "prismcraft:prism_honeycomb_block",
+    "prismcraft:prism_deepslate",
+    "prismcraft:prism_cobbled_deepslate",
+    "prismcraft:prism_chiseled_deepslate",
+    "prismcraft:prism_deepslate_tiles",
+    "prismcraft:prism_chiseled_tuff",
+    "prismcraft:prism_chiseled_tuff_bricks",
+    "prismcraft:prism_purpur_block",
+    "prismcraft:prism_purpur_pillar",
+    "prismcraft:prism_resin_block",
+    "prismcraft:prism_resin_bricks",
+    "prismcraft:prism_chiseled_resin_bricks",
+    "prismcraft:prism_prismarine_bricks",
+    "prismcraft:prism_dark_prismarine",
+
+    "prismcraft:prism_wart_block"
   ]
 }

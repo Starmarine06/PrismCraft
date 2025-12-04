@@ -133,4 +133,18 @@ public class ModItems {
 	public static final DeferredItem<Item> PRISM_CRACKED_STONE_BRICKS = registerColoredBlockItem("prism_cracked_stone_bricks", ModBlocks.PRISM_CRACKED_STONE_BRICKS);
 	public static final DeferredItem<Item> PRISM_HONEY_BLOCK = registerColoredBlockItem("prism_honey_block", ModBlocks.PRISM_HONEY_BLOCK);
 	public static final DeferredItem<Item> PRISM_HONEYCOMB_BLOCK = registerColoredBlockItem("prism_honeycomb_block", ModBlocks.PRISM_HONEYCOMB_BLOCK);
+	public static final DeferredItem<Item> PRISM_DEEPSLATE = registerColoredBlockItem("prism_deepslate", ModBlocks.PRISM_DEEPSLATE);
+	public static final DeferredItem<Item> PRISM_COBBLED_DEEPSLATE = registerColoredBlockItem("prism_cobbled_deepslate", ModBlocks.PRISM_COBBLED_DEEPSLATE);
+	public static final DeferredItem<Item> PRISM_CHISELED_DEEPSLATE = registerColoredBlockItem("prism_chiseled_deepslate", ModBlocks.PRISM_CHISELED_DEEPSLATE);
+	public static final DeferredItem<Item> PRISM_DEEPSLATE_TILES = registerColoredBlockItem("prism_deepslate_tiles", ModBlocks.PRISM_DEEPSLATE_TILES);
+	public static final DeferredItem<Item> PRISM_CHISELED_TUFF = registerColoredBlockItem("prism_chiseled_tuff", ModBlocks.PRISM_CHISELED_TUFF);
+	public static final DeferredItem<Item> PRISM_CHISELED_TUFF_BRICKS = registerColoredBlockItem("prism_chiseled_tuff_bricks", ModBlocks.PRISM_CHISELED_TUFF_BRICKS);
+	public static final DeferredItem<Item> PRISM_WART_BLOCK = registerColoredBlockItem("prism_wart_block", ModBlocks.PRISM_WART_BLOCK);
+	public static final DeferredItem<Item> PRISM_PURPUR_BLOCK = registerColoredBlockItem("prism_purpur_block", ModBlocks.PRISM_PURPUR_BLOCK);
+	public static final DeferredItem<Item> PRISM_PURPUR_PILLAR = registerColoredBlockItem("prism_purpur_pillar", ModBlocks.PRISM_PURPUR_PILLAR);
+	public static final DeferredItem<Item> PRISM_RESIN_BLOCK = registerColoredBlockItem("prism_resin_block", ModBlocks.PRISM_RESIN_BLOCK);
+	public static final DeferredItem<Item> PRISM_RESIN_BRICKS = registerColoredBlockItem("prism_resin_bricks", ModBlocks.PRISM_RESIN_BRICKS);
+	public static final DeferredItem<Item> PRISM_CHISELED_RESIN_BRICKS = registerColoredBlockItem("prism_chiseled_resin_bricks", ModBlocks.PRISM_CHISELED_RESIN_BRICKS);
+	public static final DeferredItem<Item> PRISM_PRISMARINE_BRICKS = registerColoredBlockItem("prism_prismarine_bricks", ModBlocks.PRISM_PRISMARINE_BRICKS);
+	public static final DeferredItem<Item> PRISM_DARK_PRISMARINE = registerColoredBlockItem("prism_dark_prismarine", ModBlocks.PRISM_DARK_PRISMARINE);
 }

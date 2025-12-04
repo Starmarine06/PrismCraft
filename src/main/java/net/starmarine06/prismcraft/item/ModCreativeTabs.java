@@ -107,17 +107,31 @@ public class ModCreativeTabs {
 				output.accept(new ItemStack(ModItems.PRISM_ANDESITE_STAIRS.get()));
 				output.accept(new ItemStack(ModItems.PRISM_ANDESITE_WALL.get()));
 				// Deepslate
+				output.accept(new ItemStack(ModItems.PRISM_DEEPSLATE.get()));
+				output.accept(new ItemStack(ModItems.PRISM_COBBLED_DEEPSLATE.get()));
+				output.accept(new ItemStack(ModItems.PRISM_CHISELED_DEEPSLATE.get()));
+				output.accept(new ItemStack(ModItems.PRISM_DEEPSLATE_TILES.get()));
 				// Tuff
+				output.accept(new ItemStack(ModItems.PRISM_CHISELED_TUFF.get()));
+				output.accept(new ItemStack(ModItems.PRISM_CHISELED_TUFF_BRICKS.get()));
 				// Brick
 				// Resin
+				output.accept(new ItemStack(ModItems.PRISM_RESIN_BLOCK.get()));
+				output.accept(new ItemStack(ModItems.PRISM_RESIN_BRICKS.get()));
+				output.accept(new ItemStack(ModItems.PRISM_CHISELED_RESIN_BRICKS.get()));
 				// Sand + Sandstone
 				output.accept(new ItemStack(ModItems.PRISM_SAND.get()));
 				output.accept(new ItemStack(ModItems.PRISM_SANDSTONE.get()));
 				output.accept(new ItemStack(ModItems.PRISM_CUT_SANDSTONE.get()));
 				output.accept(new ItemStack(ModItems.PRISM_CHISELED_SANDSTONE.get()));
 				output.accept(new ItemStack(ModItems.PRISM_CHISELED_RED_SANDSTONE.get()));
+				output.accept(new ItemStack(ModItems.PRISM_WART_BLOCK.get()));
 				// Prismarine
+				output.accept(new ItemStack(ModItems.PRISM_PRISMARINE_BRICKS.get()));
+				output.accept(new ItemStack(ModItems.PRISM_DARK_PRISMARINE.get()));
 				// Purpur
+				output.accept(new ItemStack(ModItems.PRISM_PURPUR_BLOCK.get()));
+				output.accept(new ItemStack(ModItems.PRISM_PURPUR_PILLAR.get()));
 				// Quartz
 				output.accept(new ItemStack(ModItems.PRISM_QUARTZ_BLOCK.get()));
 				output.accept(new ItemStack(ModItems.PRISM_QUARTZ_PILLAR.get()));

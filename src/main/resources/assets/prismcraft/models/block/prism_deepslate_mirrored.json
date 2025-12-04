@@ -1,0 +1,7 @@
+{
+  "parent": "prismcraft:block/template_cube_column_mirrored",
+  "textures": {
+    "end": "prismcraft:block/prism_deepslate_top",
+    "side": "prismcraft:block/prism_deepslate"
+  }
+}

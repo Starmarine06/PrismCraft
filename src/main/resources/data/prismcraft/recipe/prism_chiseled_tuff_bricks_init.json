@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chiseled_tuff_bricks",
+    "prismcraft:titanium_dye"
+  ],
+  "result": {
+    "id": "prismcraft:prism_chiseled_tuff_bricks",
+    "count": 1
+  }
+}

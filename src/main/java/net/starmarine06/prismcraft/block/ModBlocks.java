@@ -922,4 +922,144 @@ public class ModBlocks {
 					.setId(ResourceKey.create(Registries.BLOCK, registryName))
 			)
 		);
+	public static final DeferredBlock<PrismOrientedBlock> PRISM_DEEPSLATE =
+		BLOCKS.register("prism_deepslate",
+			registryName -> new PrismOrientedBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.DEEPSLATE)
+					.strength(1.8F)
+					.sound(SoundType.DEEPSLATE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_COBBLED_DEEPSLATE =
+		BLOCKS.register("prism_cobbled_deepslate",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.DEEPSLATE)
+					.strength(1.8F)
+					.sound(SoundType.DEEPSLATE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_CHISELED_DEEPSLATE =
+		BLOCKS.register("prism_chiseled_deepslate",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.DEEPSLATE)
+					.strength(1.8F)
+					.sound(SoundType.DEEPSLATE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_DEEPSLATE_TILES =
+		BLOCKS.register("prism_deepslate_tiles",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.DEEPSLATE)
+					.strength(1.8F)
+					.sound(SoundType.DEEPSLATE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_CHISELED_TUFF =
+		BLOCKS.register("prism_chiseled_tuff",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.TUFF_BRICKS)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_CHISELED_TUFF_BRICKS =
+		BLOCKS.register("prism_chiseled_tuff_bricks",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.TUFF_BRICKS)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_WART_BLOCK =
+		BLOCKS.register("prism_wart_block",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.WART_BLOCK)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_PURPUR_BLOCK =
+		BLOCKS.register("prism_purpur_block",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismOrientedBlock> PRISM_PURPUR_PILLAR =
+		BLOCKS.register("prism_purpur_pillar",
+			registryName -> new PrismOrientedBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_RESIN_BLOCK =
+		BLOCKS.register("prism_resin_block",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_RESIN_BRICKS =
+		BLOCKS.register("prism_resin_bricks",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_CHISELED_RESIN_BRICKS =
+		BLOCKS.register("prism_chiseled_resin_bricks",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_PRISMARINE_BRICKS =
+		BLOCKS.register("prism_prismarine_bricks",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
+	public static final DeferredBlock<PrismBlock> PRISM_DARK_PRISMARINE =
+		BLOCKS.register("prism_dark_prismarine",
+			registryName -> new PrismBlock(
+				BlockBehaviour.Properties.of()
+					.mapColor(MapColor.STONE)
+					.strength(1.8F)
+					.sound(SoundType.STONE)
+					.setId(ResourceKey.create(Registries.BLOCK, registryName))
+			)
+		);
 }

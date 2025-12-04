@@ -213,5 +213,25 @@
   "item.prismcraft.prism_cracked_stone_bricks": "Prism Cracked Stone Bricks",
 
   "item.prismcraft.prism_honey_block": "Prism Honey Block",
-  "item.prismcraft.prism_honeycomb_block": "Prism Honeycomb Block"
+  "item.prismcraft.prism_honeycomb_block": "Prism Honeycomb Block",
+
+  "item.prismcraft.prism_deepslate": "Prism Deepslate",
+  "item.prismcraft.prism_cobbled_deepslate": "Prism Cobbled Deepslate",
+  "item.prismcraft.prism_chiseled_deepslate": "Prism Chiseled Deepslate",
+  "item.prismcraft.prism_deepslate_tiles": "Prism Deepslate Tiles",
+
+  "item.prismcraft.prism_chiseled_tuff": "Prism Chiseled Tuff",
+  "item.prismcraft.prism_chiseled_tuff_bricks": "Prism Chiseled Tuff Bricks",
+
+  "item.prismcraft.prism_purpur_block": "Prism Purpur Block",
+  "item.prismcraft.prism_purpur_pillar": "Prism Purpur Pillar",
+
+  "item.prismcraft.prism_resin_block": "Prism Resin Block",
+  "item.prismcraft.prism_resin_bricks": "Prism Resin Bricks",
+  "item.prismcraft.prism_chiseled_resin_bricks": "Prism Chiseled Resin Bricks",
+
+  "item.prismcraft.prism_prismarine_bricks": "Prism Prismarine Bricks",
+  "item.prismcraft.prism_dark_prismarine": "Prism Dark Prismarine",
+
+  "item.prismcraft.prism_wart_block": "Prism Wart Block"
 }

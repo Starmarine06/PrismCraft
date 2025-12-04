@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chiseled_deepslate",
+    "prismcraft:titanium_dye"
+  ],
+  "result": {
+    "id": "prismcraft:prism_chiseled_deepslate",
+    "count": 1
+  }
+}
