@@ -62,6 +62,10 @@ public class DyeMixerScreen extends AbstractContainerScreen<DyeMixerMenu> {
 				}
 			).bounds(buttonX, buttonY, buttonWidth, buttonHeight).build()
 		);
+
+		for (DyeMixerMenu.DyeSlotMapping mapping : DyeMixerMenu.DYE_SLOTS) {
+			boolean selected = menu.isSlotSelected(mapping.slotIndex());
+		}
 	}
 
 	@Override
