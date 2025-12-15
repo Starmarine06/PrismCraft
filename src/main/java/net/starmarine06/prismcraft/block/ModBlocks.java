@@ -8,6 +8,8 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.starmarine06.prismcraft.PrismCraftMod;
+import net.starmarine06.prismcraft.blockentity.ModBlockEntities;
+import net.starmarine06.prismcraft.menu.ModMenuTypes;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
@@ -87,7 +89,9 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
             )
         );
-   	/*public static final DeferredBlock<PrismDoorBlock> PRISM_DOOR =
+
+
+    /*public static final DeferredBlock<PrismDoorBlock> PRISM_DOOR =
 		BLOCKS.register("prism_door",
             registryName -> new PrismDoorBlock(
                 BlockSetType.OAK,
@@ -444,6 +448,16 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
             )
         );
+    public static final DeferredBlock<PrismChestBlock> PRISM_CHEST =
+            BLOCKS.register("prism_chest",
+                    registryName -> new PrismChestBlock(
+                            BlockBehaviour.Properties.of()
+                                    .mapColor(MapColor.WOOD)
+                                    .strength(2.5F)
+                                    .sound(SoundType.WOOD)
+                                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    )
+            );
     public static final DeferredBlock<PrismBlock> PRISM_COPPER_BLOCK =
         BLOCKS.register("prism_copper_block",
             registryName -> new PrismBlock(

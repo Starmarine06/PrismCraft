@@ -103,6 +103,7 @@ public class ModColorHandlers {
 		event.register(blockColor,
 			ModBlocks.PRISM_LOG.get(),
 			ModBlocks.PRISM_BARREL.get(),
+			ModBlocks.PRISM_CHEST.get(),
 			ModBlocks.PRISM_STRIPPED_LOG.get(),
 			ModBlocks.PRISM_PLANKS.get(),
 			ModBlocks.PRISM_SLAB.get(),

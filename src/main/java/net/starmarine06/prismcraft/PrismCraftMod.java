@@ -22,6 +22,7 @@ import net.starmarine06.prismcraft.network.CraftDyeMixerPacket;
 import net.starmarine06.prismcraft.network.DyeSelectionPacket;
 import net.starmarine06.prismcraft.screen.DyeMixerScreen;
 import net.starmarine06.prismcraft.screen.PrismBarrelScreen;
+import net.starmarine06.prismcraft.screen.PrismChestScreen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,5 +50,6 @@ public class PrismCraftMod {
     private void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.DYE_MIXER.get(), DyeMixerScreen::new);
         event.register(ModMenuTypes.PRISM_BARREL.get(), PrismBarrelScreen::new);
+        event.register(ModMenuTypes.PRISM_CHEST.get(), PrismChestScreen::new);
     }
 }

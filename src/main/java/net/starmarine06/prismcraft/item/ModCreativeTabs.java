@@ -78,6 +78,7 @@ public class ModCreativeTabs {
 				output.accept(new ItemStack(ModItems.PRISM_SIGN_ITEM.get()));
 				output.accept(new ItemStack(ModItems.PRISM_HANGING_SIGN_ITEM.get()));
 				output.accept(new ItemStack(ModItems.PRISM_BARREL.get()));
+				output.accept(new ItemStack(ModItems.PRISM_CHEST.get()));
 				output.accept(new ItemStack(ModItems.PRISM_LADDER.get()));
 				// Items
 				output.accept(new ItemStack(ModItems.PRISM_FLOWER_POT.get()));

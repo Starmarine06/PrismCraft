@@ -52,6 +52,7 @@ public class ModItems {
     public static final DeferredItem<Item> PRISM_CARPET = registerColoredBlockItem("prism_carpet", ModBlocks.PRISM_CARPET);
     public static final DeferredItem<Item> PRISM_LADDER = registerColoredBlockItem("prism_ladder", ModBlocks.PRISM_LADDER);
     public static final DeferredItem<Item> PRISM_BARREL = registerColoredBlockItem("prism_barrel", ModBlocks.PRISM_BARREL);
+    public static final DeferredItem<Item> PRISM_CHEST = registerColoredBlockItem("prism_chest", ModBlocks.PRISM_CHEST);
     public static final DeferredItem<Item> PRISM_SLIME_BLOCK = registerColoredBlockItem("prism_slime_block", ModBlocks.PRISM_SLIME_BLOCK);
     public static final DeferredItem<Item> PRISM_WOOL = registerColoredBlockItem("prism_wool", ModBlocks.PRISM_WOOL);
     public static final DeferredItem<Item> PRISM_CONCRETE = registerColoredBlockItem("prism_concrete", ModBlocks.PRISM_CONCRETE);

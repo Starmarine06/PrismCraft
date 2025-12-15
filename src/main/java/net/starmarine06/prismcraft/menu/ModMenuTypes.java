@@ -20,5 +20,8 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<PrismBarrelMenu>> PRISM_BARREL =
             MENUS.register("prism_barrel", () ->
                     new MenuType<>((id, inv) -> new PrismBarrelMenu(id, inv, null), FeatureFlags.DEFAULT_FLAGS));
+    public static final DeferredHolder<MenuType<?>, MenuType<PrismChestMenu>> PRISM_CHEST =
+            MENUS.register("prism_chest", () ->
+                    new MenuType<>((id, inv) -> new PrismChestMenu(id, inv, null), FeatureFlags.DEFAULT_FLAGS));
 
 }

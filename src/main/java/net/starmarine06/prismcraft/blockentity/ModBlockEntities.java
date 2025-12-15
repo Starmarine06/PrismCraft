@@ -26,6 +26,10 @@ public class ModBlockEntities {
 		BLOCK_ENTITIES.register("prism_barrel", () ->
 			new BlockEntityType<>(PrismBarrelBlockEntity::new, ModBlocks.PRISM_BARREL.get()));
 
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismChestBlockEntity>> PRISM_CHEST =
+			BLOCK_ENTITIES.register("prism_chest", () ->
+					new BlockEntityType<>(PrismChestBlockEntity::new, ModBlocks.PRISM_CHEST.get()));
+
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrismSignBlockEntity>> PRISM_SIGN_ENTITY =
 		BLOCK_ENTITIES.register("prism_sign",
 			() -> new BlockEntityType<>(

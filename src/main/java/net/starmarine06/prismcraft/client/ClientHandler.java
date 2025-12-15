@@ -2,6 +2,7 @@ package net.starmarine06.prismcraft.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.ChestRenderer;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -34,6 +35,10 @@ public class ClientHandler {
         BlockEntityRenderers.register(
                 ModBlockEntities.DYE_MIXER.get(),
                 DyeMixerRenderer::new
+        );
+        BlockEntityRenderers.register(
+                ModBlockEntities.PRISM_CHEST.get(),
+                ChestRenderer::new
         );
     }
 
